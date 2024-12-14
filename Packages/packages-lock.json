@@ -1,10 +1,66 @@
 {
   "dependencies": {
+    "com.au.ghoulish.fixedcamerasystem": {
+      "version": "https://mickkrekART@bitbucket.org/ghoulish/fixedcamerasystem.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.9",
+        "com.unity.inputsystem": "1.7.0",
+        "com.unity.cinemachine": "2.10.1",
+        "com.unity.2d.psdimporter": "8.0.5",
+        "com.unity.render-pipelines.universal": "14.0.11"
+      },
+      "hash": "76f006d768e2f8639b0d4293cf593414cdbafb10"
+    },
+    "com.au.ghoulish.interactionsystem": {
+      "version": "https://mickkrekART@bitbucket.org/ghoulish/interactionsystem.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.9",
+        "com.unity.inputsystem": "1.7.0"
+      },
+      "hash": "daffa7fb7dec4a0bbb528b97417f6c8fc370fd0f"
+    },
+    "com.au.ghoulish.playercontrols": {
+      "version": "https://mickkrekART@bitbucket.org/ghoulish/playercontrols.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.9",
+        "com.unity.inputsystem": "1.7.0"
+      },
+      "hash": "25b14578167499bfe5991387b2386919516cb447"
+    },
     "com.autodesk.fbx": {
       "version": "5.1.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.2d.common": {
+      "version": "9.0.7",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.burst": "1.8.4",
+        "com.unity.2d.sprite": "1.0.0",
+        "com.unity.mathematics": "1.1.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.uielements": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.2d.psdimporter": {
+      "version": "9.0.3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.2d.common": "9.0.4",
+        "com.unity.2d.sprite": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.2d.sprite": {
@@ -243,6 +299,14 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "com.unity.textmeshpro": {
+      "version": "3.0.9",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.ugui": "2.0.0"
+      }
     },
     "com.unity.timeline": {
       "version": "1.8.7",

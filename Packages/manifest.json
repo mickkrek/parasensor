@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.au.ghoulish.fixedcamerasystem": "https://mickkrekART@bitbucket.org/ghoulish/fixedcamerasystem.git",
+    "com.au.ghoulish.interactionsystem": "https://mickkrekART@bitbucket.org/ghoulish/interactionsystem.git",
+    "com.au.ghoulish.playercontrols": "https://mickkrekART@bitbucket.org/ghoulish/playercontrols.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.5",
     "com.unity.cinemachine": "3.1.2",
