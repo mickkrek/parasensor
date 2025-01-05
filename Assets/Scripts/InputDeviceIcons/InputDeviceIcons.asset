@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477db78a92ff69347808a9ec49aa86c4, type: 3}
+  m_Name: InputDeviceIcons
+  m_EditorClassIdentifier: 
+  InputIcons:
+  - Name: Cancel
+    Keyboard: {fileID: 21300000, guid: be5cbd73a4eea694c97c2ed7533133a3, type: 3}
+    Xbox: {fileID: 21300000, guid: 0723023a0652d2648bded917879566ef, type: 3}
+    Playstation: {fileID: 21300000, guid: d7e2cfe4e3aae6a448cb47165a3c037f, type: 3}
+  - Name: Confirm
+    Keyboard: {fileID: 21300000, guid: b0f518ccf2b37e3408986c6bd5e40956, type: 3}
+    Xbox: {fileID: 21300000, guid: 418dab1a25089024f8d2424a89516cf5, type: 3}
+    Playstation: {fileID: 21300000, guid: 8a614c8ebf4dadd499f5dc6a7355f1ff, type: 3}
+  - Name: OpenBackpack
+    Keyboard: {fileID: 21300000, guid: 4ca62c27e7c0e604d94d37757e65a8ee, type: 3}
+    Xbox: {fileID: 21300000, guid: 21327ceb9beac524fa6907f39a9caa46, type: 3}
+    Playstation: {fileID: 21300000, guid: 879672f3ddb33f247935f7e49c11b26c, type: 3}
+  - Name: TabLeft
+    Keyboard: {fileID: 21300000, guid: 18dbb214ce367d843b1671331c9d6fa7, type: 3}
+    Xbox: {fileID: 21300000, guid: 49b9e2de6264c0042a52db6f49a859b6, type: 3}
+    Playstation: {fileID: 21300000, guid: 933ac2fe9a1a298418aa2ec4cbf87f3d, type: 3}
+  - Name: TabRight
+    Keyboard: {fileID: 21300000, guid: a08ab8ebfc5c90a46bbb5fb70f6920e2, type: 3}
+    Xbox: {fileID: 21300000, guid: bc12d298c0d8cf64b9db1addc8b65157, type: 3}
+    Playstation: {fileID: 21300000, guid: 72eda5eb172517b45afa07f24f08c64b, type: 3}
