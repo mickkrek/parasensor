@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-
 public class GameManager : MonoBehaviour
 {
     #region Singleton
@@ -28,24 +27,19 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
-    
-    private CharacterController _characterController = null;
     [SerializeField] private CharacterList _characterList;
     private static CharacterList _characterListInstance;
     
     public bool _characterMovementEnabled = true;
     [HideInInspector] public bool _conversationActive = false;
-    [HideInInspector] public GameObject PlayerSystem = null;
-    [HideInInspector] public CharacterController CharacterController => _characterController;
+    public CharacterController CharacterController;
     [HideInInspector] public CharacterList CharacterListInstance => _characterListInstance;
     [HideInInspector] public Character ActiveCharacter;
     [HideInInspector] public List<string> VisitedScenes;
     [HideInInspector] public List<string> CollectedItems;
     private void OnEnable()
     {
-        PlayerSystem = GameObject.Find("PlayerSystem");
-        _characterController = PlayerSystem.GetComponentInChildren<CharacterController>();
-        _characterListInstance = Instantiate(_characterList);//create a runtime instance of the character list
+        //_characterListInstance = Instantiate(_characterList);//create a runtime instance of the character list
         SceneManager.sceneUnloaded += OnSceneUnloaded;
     }
     private void OnSceneUnloaded(Scene current)

@@ -15,7 +15,7 @@ public class YarnInteractable : MonoBehaviour {
     private float defaultIndicatorIntensity;
 
     public void Start() {
-        dialogueRunner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
+        dialogueRunner = FindAnyObjectByType<DialogueRunner>();
         dialogueRunner.onDialogueComplete.AddListener(EndConversation);
         lightIndicatorObject = GetComponentInChildren<Light>();
         // get starter intensity of light then

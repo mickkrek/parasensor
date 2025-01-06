@@ -42,12 +42,9 @@ public class GameManager_GUI : MonoBehaviour
         _selectedItemTitle.text = _selectedItemTitleDefault;
         _selectedItemDescription.text = _selectedItemDescriptionDefault;
     }
-
-    
     
     [Header("General")]
     [SerializeField] private Transform _mainCanvas = null;
-    [SerializeField] private Transform _characterSelectionParent, _clueSelectionParent = null;
 
     [Header("Inventory")]
     [SerializeField] private Transform _inventoryParent = null;
@@ -71,8 +68,6 @@ public class GameManager_GUI : MonoBehaviour
     public Transform MainCanvas => _mainCanvas;
     public Transform ConversationParent => _conversationParent;
     public Transform InventoryParent => _inventoryParent;
-    public Transform CharacterSelectionParent => _characterSelectionParent;
-    public Transform ClueSelectionParent => _clueSelectionParent;
     public Transform ThoughtBubblePosition => _thoughtBubblePosition;
     public GameObject SpeechBubblePrefab => _speechBubblePrefab;
     public TextMeshProUGUI SelectedItemTitle => _selectedItemTitle;
@@ -80,10 +75,6 @@ public class GameManager_GUI : MonoBehaviour
     public Image SelectedItemImage => _selectedItemImage;
     public Color ThoughtBubbleColor => _thoughtBubbleColor;
     public Color ThoughtTextColor => _thoughtTextColor;
-
-    public bool JournalOpen, QuestioningOpen;
-    public Transform[] QuestioningObjects;
-    public int CurrentQuestioningTab;
 
     public Transform SpeechBubbleTarget;
     public Image[] SpeechBubble_BG;

@@ -19,7 +19,7 @@ public class InputDeviceChangeHandler : MonoBehaviour {
     private string currentControlScheme;
  
     void Awake() {
-        _playerInput = GameObject.Find("Player").GetComponent<PlayerInput>();
+        _playerInput = GameObject.Find("PlayerController").GetComponent<PlayerInput>();
         currentControlScheme = _playerInput.currentControlScheme;
         _buttonImage = GetComponent<Image>();
         _buttonImage.sprite = GetButtonIcon();
