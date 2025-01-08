@@ -12,12 +12,12 @@ public class PlayerInput_Menu : MonoBehaviour
         if (stateMachine.currentState.name != "Inventory")
         {
             stateMachine.ChangeState("Inventory");
-            //GameManager.Instance._characterMovementEnabled = false;
+            GameManager.Instance.CharacterMovementEnabled(false);
         }
         else
         {
             stateMachine.ChangeState("Game");
-            //GameManager.Instance._characterMovementEnabled = true;
+            GameManager.Instance.CharacterMovementEnabled(true);
         }
     }
     /*
@@ -62,18 +62,18 @@ public class PlayerInput_Menu : MonoBehaviour
         if (stateMachine.currentState.name != "Pause")
         {
             stateMachine.ChangeState("Pause");
-            //GameManager.Instance._characterMovementEnabled = false;
+            GameManager.Instance.CharacterMovementEnabled(false);
         }
         else
         {
             stateMachine.ChangeState("Game");
-            //GameManager.Instance._characterMovementEnabled = true;
+            GameManager.Instance.CharacterMovementEnabled(true);
         }
     }
     public void ResumeGame()
     {
         stateMachine.ChangeState("Game");
-        //GameManager.Instance._characterMovementEnabled = true;
+        GameManager.Instance.CharacterMovementEnabled(true);
     }
     public void ExitGame()
     {

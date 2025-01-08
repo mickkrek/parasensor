@@ -22,7 +22,7 @@ public class Interactable_ChangeScene : MonoBehaviour, IInteractable
     }
     public void FadeOut()
     {
-        GameManager.Instance._characterMovementEnabled = false;
+        GameManager.Instance.CharacterMovementEnabled(false);
         _mainGroup.interactable = false;
         _fadeBlack.alpha = 0f;
         Tween.CanvasGroupAlpha(_fadeBlack, 1f, _fadeDuration, 0f, Tween.EaseLinear, Tween.LoopType.None, ChangeScene);

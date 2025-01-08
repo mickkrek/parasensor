@@ -49,7 +49,7 @@ public class Interactable_Character: MonoBehaviour, IInteractable
         if (!dialogueRunner.IsDialogueRunning)
         {
             StartConversation();
-            GameManager.Instance._characterMovementEnabled = false;
+            GameManager.Instance.CharacterMovementEnabled(false);
         }
     }
 

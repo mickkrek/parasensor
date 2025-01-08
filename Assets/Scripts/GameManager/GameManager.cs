@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Ghoulish.PlayerControls;
+using Pixelplacement;
 public class GameManager : MonoBehaviour
 {
     #region Singleton
@@ -29,8 +31,10 @@ public class GameManager : MonoBehaviour
     #endregion
     [SerializeField] private CharacterList _characterList;
     private static CharacterList _characterListInstance;
+    private IPlayerControls _playerControls;
     
     public bool _characterMovementEnabled = true;
+    public StateMachine UIStateMachine;
     [HideInInspector] public bool _conversationActive = false;
     public CharacterController CharacterController;
     [HideInInspector] public CharacterList CharacterListInstance => _characterListInstance;
@@ -41,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         //_characterListInstance = Instantiate(_characterList);//create a runtime instance of the character list
         SceneManager.sceneUnloaded += OnSceneUnloaded;
+        _playerControls = CharacterController.GetComponent<IPlayerControls>();
     }
     private void OnSceneUnloaded(Scene current)
     {
@@ -48,5 +53,10 @@ public class GameManager : MonoBehaviour
         {
             VisitedScenes.Add(current.name);
         }
+    }
+    public void CharacterMovementEnabled(bool enabled)
+    {
+        _characterMovementEnabled = enabled;
+        _playerControls.MovementEnabled(enabled);
     }
 }

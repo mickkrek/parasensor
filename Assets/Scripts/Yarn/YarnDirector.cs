@@ -20,12 +20,12 @@ public class YarnDirector : MonoBehaviour
     private void OnDialogueStart() 
     {
         GameManager.Instance._conversationActive = true;
-        GameManager.Instance._characterMovementEnabled = false;
+        GameManager.Instance.CharacterMovementEnabled(false);
     }
     private void OnDialogueEnd()
     {
         GameManager.Instance._conversationActive = false;
-        GameManager.Instance._characterMovementEnabled = true;
+        GameManager.Instance.CharacterMovementEnabled(true);
     }
     // updates speechBubble to match the character speaking
     private void UpdateSpeechBubble(SpeechBubbleMaker bubbleMaker) 
