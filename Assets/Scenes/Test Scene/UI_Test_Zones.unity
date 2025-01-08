@@ -13486,7 +13486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -75, y: 55.29486}
+  m_AnchoredPosition: {x: -75, y: 55.29492}
   m_SizeDelta: {x: 150, y: 110.5898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1188630601
@@ -14031,11 +14031,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 903630236}
---- !u!1 &1317280163 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5858621926587544062, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
-  m_PrefabInstance: {fileID: 1947316370}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1323788244 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: e1e6aa25388513a48bdb722b348bd1cd, type: 3}
@@ -17445,7 +17440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -75, y: 55.29486}
+  m_AnchoredPosition: {x: -75, y: 55.29492}
   m_SizeDelta: {x: 150, y: 110.5898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1780275150
@@ -18113,10 +18108,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1753907851294318676, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
-      propertyPath: m_NotificationBehavior
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1753907851294318676, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 8
       objectReference: {fileID: 0}
@@ -18176,6 +18167,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.45
       objectReference: {fileID: 0}
+    - target: {fileID: 8469983504801077505, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: stateMachine
+      value: 
+      objectReference: {fileID: 782473431}
     - target: {fileID: 8957268949999358541, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18226,17 +18221,14 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4845265339266255703, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2062012861}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5858621926587544062, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1947316376}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
 --- !u!114 &1947316371 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8631302908889666212, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
   m_PrefabInstance: {fileID: 1947316370}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317280163}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 938e8fef61c34c14dadc796c740365f4, type: 3}
@@ -18252,19 +18244,6 @@ CharacterController:
   m_CorrespondingSourceObject: {fileID: 6545843094286030614, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
   m_PrefabInstance: {fileID: 1947316370}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1947316376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317280163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e36b94adeaaa2474e8b415a101a761e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateMachine: {fileID: 782473431}
 --- !u!4 &1986525432 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: e0f1d6ccd916f164e924a8aa4f7d1f48, type: 3}
