@@ -1,10 +1,13 @@
 ﻿title: TestCharacter_Start
 tags:
 ---
+<<SpeechBubble CharacterTest>>
 Test Yarn Script: Hello, this is a test interaction.
 Test Yarn Script: Test, test, test. It's all I ever do...
 -> ARGH
     Test Yarn Script: askljksldj
+    <<SpeechBubble PlayerController>>
+    Marisol: poopie butthole
 -> OUGH
     Test Yarn Script: jjklsdfjlk
 ===
