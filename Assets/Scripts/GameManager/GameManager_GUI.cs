@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
+using Pixelplacement;
 
 public class GameManager_GUI : MonoBehaviour
 {
@@ -30,6 +30,7 @@ public class GameManager_GUI : MonoBehaviour
     }
     #endregion
     
+    /*
     void Start()
     {
         _selectedItemImageDefault = _selectedItemImage.sprite;
@@ -42,9 +43,10 @@ public class GameManager_GUI : MonoBehaviour
         _selectedItemTitle.text = _selectedItemTitleDefault;
         _selectedItemDescription.text = _selectedItemDescriptionDefault;
     }
-    
+    */
     [Header("General")]
     [SerializeField] private Transform _mainCanvas = null;
+    [SerializeField] private StateMachine _UIstateMachine;
 
     [Header("Inventory")]
     [SerializeField] private Transform _inventoryParent = null;
@@ -75,6 +77,7 @@ public class GameManager_GUI : MonoBehaviour
     public Image SelectedItemImage => _selectedItemImage;
     public Color ThoughtBubbleColor => _thoughtBubbleColor;
     public Color ThoughtTextColor => _thoughtTextColor;
+    public StateMachine UIStateMachine => _UIstateMachine;
 
     public Transform SpeechBubbleTarget;
     public Image[] SpeechBubble_BG;

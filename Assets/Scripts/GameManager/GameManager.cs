@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public List<string> CollectedItems;
     private void OnEnable()
     {
-        //_characterListInstance = Instantiate(_characterList);//create a runtime instance of the character list
+        _characterListInstance = Instantiate(_characterList);//create a runtime instance of the character list
         SceneManager.sceneUnloaded += OnSceneUnloaded;
         _playerControls = CharacterController.GetComponent<IPlayerControls>();
     }

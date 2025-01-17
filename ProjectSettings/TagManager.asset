@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - GreyboxRenderCam
+  - DontDestroy
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - MidgroundCollider
   - ShadowCasters
   - DontRender
-  - 
+  - Interactable
   - 
   - 
   - 

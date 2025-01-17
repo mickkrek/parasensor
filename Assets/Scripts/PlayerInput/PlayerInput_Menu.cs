@@ -9,14 +9,14 @@ public class PlayerInput_Menu : MonoBehaviour
     [SerializeField] private StateMachine stateMachine;
     private void OnOpenInventory()
     {
-        if (stateMachine.currentState.name != "Inventory")
+        if (GameManager_GUI.Instance.UIStateMachine.currentState.name != "Inventory" && GameManager_GUI.Instance.UIStateMachine.currentState.name != "Conversation")
         {
-            stateMachine.ChangeState("Inventory");
+            GameManager_GUI.Instance.UIStateMachine.ChangeState("Inventory");
             GameManager.Instance.CharacterMovementEnabled(false);
         }
         else
         {
-            stateMachine.ChangeState("Game");
+            GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
             GameManager.Instance.CharacterMovementEnabled(true);
         }
     }
@@ -59,20 +59,20 @@ public class PlayerInput_Menu : MonoBehaviour
     */
     public void OnPause(InputValue value)
     {
-        if (stateMachine.currentState.name != "Pause")
+        if (GameManager_GUI.Instance.UIStateMachine.currentState.name != "Pause")
         {
-            stateMachine.ChangeState("Pause");
+            GameManager_GUI.Instance.UIStateMachine.ChangeState("Pause");
             GameManager.Instance.CharacterMovementEnabled(false);
         }
         else
         {
-            stateMachine.ChangeState("Game");
+            GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
             GameManager.Instance.CharacterMovementEnabled(true);
         }
     }
     public void ResumeGame()
     {
-        stateMachine.ChangeState("Game");
+        GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
         GameManager.Instance.CharacterMovementEnabled(true);
     }
     public void ExitGame()

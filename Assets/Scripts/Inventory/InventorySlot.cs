@@ -20,6 +20,6 @@ public class InventorySlot : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     void IDeselectHandler.OnDeselect(BaseEventData eventData)
     {
-        GameManager_GUI.Instance.RevertInventoryToDefault();
+        //GameManager_GUI.Instance.RevertInventoryToDefault();
     }
 }

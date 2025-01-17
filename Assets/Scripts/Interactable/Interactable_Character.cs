@@ -6,6 +6,7 @@ using Ghoulish.InteractionSystem;
 public class Interactable_Character: MonoBehaviour, IInteractable
 {
     [SerializeField] private Character _character;
+    [SerializeField] private Transform _promptPosition;
     private DialogueRunner dialogueRunner;
 
      public void Start() 
@@ -34,11 +35,13 @@ public class Interactable_Character: MonoBehaviour, IInteractable
     private void StartConversation() 
     {
         CharacterList CharList = GameManager.Instance.CharacterListInstance;
+        Debug.Log("Start Conversation");
         for (int i=0; i < CharList.CharacterTrackers.Length;i++)
         {
             if (_character == CharList.CharacterTrackers[i].CharacterInfo)
             {
                 GameManager.Instance.ActiveCharacter = _character;
+                GameManager_GUI.Instance.UIStateMachine.ChangeState("Conversation");
                 dialogueRunner.StartDialogue(GameManager.Instance.ActiveCharacter.NickName + "_Start");
             }
         } 
@@ -46,6 +49,7 @@ public class Interactable_Character: MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
+        Debug.Log("Interact");
         if (!dialogueRunner.IsDialogueRunning)
         {
             StartConversation();
@@ -55,6 +59,6 @@ public class Interactable_Character: MonoBehaviour, IInteractable
 
     public Vector3 GetPromptPosition()
     {
-        throw new System.NotImplementedException();
+        return _promptPosition.position;
     }
 }
