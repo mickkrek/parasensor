@@ -207,6 +207,7 @@ namespace Yarn.Unity
         private void Awake()
         {
             canvasGroup.alpha = 0;
+            canvasGroup.interactable = false;
             canvasGroup.blocksRaycasts = false;
         }
 
@@ -240,7 +241,7 @@ namespace Yarn.Unity
             canvasGroup.alpha = 0;
             canvasGroup.blocksRaycasts = false;
             // turning interaction back on, if it needs it
-            canvasGroup.interactable = interactable;
+            //canvasGroup.interactable = interactable;
             
             if (onDismissalComplete != null)
             {
