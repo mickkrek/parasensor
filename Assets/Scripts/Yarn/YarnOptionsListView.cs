@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using static Yarn.Unity.Effects;
 
 namespace Yarn.Unity
 {
@@ -86,9 +88,10 @@ namespace Yarn.Unity
 
             // Note the delegate to call when an option is selected
             OnOptionSelected = onOptionSelected;
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
 
             // Fade it all in
-            StartCoroutine(Effects.FadeAlpha(canvasGroup, 0, 1, fadeTime));
+            StartCoroutine(FadeBubbleAlpha(canvasGroup, 0, 1, fadeTime));
 
             /// <summary>
             /// Creates and configures a new <see cref="OptionView"/>, and adds
@@ -120,7 +123,7 @@ namespace Yarn.Unity
 
                 IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
                 {
-                    yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeTime));
+                    yield return StartCoroutine(FadeBubbleAlpha(canvasGroup, 1, 0, fadeTime));
                     OnOptionSelected(selectedOption.DialogueOptionID);
                 }
             }
@@ -137,7 +140,7 @@ namespace Yarn.Unity
             {
                 optionView.gameObject.SetActive(false);
             }
-
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
             // do we still have any options being shown?
             if (canvasGroup.alpha > 0)
             {
@@ -146,8 +149,41 @@ namespace Yarn.Unity
                 canvasGroup.interactable = false;
                 canvasGroup.blocksRaycasts = false;
 
-                StartCoroutine(Effects.FadeAlpha(canvasGroup, canvasGroup.alpha, 0, fadeTime));
+                StartCoroutine(FadeBubbleAlpha(canvasGroup, canvasGroup.alpha, 0, fadeTime));
             }
+        }
+        public static IEnumerator FadeBubbleAlpha(CanvasGroup canvasGroup, float from, float to, float fadeTime, CoroutineInterruptToken stopToken = null)
+        {
+            stopToken?.Start();
+            canvasGroup.alpha = from;
+            float timeElapsed = 0f;
+            while (timeElapsed < fadeTime)
+            {
+                if (stopToken?.WasInterrupted ?? false)
+                {
+                    yield break;
+                }
+
+                float t = timeElapsed / fadeTime;
+                timeElapsed += Time.deltaTime;
+                float alpha = Mathf.Lerp(from, to, t);
+                canvasGroup.alpha = alpha;
+                yield return null;
+            }
+
+            canvasGroup.alpha = to;
+            if (to == 0f)
+            {
+                canvasGroup.interactable = false;
+                canvasGroup.blocksRaycasts = false;
+            }
+            else
+            {
+                canvasGroup.interactable = true;
+                canvasGroup.blocksRaycasts = true;
+            }
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)canvasGroup.transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
+            stopToken?.Complete();
         }
     }
 }

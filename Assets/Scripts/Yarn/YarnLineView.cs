@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using static Yarn.Unity.Effects;
 
 
 namespace Yarn.Unity
@@ -198,6 +199,7 @@ namespace Yarn.Unity
 
             if (characterNameText == null)
             {
+                
                 if (showCharacterNameInLineView)
                 {
                     lineText.text = dialogueLine.Text.Text;
@@ -234,11 +236,10 @@ namespace Yarn.Unity
             if (lineCount != 0) //if this is the first line run don't duplicate
             {
                 Instantiate(gameObject, transform.parent);
-                LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
                 transform.SetSiblingIndex(transform.parent.childCount);
             }
             lineCount++;
-
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)canvasGroup.transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
             // Stop any coroutines currently running on this line view (for
             // example, any other RunLine that might be running)
             StopAllCoroutines();
@@ -265,11 +266,11 @@ namespace Yarn.Unity
                 if (continueButton != null)
                 {
                     continueButton.SetActive(false);
-                    EventSystem.current.SetSelectedGameObject(continueButton);
                 }
                 lineText.color = textColor;
                 bubbleBGSprite.color = bubbleColor;
                 bubbleBGSprite.sprite = bubbleShape;
+                characterNameText.gameObject.SetActive(dialogueLine.CharacterName != null);
                 if (characterNameText != null)
                 {
                     // If we have a character name text view, show the character
@@ -303,7 +304,7 @@ namespace Yarn.Unity
                 // finish.
                 if (useFadeEffect)
                 {
-                    yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 0, 1, fadeInTime, currentStopToken));
+                    yield return StartCoroutine(FadeBubbleAlpha(canvasGroup, 0, 1, fadeInTime, currentStopToken));
                     if (currentStopToken.WasInterrupted) {
                         // The fade effect was interrupted. Stop this entire
                         // coroutine.
@@ -332,6 +333,7 @@ namespace Yarn.Unity
             if (continueButton != null)
             {
                 continueButton.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(continueButton);
             }
 
             // If we have a hold time, wait that amount of time, and then
@@ -410,6 +412,40 @@ namespace Yarn.Unity
                 DismissLine(null);
             }
             lineCount = 0;
+        }
+
+        public static IEnumerator FadeBubbleAlpha(CanvasGroup canvasGroup, float from, float to, float fadeTime, CoroutineInterruptToken stopToken = null)
+        {
+            stopToken?.Start();
+            canvasGroup.alpha = from;
+            float timeElapsed = 0f;
+            while (timeElapsed < fadeTime)
+            {
+                if (stopToken?.WasInterrupted ?? false)
+                {
+                    yield break;
+                }
+
+                float t = timeElapsed / fadeTime;
+                timeElapsed += Time.deltaTime;
+                float alpha = Mathf.Lerp(from, to, t);
+                canvasGroup.alpha = alpha;
+                yield return null;
+            }
+
+            canvasGroup.alpha = to;
+            if (to == 0f)
+            {
+                canvasGroup.interactable = false;
+                canvasGroup.blocksRaycasts = false;
+            }
+            else
+            {
+                canvasGroup.interactable = true;
+                canvasGroup.blocksRaycasts = true;
+            }
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)canvasGroup.transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
+            stopToken?.Complete();
         }
     }
 }
