@@ -5,6 +5,7 @@ using Yarn.Unity;
 public class YarnDirector : MonoBehaviour
 {
     private DialogueRunner dialogueRunner;
+    [SerializeField] private YarnLineView yarnLineView;
 
     private void Start() {
         // get handles of utility objects in the scene that we need
@@ -30,8 +31,7 @@ public class YarnDirector : MonoBehaviour
     // updates speechBubble to match the character speaking
     private void UpdateSpeechBubble(SpeechBubbleMaker bubbleMaker) 
     {
-        Debug.Log(bubbleMaker.gameObject.name);
-        bubbleMaker.UpdateSpeechBubble();
+        yarnLineView.UpdateSpeechBubble(bubbleMaker.speechBubble.TextColor, bubbleMaker.speechBubble.BubbleColor, bubbleMaker.speechBubble.BubbleShape);
     }
     [YarnFunction]
     public static bool CheckInventory(string itemName)

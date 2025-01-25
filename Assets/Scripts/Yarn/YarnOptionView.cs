@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace Yarn.Unity
 {
-    public class YarnOptionView : UnityEngine.UI.Selectable, ISubmitHandler
+    public class YarnOptionView : UnityEngine.UI.Selectable, ISubmitHandler, IPointerClickHandler
     {
         [SerializeField] TextMeshProUGUI text;
 

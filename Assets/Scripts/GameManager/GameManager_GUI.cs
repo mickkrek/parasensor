@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Pixelplacement;
+using Yarn.Unity;
 
 public class GameManager_GUI : MonoBehaviour
 {
@@ -82,6 +83,9 @@ public class GameManager_GUI : MonoBehaviour
     public Transform SpeechBubbleTarget;
     public Image[] SpeechBubble_BG;
     public TextMeshProUGUI[] SpeechBubble_Text;
+
+    public Transform ChatboxParent;
+
 
     public CanvasGroup PauseMenu;
     [HideInInspector] public bool PauseOpen;

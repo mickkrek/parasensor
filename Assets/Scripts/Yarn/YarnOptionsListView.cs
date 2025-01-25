@@ -112,6 +112,11 @@ namespace Yarn.Unity
             void OptionViewWasSelected(DialogueOption option)
             {
                 StartCoroutine(OptionViewWasSelectedInternal(option));
+                 // Hide all existing option views
+                foreach (var optionView in optionViews)
+                {
+                    optionView.gameObject.SetActive(false);
+                }
 
                 IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
                 {
@@ -127,6 +132,12 @@ namespace Yarn.Unity
         /// </remarks>
         public override void DialogueComplete()
         {   
+            // Hide all existing option views
+            foreach (var optionView in optionViews)
+            {
+                optionView.gameObject.SetActive(false);
+            }
+
             // do we still have any options being shown?
             if (canvasGroup.alpha > 0)
             {

@@ -35,14 +35,12 @@ namespace Yarn.Unity
         /// <remarks><para>If this value is <see langword="true"/>, the <see
         /// cref="canvasGroup"/> object's alpha property will animate from 0 to
         /// 1 over the course of <see cref="fadeInTime"/> seconds when lines
-        /// appear, and animate from 1 to zero over the course of <see
-        /// cref="fadeOutTime"/> seconds when lines disappear.</para>
+        /// appear
         /// <para>If this value is <see langword="false"/>, the <see
         /// cref="canvasGroup"/> object will appear instantaneously.</para>
         /// </remarks>
         /// <seealso cref="canvasGroup"/>
         /// <seealso cref="fadeInTime"/>
-        /// <seealso cref="fadeOutTime"/>
         [SerializeField]
         internal bool useFadeEffect = true;
 
@@ -55,16 +53,6 @@ namespace Yarn.Unity
         [SerializeField]
         [Min(0)]
         internal float fadeInTime = 0.25f;
-
-        /// <summary>
-        /// The time that the fade effect will take to fade lines out.
-        /// </summary>
-        /// <remarks>This value is only used when <see cref="useFadeEffect"/> is
-        /// <see langword="true"/>.</remarks>
-        /// <seealso cref="useFadeEffect"/>
-        [SerializeField]
-        [Min(0)]
-        internal float fadeOutTime = 0.05f;
 
         /// <summary>
         /// The <see cref="TextMeshProUGUI"/> object that displays the text of
@@ -101,49 +89,8 @@ namespace Yarn.Unity
         [SerializeField]
         internal TextMeshProUGUI characterNameText = null;
 
-        /// <summary>
-        /// Controls whether the text of <see cref="lineText"/> should be
-        /// gradually revealed over time.
-        /// </summary>
-        /// <remarks><para>If this value is <see langword="true"/>, the <see
-        /// cref="lineText"/> object's <see
-        /// cref="TMP_Text.maxVisibleCharacters"/> property will animate from 0
-        /// to the length of the text, at a rate of <see
-        /// cref="typewriterEffectSpeed"/> letters per second when the line
-        /// appears. <see cref="onCharacterTyped"/> is called for every new
-        /// character that is revealed.</para>
-        /// <para>If this value is <see langword="false"/>, the <see
-        /// cref="lineText"/> will all be revealed at the same time.</para>
-        /// <para style="note">If <see cref="useFadeEffect"/> is <see
-        /// langword="true"/>, the typewriter effect will run after the fade-in
-        /// is complete.</para>
-        /// </remarks>
-        /// <seealso cref="lineText"/>
-        /// <seealso cref="onCharacterTyped"/>
-        /// <seealso cref="typewriterEffectSpeed"/>
         [SerializeField]
-        internal bool useTypewriterEffect = false;
-
-        /// <summary>
-        /// A Unity Event that is called each time a character is revealed
-        /// during a typewriter effect.
-        /// </summary>
-        /// <remarks>
-        /// This event is only invoked when <see cref="useTypewriterEffect"/> is
-        /// <see langword="true"/>.
-        /// </remarks>
-        /// <seealso cref="useTypewriterEffect"/>
-        [SerializeField]
-        internal UnityEngine.Events.UnityEvent onCharacterTyped;
-
-        /// <summary>
-        /// The number of characters per second that should appear during a
-        /// typewriter effect.
-        /// </summary>
-        /// <seealso cref="useTypewriterEffect"/>
-        [SerializeField]
-        [Min(0)]
-        internal float typewriterEffectSpeed = 0f;
+        internal Image bubbleBGSprite = null;
 
         /// <summary>
         /// The game object that represents an on-screen button that the user
@@ -204,11 +151,16 @@ namespace Yarn.Unity
         /// </summary>
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
 
+        [HideInInspector] public Color textColor, bubbleColor;
+        [HideInInspector] public Sprite bubbleShape; 
+
+        private int lineCount = 0;
+
         private void Awake()
         {
-            canvasGroup.alpha = 0;
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
+            //canvasGroup.alpha = 0;
+            //canvasGroup.interactable = false;
+            //canvasGroup.blocksRaycasts = false;
         }
 
         private void Reset()
@@ -220,29 +172,8 @@ namespace Yarn.Unity
         public override void DismissLine(Action onDismissalComplete)
         {
             currentLine = null;
-
-            StartCoroutine(DismissLineInternal(onDismissalComplete));
-        }
-
-        private IEnumerator DismissLineInternal(Action onDismissalComplete)
-        {
-            // disabling interaction temporarily while dismissing the line
-            // we don't want people to interrupt a dismissal
-            var interactable = canvasGroup.interactable;
-            canvasGroup.interactable = false;
-
-            // If we're using a fade effect, run it, and wait for it to finish.
-            if (useFadeEffect)
-            {
-                yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeOutTime, currentStopToken));
-                currentStopToken.Complete();
-            }
-            
-            canvasGroup.alpha = 0;
-            canvasGroup.blocksRaycasts = false;
-            // turning interaction back on, if it needs it
-            //canvasGroup.interactable = interactable;
-            
+            //canvasGroup.interactable = false;
+            //canvasGroup.blocksRaycasts = false;
             if (onDismissalComplete != null)
             {
                 onDismissalComplete();
@@ -289,10 +220,10 @@ namespace Yarn.Unity
             lineText.maxVisibleCharacters = length;
 
             // Make the canvas group fully visible immediately, too.
-            canvasGroup.alpha = 1;
+            //canvasGroup.alpha = 1;
 
-            canvasGroup.interactable = true;
-            canvasGroup.blocksRaycasts = true;
+            //canvasGroup.interactable = true;
+            //canvasGroup.blocksRaycasts = true;
 
             onInterruptLineFinished();
         }
@@ -300,12 +231,26 @@ namespace Yarn.Unity
         /// <inheritdoc/>
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
+            if (lineCount != 0) //if this is the first line run don't duplicate
+            {
+                Instantiate(gameObject, transform.parent);
+                LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
+                transform.SetSiblingIndex(transform.parent.childCount);
+            }
+            lineCount++;
+
             // Stop any coroutines currently running on this line view (for
             // example, any other RunLine that might be running)
             StopAllCoroutines();
 
             // Begin running the line as a coroutine.
             StartCoroutine(RunLineInternal(dialogueLine, onDialogueLineFinished));
+        }
+        public void UpdateSpeechBubble(Color textColor, Color bubbleColor, Sprite bubbleSprite) 
+        {
+            this.bubbleShape = bubbleSprite;
+            this.bubbleColor = bubbleColor;
+            this.textColor = textColor;
         }
 
         private IEnumerator RunLineInternal(LocalizedLine dialogueLine, Action onDialogueLineFinished)
@@ -322,13 +267,16 @@ namespace Yarn.Unity
                     continueButton.SetActive(false);
                     EventSystem.current.SetSelectedGameObject(continueButton);
                 }
-
+                lineText.color = textColor;
+                bubbleBGSprite.color = bubbleColor;
+                bubbleBGSprite.sprite = bubbleShape;
                 if (characterNameText != null)
                 {
                     // If we have a character name text view, show the character
                     // name in it, and show the rest of the text in our main
                     // text view.
                     characterNameText.text = dialogueLine.CharacterName;
+                    characterNameText.color = textColor;
                     lineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 }
                 else
@@ -347,19 +295,9 @@ namespace Yarn.Unity
                     }
                 }
 
-                if (useTypewriterEffect)
-                {
-                    // If we're using the typewriter effect, hide all of the
-                    // text before we begin any possible fade (so we don't fade
-                    // in on visible text).
-                    lineText.maxVisibleCharacters = 0;
-                }
-                else
-                {
-                    // Ensure that the max visible characters is effectively
-                    // unlimited.
-                    lineText.maxVisibleCharacters = int.MaxValue;
-                }
+                // Ensure that the max visible characters is effectively
+                // unlimited.
+                lineText.maxVisibleCharacters = int.MaxValue;
 
                 // If we're using the fade effect, start it, and wait for it to
                 // finish.
@@ -373,28 +311,6 @@ namespace Yarn.Unity
                     }
                 }
 
-                // If we're using the typewriter effect, start it, and wait for
-                // it to finish.
-                if (useTypewriterEffect)
-                {
-                    // setting the canvas all back to its defaults because if we didn't also fade we don't have anything visible
-                    canvasGroup.alpha = 1f;
-                    canvasGroup.interactable = true;
-                    canvasGroup.blocksRaycasts = true;
-                    yield return StartCoroutine(
-                        Effects.Typewriter(
-                            lineText,
-                            typewriterEffectSpeed,
-                            () => onCharacterTyped.Invoke(),
-                            currentStopToken
-                        )
-                    );
-                    if (currentStopToken.WasInterrupted) {
-                        // The typewriter effect was interrupted. Stop this
-                        // entire coroutine.
-                        yield break;
-                    }
-                }
             }
             currentLine = dialogueLine;
 
@@ -409,8 +325,8 @@ namespace Yarn.Unity
             lineText.maxVisibleCharacters = int.MaxValue;
 
             // Our view should at be at full opacity.
-            canvasGroup.alpha = 1f;
-            canvasGroup.blocksRaycasts = true;
+            //canvasGroup.alpha = 1f;
+            //canvasGroup.blocksRaycasts = true;
 
             // Show the continue button, if we have one.
             if (continueButton != null)
@@ -491,8 +407,9 @@ namespace Yarn.Unity
             if (currentLine != null)
             {
                 currentLine = null;
-                StartCoroutine(DismissLineInternal(null));
+                DismissLine(null);
             }
+            lineCount = 0;
         }
     }
 }
