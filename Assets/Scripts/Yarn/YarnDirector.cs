@@ -36,17 +36,9 @@ public class YarnDirector : MonoBehaviour
     [YarnFunction]
     public static bool CheckInventory(string itemName)
     {
-        InventoryItem[] trinketItems = GameManager_Inventory.Instance.TrinketSlotsParent.GetComponentsInChildren<InventoryItem>();
+        InventoryItem[] items = GameManager_Inventory.Instance.SlotsParent.GetComponentsInChildren<InventoryItem>();
         int itemFound = 0;
-        foreach(InventoryItem i in trinketItems)
-        {
-            if (i.item.title.Equals(itemName))
-            {
-                itemFound++;
-            }
-        }
-        InventoryItem[] toolItems = GameManager_Inventory.Instance.ToolSlotsParent.GetComponentsInChildren<InventoryItem>();
-        foreach(InventoryItem i in toolItems)
+        foreach(InventoryItem i in items)
         {
             if (i.item.title.Equals(itemName))
             {
@@ -58,17 +50,8 @@ public class YarnDirector : MonoBehaviour
     [YarnCommand("DestroyItem")]
     public static void DestroyItem(string itemName)
     {
-        InventoryItem[] trinketItems = GameManager_Inventory.Instance.TrinketSlotsParent.GetComponentsInChildren<InventoryItem>();
-        foreach(InventoryItem i in trinketItems)
-        {
-            if (i.item.title.Equals(itemName))
-            {
-                Destroy(i.gameObject);
-                return;
-            }
-        }
-        InventoryItem[] toolItems = GameManager_Inventory.Instance.ToolSlotsParent.GetComponentsInChildren<InventoryItem>();
-        foreach(InventoryItem i in toolItems)
+        InventoryItem[] items = GameManager_Inventory.Instance.SlotsParent.GetComponentsInChildren<InventoryItem>();
+        foreach(InventoryItem i in items)
         {
             if (i.item.title.Equals(itemName))
             {

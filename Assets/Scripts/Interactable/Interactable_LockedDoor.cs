@@ -59,16 +59,8 @@ public class Interactable_LockedDoor : MonoBehaviour, IInteractable
     }
     private bool CheckInventory()
     {
-        InventoryItem[] trinketItems = GameManager_Inventory.Instance.TrinketSlotsParent.GetComponentsInChildren<InventoryItem>();
-        foreach(InventoryItem i in trinketItems)
-        {
-            if (i.item.title.Equals(_requiredItem.title))
-            {
-                return true;
-            }
-        }
-        InventoryItem[] toolItems = GameManager_Inventory.Instance.ToolSlotsParent.GetComponentsInChildren<InventoryItem>();
-        foreach(InventoryItem i in toolItems)
+        InventoryItem[] items = GameManager_Inventory.Instance.SlotsParent.GetComponentsInChildren<InventoryItem>();
+        foreach(InventoryItem i in items)
         {
             if (i.item.title.Equals(_requiredItem.title))
             {

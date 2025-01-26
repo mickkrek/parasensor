@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Ghoulish.UISystem;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour
 {
-    private Image _icon;
-
+    [SerializeField] private Image _image;
     [HideInInspector] public Item item;
 
     public void InitialiseItem(Item newItem)
     {
-        gameObject.name = new string(gameObject.name + "(" + item.title + ")");
-        _icon = GetComponent<Image>();
+        gameObject.name = new string(gameObject.name + "(" + newItem.title + ")");
         item = newItem;
-        _icon.sprite = newItem.icon;
+        _image.sprite = newItem.icon;
+    }
+    public void SetSelectedToThis()
+    {
+        UISelectableBase thisSelectable = transform.gameObject.GetComponent<UISelectableBase>();
+        GameManager_Inventory.Instance.SelectedInventoryItem = thisSelectable;
+        GameManager_Inventory.Instance.InventoryItemSelected.Invoke();
     }
 }

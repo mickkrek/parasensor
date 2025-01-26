@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d8236bce0c73b44bc564f6623ddd04, type: 3}
+  m_Name: Item_Groceries
+  m_EditorClassIdentifier: 
+  title: Groceries
+  yarnNodeTitle: Item_Groceries
+  icon: {fileID: 21300000, guid: a0ccaabaa8259fc41ae5738467d62ebe, type: 3}
+  description: Some bok choy, bean sprouts, and a lime!
+  descriptionImage: {fileID: 21300000, guid: cff8279ff3cc0004aa9cd64c09791e4d, type: 3}
+  itemType: 1

@@ -1,5 +1,6 @@
+using Ghoulish.UISystem;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 public class GameManager_Inventory : MonoBehaviour
 {
     #region Singleton
@@ -27,59 +28,44 @@ public class GameManager_Inventory : MonoBehaviour
     }
     #endregion
 
-    public Transform ToolSlotsParent, TrinketSlotsParent;
-    public Transform ToolsCategory, TrinketsCategory;
+    public Transform SlotsParent;
 
-    private InventorySlot[] _toolSlots, _trinketSlots;
+    private InventorySlot[] _slots;
 
-    public GameObject inventorySlotPrefabTrinkets, inventorySlotPrefabTools;
+    public GameObject inventorySlotPrefab;
     public GameObject inventoryItemPrefab;
+    [HideInInspector] public UISelectableBase SelectedInventoryItem; 
+    public UnityEvent InventoryItemSelected, InventoryItemPlaced;
 
     public void Start()
     {
-        _toolSlots = ToolSlotsParent.GetComponentsInChildren<InventorySlot>();
-        _trinketSlots = TrinketSlotsParent.GetComponentsInChildren<InventorySlot>();
+        _slots = SlotsParent.GetComponentsInChildren<InventorySlot>();
+        InventoryItemSelected ??= new UnityEvent();
+        InventoryItemPlaced ??= new UnityEvent();
     }
     public void AddItem(Item item)
     {
-        ref InventorySlot[] slotsToUse = ref _toolSlots;
-        ref Transform parentToUse = ref ToolSlotsParent; //default to tools slots
-        ref GameObject slotPrefabToUse = ref inventorySlotPrefabTrinkets;
-        if (item.itemType == Item.ItemType.Tool) 
-        { 
-            slotsToUse = ref _toolSlots;
-            parentToUse = ref ToolSlotsParent;
-            slotPrefabToUse = ref inventorySlotPrefabTrinkets;
-        } 
-        else if (item.itemType == Item.ItemType.Trinket) 
-        { 
-            slotsToUse = ref _trinketSlots;
-            parentToUse = ref TrinketSlotsParent;
-            slotPrefabToUse = ref inventorySlotPrefabTools;
-        }
+        _slots = SlotsParent.GetComponentsInChildren<InventorySlot>();
+        ref Transform parentToUse = ref SlotsParent; //default to tools slots
+        ref GameObject slotPrefabToUse = ref inventorySlotPrefab;
 
-        //Find an empty slot, instantiate an item there. If no available slots, create new slot and instantiate item there.
-        for (int i = 0; i < slotsToUse.Length; i++)
+        //Find an empty slot, instantiate an item there.
+        for (int i = 0; i < _slots.Length; i++)
         {
-            InventorySlot slot = slotsToUse[i];
-            InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if (itemInSlot == null)
+            InventorySlot targetSlot = _slots[i];
+            EmptySlot targetEmptySlot = targetSlot.GetComponentInChildren<EmptySlot>();
+            if (targetEmptySlot != null)
             {
-                InstantiateItem(item, slot);
+                InstantiateItem(item, targetSlot.transform);
+                Destroy(targetEmptySlot.gameObject);
                 return;
             }
         }
-        InstantiateItem(item, InstantiateSlot(parentToUse, slotPrefabToUse));
     }
-    public void InstantiateItem(Item item, InventorySlot slot)
+    public void InstantiateItem(Item item, Transform heirarchyPosition)
     {
-        GameObject newItemGO = Instantiate(inventoryItemPrefab, slot.transform);
+        GameObject newItemGO = Instantiate(inventoryItemPrefab, heirarchyPosition);
         InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
-    }
-    public InventorySlot InstantiateSlot(Transform slotsParent, GameObject slotPrefab)
-    {
-        GameObject newSlotGO = Instantiate(slotPrefab, slotsParent);
-        return newSlotGO.GetComponent<InventorySlot>();
     }
 }

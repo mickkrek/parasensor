@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d8236bce0c73b44bc564f6623ddd04, type: 3}
+  m_Name: Item_Lighter
+  m_EditorClassIdentifier: 
+  title: Lighter
+  yarnNodeTitle: Item_Lighter
+  icon: {fileID: 21300000, guid: 165be96911c56f845b216c0fcb1d9f9d, type: 3}
+  description: A lost lighter, well-loved.
+  descriptionImage: {fileID: 21300000, guid: 6114b6392e55da940add2995464f0075, type: 3}
+  itemType: 0

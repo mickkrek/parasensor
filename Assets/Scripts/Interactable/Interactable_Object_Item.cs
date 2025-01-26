@@ -6,6 +6,7 @@ public class Interactable_Object_Item : MonoBehaviour, IInteractable
 {
     [SerializeField] private Item _item; 
     private DialogueRunner dialogueRunner;
+    [SerializeField] private Transform _promptPosition;
 
     public void Start() 
     {
@@ -28,20 +29,14 @@ public class Interactable_Object_Item : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        GameObject.Find("GUI_NewJournalPrompt").GetComponent<GUI_NewItemPrompt>().TriggerPrompt();
-        dialogueRunner.StartDialogue(_item.yarnNodeTitle);
+        //dialogueRunner.StartDialogue(_item.yarnNodeTitle);
         GameManager.Instance.CollectedItems.Add(_item.title);
         GameManager_Inventory.Instance.AddItem(_item);
         gameObject.SetActive(false);
     }
 
-    public void OnValidate()
-    {
-        GetComponentInChildren<SpriteRenderer>().sprite = _item.icon;
-    }
-
     public Vector3 GetPromptPosition()
     {
-        throw new System.NotImplementedException();
+        return _promptPosition.position;
     }
 }

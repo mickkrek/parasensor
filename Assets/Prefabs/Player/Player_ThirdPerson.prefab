@@ -263,7 +263,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3635884922720816225}
-  - component: {fileID: 7764981637951989089}
   - component: {fileID: 2446164403946393547}
   - component: {fileID: 6511172686771181320}
   - component: {fileID: 3446133163046489532}
@@ -290,27 +289,6 @@ Transform:
   - {fileID: 3143061248115844335}
   m_Father: {fileID: 8957268949999358541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &7764981637951989089
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7226072727452212823}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.89
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2446164403946393547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +342,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1570363601192868330}
-  - component: {fileID: 1641247334719095766}
   - component: {fileID: 1950239461018549365}
   - component: {fileID: 6745410119737104661}
   - component: {fileID: 9037723955274411969}
@@ -391,27 +368,6 @@ Transform:
   - {fileID: 7069219587056260903}
   m_Father: {fileID: 8957268949999358541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &1641247334719095766
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8484030936829242180}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.89
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1950239461018549365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,6 +695,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   _playerControllerTransform: {fileID: 7200190652408895845}
+  InteractionEnabled: 1
 --- !u!4 &7200190652408895845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8946613393196690550, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
