@@ -10,7 +10,10 @@ public class NPCEditorGizmo : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         _col = GetComponentInChildren<Collider>();
-        Gizmos.DrawIcon(_col.bounds.center, "Assets/Gizmos/NPCIcon.png", true, GizmoColor);
+        if (_col != null)
+        {
+            Gizmos.DrawIcon(_col.bounds.center, "Assets/Gizmos/NPCIcon.png", true, GizmoColor);
+        }
     }
     #endif
 }
