@@ -1,9 +1,6 @@
 using Pixelplacement;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using Yarn.Unity;
 public class PlayerInput_Menu : MonoBehaviour
 {
     [SerializeField] private StateMachine stateMachine;
@@ -12,12 +9,10 @@ public class PlayerInput_Menu : MonoBehaviour
         if (GameManager_GUI.Instance.UIStateMachine.currentState.name != "Inventory" && GameManager_GUI.Instance.UIStateMachine.currentState.name != "Conversation")
         {
             GameManager_GUI.Instance.UIStateMachine.ChangeState("Inventory");
-            GameManager.Instance.CharacterMovementEnabled(false);
         }
         else
         {
             GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
-            GameManager.Instance.CharacterMovementEnabled(true);
         }
     }
     /*
@@ -62,18 +57,15 @@ public class PlayerInput_Menu : MonoBehaviour
         if (GameManager_GUI.Instance.UIStateMachine.currentState.name != "Pause")
         {
             GameManager_GUI.Instance.UIStateMachine.ChangeState("Pause");
-            GameManager.Instance.CharacterMovementEnabled(false);
         }
         else
         {
             GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
-            GameManager.Instance.CharacterMovementEnabled(true);
         }
     }
     public void ResumeGame()
     {
         GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
-        GameManager.Instance.CharacterMovementEnabled(true);
     }
     public void ExitGame()
     {
