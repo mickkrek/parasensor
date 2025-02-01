@@ -16,7 +16,7 @@ public class FadeBlack : MonoBehaviour
     {
         GameManager.Instance.CharacterMovementEnabled(false);
         _canvasGroup.alpha = 1f;
-        Tween.CanvasGroupAlpha(_canvasGroup, 0f, _fadeDuration, _delay, Tween.EaseLinear, Tween.LoopType.None, ReEnable);
+        Tween.CanvasGroupAlpha(_canvasGroup, 0f, _fadeDuration, _delay, Tween.EaseLinear, Tween.LoopType.None, null, ReEnable);
     }
     public void FadeOut()
     {
@@ -27,6 +27,6 @@ public class FadeBlack : MonoBehaviour
     private void ReEnable()
     {
         GameManager.Instance.CharacterMovementEnabled(true);
-        Debug.Log("Enabled");
+        GameManager.Instance.UIStateMachine.ChangeState("Game");
     }
 }

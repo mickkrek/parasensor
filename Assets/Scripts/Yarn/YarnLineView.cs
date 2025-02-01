@@ -157,13 +157,6 @@ namespace Yarn.Unity
 
         private int lineCount = 0;
 
-        private void Awake()
-        {
-            //canvasGroup.alpha = 0;
-            //canvasGroup.interactable = false;
-            //canvasGroup.blocksRaycasts = false;
-        }
-
         private void Reset()
         {
             canvasGroup = GetComponentInParent<CanvasGroup>();
@@ -173,8 +166,6 @@ namespace Yarn.Unity
         public override void DismissLine(Action onDismissalComplete)
         {
             currentLine = null;
-            //canvasGroup.interactable = false;
-            //canvasGroup.blocksRaycasts = false;
             if (onDismissalComplete != null)
             {
                 onDismissalComplete();
@@ -220,12 +211,6 @@ namespace Yarn.Unity
 
             // Show the entire line's text immediately.
             lineText.maxVisibleCharacters = length;
-
-            // Make the canvas group fully visible immediately, too.
-            //canvasGroup.alpha = 1;
-
-            //canvasGroup.interactable = true;
-            //canvasGroup.blocksRaycasts = true;
 
             onInterruptLineFinished();
         }
@@ -324,10 +309,6 @@ namespace Yarn.Unity
 
             // All of our text should now be visible.
             lineText.maxVisibleCharacters = int.MaxValue;
-
-            // Our view should at be at full opacity.
-            //canvasGroup.alpha = 1f;
-            //canvasGroup.blocksRaycasts = true;
 
             // Show the continue button, if we have one.
             if (continueButton != null)
@@ -437,12 +418,10 @@ namespace Yarn.Unity
             if (to == 0f)
             {
                 canvasGroup.interactable = false;
-                canvasGroup.blocksRaycasts = false;
             }
             else
             {
                 canvasGroup.interactable = true;
-                canvasGroup.blocksRaycasts = true;
             }
             LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)canvasGroup.transform.parent); //Need to call this dumb function because Unity layouts don't update correctly
             stopToken?.Complete();

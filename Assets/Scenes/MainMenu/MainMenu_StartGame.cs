@@ -8,7 +8,7 @@ using Pixelplacement;
 public class MainMenu_StartGame : MonoBehaviour
 {
     [SerializeField] private Image Background;
-    [SerializeField] private RectTransform PaperTop, PaperBottom, Title, FadeBlack, ForewordParent;
+    [SerializeField] private RectTransform Title, FadeBlack, ForewordParent;
     [SerializeField] private CanvasGroup _menuGroup, _ghoulishGroup,_vicScreenGroup;
 
     [SerializeField] private GameObject _defaultButton;
@@ -34,20 +34,17 @@ public class MainMenu_StartGame : MonoBehaviour
         FadeBlack.GetComponent<Image>().color = new Color(0,0,0,0);
         Background.materialForRendering.SetFloat("_Fade", 0f);
         Background.materialForRendering.SetFloat("_Flash", 0f);
-        Tween.ShaderFloat(Background.materialForRendering, "_Fade", 1f, 8f, 0f, Tween.EaseOut, Tween.LoopType.None);
-        Tween.Position(PaperTop, new Vector3(PaperTop.position.x, 383, 0f), 2f, 3f, Tween.EaseBounce);
-        Tween.Position(PaperBottom, new Vector3(PaperBottom.position.x, -383, 0f), 2f, 3f, Tween.EaseBounce);
+        Tween.ShaderFloat(Background.materialForRendering, "_Fade", 1f, 5f, 0f, Tween.EaseIn, Tween.LoopType.None);
         Title.GetComponent<Image>().color = new Color(0,0,0,0);
-        Tween.Color(Title.GetComponent<Image>(), Color.white, 2f, 4f);
+        Tween.Color(Title.GetComponent<Image>(), Color.white, 2f, 3f);
         _menuGroup.alpha = 0f;
-        Tween.CanvasGroupAlpha(_menuGroup, 1f, 2f, 5f, Tween.EaseLinear, Tween.LoopType.None, null, EnableCanvasGroup);
+        Tween.CanvasGroupAlpha(_menuGroup, 1f, 2f, 4f, Tween.EaseLinear, Tween.LoopType.None, null, EnableCanvasGroup);
     }
     public void NewGame()
     {
         _menuGroup.interactable = false;
-        Tween.ShaderFloat(Background.materialForRendering, "_Flash", 1f, .15f, 0f, Tween.EaseLinear, Tween.LoopType.None);
-        //Tween.ShaderFloat(Background.materialForRendering, "_Fade", .25f, .15f, 0f, Tween.EaseLinear, Tween.LoopType.None);
-        Tween.Color(FadeBlack.GetComponent<Image>(), Color.black, 2f, .35f, Tween.EaseLinear, Tween.LoopType.None, null, LoadNewGame);
+        Tween.ShaderFloat(Background.materialForRendering, "_Flash", 1f, .3f, 0f, Tween.EaseOutBack, Tween.LoopType.None);
+        Tween.Color(FadeBlack.GetComponent<Image>(), Color.black, 2f, .5f, Tween.EaseLinear, Tween.LoopType.None, null, LoadNewGame);
     }
 
     public void QuitGame()
