@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: CharacterList
   m_EditorClassIdentifier: 
   CharacterTrackers:
-  - Name: TestCharacter
-    CharacterInfo: {fileID: 11400000, guid: b489652e78729f64ba01baf70c4e1fd8, type: 2}
+  - Name: TutorialA
+    CharacterInfo: {fileID: 11400000, guid: fbfca83e0bf513840a990b511b72e865, type: 2}
+    Unlocked: 0
+    CharacterState: 0
+    CompletedAsks: []
+    Alert: 0
+  - Name: TutorialB
+    CharacterInfo: {fileID: 11400000, guid: 122caf507636be0429537bc08e6cc14c, type: 2}
+    Unlocked: 0
+    CharacterState: 0
+    CompletedAsks: []
+    Alert: 0
+  - Name: TutorialC
+    CharacterInfo: {fileID: 11400000, guid: a8f5b0eec6f911043a9cd2cb8c30a85e, type: 2}
     Unlocked: 0
     CharacterState: 0
     CompletedAsks: []

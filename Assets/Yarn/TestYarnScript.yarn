@@ -1,40 +1,135 @@
-﻿title: TestCharacter_Start
+﻿title: Tutorial_Exit
 tags:
 ---
 <<SpeechBubble CharacterTest>>
-Test Yarn Script: Hello, this is a test interaction.
-Test Yarn Script: Test, test, test. It's all I ever do...
-Test Yarn Script: What do you think about that?
--> I think I'd say something normal about that.
+    Ghoulish: Hey, looks like you've done everything there is to do in this build.
+    Ghoulish: Feel free to exit the game via the pause menu.
+===
+title: Tutorial_DialogueQuestion
+tags:
+---
+-> Actually, can you tell me about the new conversation system?
     <<SpeechBubble PlayerBubble>>
-    Marisol: Let me out!!! Let me out of here!!!
-    <<SpeechBubble ProseBubble>>
-    The realisation that you are still stuck in the test scene causes you psychic damage.
+    VicScreen: Actually, can you tell me about the dialogue system?
     <<SpeechBubble CharacterTest>>
-    Test Yarn Script: Put yourself in my shoes. At least you're not a default sphere.
--> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    <<SpeechBubble PlayerBubble>>
-    Marisol: Quisque ut nisl luctus, ornare odio vitae, fermentum dui.
-    <<SpeechBubble CharacterTest>>
-    Test Yarn Script: Fusce ornare, risus sed ultricies sagittis, justo odio iaculis lorem, vitae suscipit lectus dui sed felis. Sed lobortis, sem at euismod lobortis, sapien urna bibendum dolor, non rutrum orci massa eu enim. Integer pellentesque purus ac eros gravida ullamcorper.
--> A third option is possible.
+    Ghoulish: Sure!
+    Ghoulish: We decided to revamp the way our dialogue looks. The old 'speechbubbles' weren't working for us.
+    Ghoulish: The new conversation UI you see here is more flexible and scaleable for what we need.
+    Ghoulish: We modelled it off similar RPG games to us but we also want it to feel like a mobile phone interface, something most players are already comfortable with.
+    Ghoulish: You can scroll through the history of your most recent conversation and the dialogue is consistently displayed on the same part of the screen. It's better for accessibility!
     <<SpeechBubble ProseBubble>>
-    The thought of a third option rolls around in your mind. You can't bring yourself to say another thing.
--> Say a bunch of stuff to make the scroll view extend
+    The mascot's unwavering expression is starting to get unnerving...
     <<SpeechBubble PlayerBubble>>
-    Marisol: Test 1
-    Marisol: Test 2
-    Marisol: Test 3
-    Marisol: Test 4
-    Marisol: Test 5
-    Marisol: Test 6
-    Marisol: Test 7
-    Marisol: Test 8
-    Marisol: Test 9
-    Marisol: Test 10
-    Marisol: Test 11
-    Marisol: Test 12
-    Marisol: Test 13
-    Marisol: Test 14
-    Marisol: Test 15
+    VicScreen: What was that?!
+    <<SpeechBubble CharacterTest>>
+    Ghoulish: Whoops! Haha that's what we call a 'thought bubble'! Sometimes Marisol, our protagonist, will have intrusive thoughts that can change the outcome of a conversation.
+    Ghoulish: It's part of a gameplay system we're calling 'Neuroses' which will affect how Marisol reacts to dialogue. But that's not ready to show yet!
+    Ghoulish: Feel free to proceed through the other doors now.
+    <<set $askedAboutDialogue to true>>
+-> Okay, thanks. Bye!
+    <<SpeechBubble PlayerBubble>>
+    VicScreen: Okay, thanks. Bye!
+===
+
+title: TutorialA_Start
+tags:
+position: -92,136
+---
+<<declare $askedAboutDialogue = false>>
+<<if visited("TutorialA_Start") && visited("TutorialB_Start") && visited("TutorialC_Start") && $askedAboutDialogue>>
+    <<jump Tutorial_Exit>>
+<<endif>>
+<<if !visited("TutorialA_Start")>>
+    <<SpeechBubble CharacterTest>>
+    Ghoulish: Hello, welcome to our WIP build of the game currently titled 'Have You Seen Me?'
+    Ghoulish: We're probably going to change that name soon...
+    Ghoulish: There's not much to do in this build besides walk around and do some basic interactions.
+    Ghoulish: We decided to basically start the project's code from scratch, to set ourselves up for success later. This means we're redoing a lot of the basics.
+    Ghoulish: To my left and right are two different 'zones' in this scene which you can enter by simply walking through the doors.
+<<else>>
+    <<if visited("TutorialB_Start") or visited("TutorialC_Start")>>
+        <<SpeechBubble CharacterTest>>
+        Ghoulish: Hey! If you see any other versions of me in these rooms just know that I didn't approve of my likeness being used there.
+        Ghoulish: Just don't say anything to them, capiche?
+    <<else>>
+        <<SpeechBubble CharacterTest>>
+        Ghoulish: Hey, did you try go in either of those rooms yet?
+    <<endif>>
+<<endif>>
+
+<<if !$askedAboutDialogue>>
+    <<jump Tutorial_DialogueQuestion>>
+<<else>>
+    -> Okay, thanks. Bye!
+        <<SpeechBubble PlayerBubble>>
+        VicScreen: Okay, thanks. Bye!
+<<endif>>
+===
+
+title: TutorialB_Start
+tags:
+position: -91,271
+---
+<<if !visited("TutorialB_Start")>>
+    <<if !visited("TutorialA_Start")>>
+        <<SpeechBubble CharacterTest>>
+        Ghoulish: Hello there! Oh, did you speak to the other me in the first room?
+        Ghoulish: No? Ah...that's okay.
+        Ghoulish: That other me can give you the introduction to the build, I don't get paid to do that.
+    <<else>>
+        <<SpeechBubble CharacterTest>>
+        Ghoulish: Hello again! Haha I'm in this room too.
+    <<endif>>
+        Ghoulish: I call this the 'torus room'...
+        Ghoulish: Because of the torus.
+        Ghoulish: This room demonstrates our pre-rendered background system which allows 3D geometry to pass in-front or behind of illustrations.
+        Ghoulish: You can walk around this torus and the depth should remain seamless.
+        Ghoulish: It's difficult to explain but basically that torus is not really there in 3D space, it's part of the illustrated background!
+        Ghoulish: This means we can fully illustrate our environments with no 3D modelling at all. It saves us time and will give us a very unique visual style.
+        Ghoulish: Of course, the backgrounds in this scene were drawn by our developer...using a mouse...
+        Ghoulish: The next build we send you will look much better than this!!
+<<else>>
+    <<SpeechBubble CharacterTest>>
+    Ghoulish: I actually don't have much else to say about this room...
+<<endif>>
+
+<<if !$askedAboutDialogue>>
+    <<jump Tutorial_DialogueQuestion>>
+<<else>>
+    -> Okay, thanks. Bye!
+        <<SpeechBubble PlayerBubble>>
+        VicScreen: Okay, thanks. Bye!
+<<endif>>
+===
+
+
+title: TutorialC_Start
+tags:
+position: -92,408
+---
+<<if !visited("TutorialC_Start")>>
+    <<if !visited("TutorialA_Start")>>
+        <<SpeechBubble CharacterTest>>
+        Ghoulish: Hey have you spoken to the other me in the first room?
+        Ghoulish: Super weird guy. They have the script for the introduction text though so you might want to chat to them.
+    <<else>>
+        <<SpeechBubble CharacterTest>>
+        Ghoulish: Hey what's up! I'm in this room too!! Haha
+        Ghoulish: This is the trash room where I keep all my trash.
+        Ghoulish: I'm a static sprite image so I can't walk around to pick it up. Can you pick it all up for me?
+        Ghoulish: It will appear in your inventory after that, which you can open by pressing the inventory button that appears at the bottom right of your screen.
+        Ghoulish: The inventory doesn't do anything right now, though. So if you could just hold on to all that trash for me that would be great, thanks!
+    <<endif>>
+<<else>>
+    <<SpeechBubble CharacterTest>>
+    Ghoulish: Yep. Just trash in this room.
+<<endif>>
+
+<<if !$askedAboutDialogue>>
+    <<jump Tutorial_DialogueQuestion>>
+<<else>>
+    -> Okay, thanks. Bye!
+        <<SpeechBubble PlayerBubble>>
+        VicScreen: Okay, thanks. Bye!
+<<endif>>
 ===
