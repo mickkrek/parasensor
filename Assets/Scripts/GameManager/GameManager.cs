@@ -59,4 +59,8 @@ public class GameManager : MonoBehaviour
         _characterMovementEnabled = enabled;
         _playerControls.MovementEnabled(enabled);
     }
+    public void QuitApplication()
+    {
+        Application.Quit();
+    }
 }

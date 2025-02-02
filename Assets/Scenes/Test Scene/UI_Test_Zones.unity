@@ -16417,7 +16417,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 680737097520113184, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 1
+      value: 0.6883318
       objectReference: {fileID: 0}
     - target: {fileID: 1159087282404148193, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_IsActive
@@ -16669,11 +16669,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009694063402418035, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 1
+      value: 0.6883318
       objectReference: {fileID: 0}
     - target: {fileID: 7058870489701474620, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 1
+      value: 0.6883318
       objectReference: {fileID: 0}
     - target: {fileID: 7607310228134709395, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_IsActive
@@ -27601,18 +27601,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!225 &2007338142787565123
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5771910809288641094}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 0
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
 --- !u!222 &2174986649253951173
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -27722,13 +27710,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerInput_Menu, Assembly-CSharp
-        m_MethodName: ResumeGame
-        m_Mode: 1
+      - m_Target: {fileID: 782473430}
+        m_TargetAssemblyTypeName: StateMachineController, Ghoulish.UIToolkit
+        m_MethodName: ChangeState
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 685775601}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -28081,9 +28069,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerInput_Menu, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 633294327126366981}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitApplication
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28471,7 +28459,6 @@ GameObject:
   - component: {fileID: 1565983870356680893}
   - component: {fileID: 8206977884413137005}
   - component: {fileID: 1982430124189419950}
-  - component: {fileID: 2007338142787565123}
   - component: {fileID: 8206977884413137006}
   - component: {fileID: 8206977884413137007}
   m_Layer: 5

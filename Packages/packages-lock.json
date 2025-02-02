@@ -11,7 +11,7 @@
         "com.unity.2d.psdimporter": "8.0.5",
         "com.unity.render-pipelines.universal": "14.0.11"
       },
-      "hash": "17e99835a63611d90cdd91becc240e15501a5f56"
+      "hash": "9a894d20d085b0fd65da1dff82ddf736998490e6"
     },
     "com.au.ghoulish.interactionsystem": {
       "version": "https://mickkrekART@bitbucket.org/ghoulish/interactionsystem.git",
@@ -41,7 +41,7 @@
         "com.unity.textmeshpro": "3.0.9",
         "com.unity.inputsystem": "1.7.0"
       },
-      "hash": "15d90a4ac91ac1b4c1a9f820a37e8e22704b0cc4"
+      "hash": "7a2112a560365444aa1093cc454a92c0666af4cd"
     },
     "com.autodesk.fbx": {
       "version": "5.1.1",
