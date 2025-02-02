@@ -8,7 +8,7 @@ using Pixelplacement;
 public class MainMenu_StartGame : MonoBehaviour
 {
     [SerializeField] private Image Background;
-    [SerializeField] private RectTransform Title, FadeBlack, ForewordParent;
+    [SerializeField] private RectTransform FadeBlack, ForewordParent;
     [SerializeField] private CanvasGroup _menuGroup, _ghoulishGroup,_vicScreenGroup;
 
     [SerializeField] private GameObject _defaultButton;
@@ -19,6 +19,7 @@ public class MainMenu_StartGame : MonoBehaviour
     {
         ForewordParent.gameObject.SetActive(false);
         _menuGroup.interactable = false;
+        _menuGroup.alpha = 0f;
         FadeBlack.GetComponent<Image>().color = new Color(0,0,0,1);
         _delay += 2f;
         Tween.CanvasGroupAlpha(_ghoulishGroup, 1f, 1f, _delay);
@@ -35,10 +36,7 @@ public class MainMenu_StartGame : MonoBehaviour
         Background.materialForRendering.SetFloat("_Fade", 0f);
         Background.materialForRendering.SetFloat("_Flash", 0f);
         Tween.ShaderFloat(Background.materialForRendering, "_Fade", 1f, 5f, 0f, Tween.EaseIn, Tween.LoopType.None);
-        Title.GetComponent<Image>().color = new Color(0,0,0,0);
-        Tween.Color(Title.GetComponent<Image>(), Color.white, 2f, 3f);
-        _menuGroup.alpha = 0f;
-        Tween.CanvasGroupAlpha(_menuGroup, 1f, 2f, 4f, Tween.EaseLinear, Tween.LoopType.None, null, EnableCanvasGroup);
+        Tween.CanvasGroupAlpha(_menuGroup, 1f, 2f, 5f, Tween.EaseIn, Tween.LoopType.None, null, EnableCanvasGroup);
     }
     public void NewGame()
     {

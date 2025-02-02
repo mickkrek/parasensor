@@ -17,6 +17,7 @@ public class MainMenu_Music : MonoBehaviour
 
     public void EndMusic()
     {
-        Tween.Volume(_audioSource, 0f, 1f, 2f, Tween.EaseLinear);
+        Tween.Volume(_audioSource, 0f, 2f, 0f, Tween.EaseLinear);
+        Tween.Pitch(_audioSource, 0.2f, 0.5f, 0f, Tween.EaseLinear);
     }
 }
