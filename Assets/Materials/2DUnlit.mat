@@ -24,9 +24,9 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: 3b60680073e5bde438d99d2bcb4a1373, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -111,7 +111,7 @@ Material:
     - _BlendOp: 0
     - _BoilScale: 300
     - _BoilSpeed: 6
-    - _BoilStrength: 0.03
+    - _BoilStrength: 0.07
     - _BumpScale: 1
     - _CastShadows: 0
     - _ClearCoatMask: 0
