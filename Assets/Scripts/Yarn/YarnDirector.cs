@@ -6,6 +6,7 @@ public class YarnDirector : MonoBehaviour
 {
     private DialogueRunner dialogueRunner;
     [SerializeField] private YarnLineView yarnLineView;
+    private SpeechBubbleMaker _previousBubbleMaker = null;
 
     private void Start() {
         // get handles of utility objects in the scene that we need
@@ -31,7 +32,9 @@ public class YarnDirector : MonoBehaviour
     // updates speechBubble to match the character speaking
     private void UpdateSpeechBubble(SpeechBubbleMaker bubbleMaker) 
     {
-        yarnLineView.UpdateSpeechBubble(bubbleMaker.speechBubble.TextColor, bubbleMaker.speechBubble.BubbleColor, bubbleMaker.speechBubble.BubbleShape);
+        bool isFirstLine = bubbleMaker != _previousBubbleMaker;
+        yarnLineView.UpdateSpeechBubble(bubbleMaker.speechBubble.TextColor, bubbleMaker.speechBubble.BubbleColor, bubbleMaker.speechBubble.BubbleShape, isFirstLine);
+        _previousBubbleMaker = bubbleMaker;
     }
     [YarnFunction]
     public static bool CheckInventory(string itemName)

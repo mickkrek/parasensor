@@ -13,9 +13,13 @@ tags:
     VicScreen: Actually, can you tell me about the dialogue system?
     <<SpeechBubble CharacterTest>>
     Ghoulish: Sure!
+    <<SpeechBubble CharacterTest>>
     Ghoulish: We decided to revamp the way our dialogue looks. The old 'speechbubbles' weren't working for us.
+    <<SpeechBubble CharacterTest>>
     Ghoulish: The new conversation UI you see here is more flexible and scaleable for what we need.
+    <<SpeechBubble CharacterTest>>
     Ghoulish: We modelled it off similar RPG games to us but we also want it to feel like a mobile phone interface, something most players are already comfortable with.
+    <<SpeechBubble CharacterTest>>
     Ghoulish: You can scroll through the history of your most recent conversation and the dialogue is consistently displayed on the same part of the screen. It's better for accessibility!
     <<SpeechBubble ProseBubble>>
     The mascot's unwavering expression is starting to get unnerving...
@@ -42,7 +46,9 @@ position: -92,136
 <<if !visited("TutorialA_Start")>>
     <<SpeechBubble CharacterTest>>
     Ghoulish: Hello, welcome to our WIP build of the game currently titled 'Have You Seen Me?'
+    <<SpeechBubble CharacterTest>>
     Ghoulish: We're probably going to change that name soon...
+    <<SpeechBubble CharacterTest>>
     Ghoulish: There's not much to do in this build besides walk around and do some basic interactions.
     Ghoulish: We decided to basically start the project's code from scratch, to set ourselves up for success later. This means we're redoing a lot of the basics.
     Ghoulish: To my left and right are two different 'zones' in this scene which you can enter by simply walking through the doors.

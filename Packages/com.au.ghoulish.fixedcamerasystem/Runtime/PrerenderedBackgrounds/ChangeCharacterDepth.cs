@@ -21,6 +21,10 @@ public class ChangeCharacterDepth : MonoBehaviour
     */
     void Awake()
     {
+        if (_shadowCastersParent == null)
+        {
+            return;
+        }
         foreach(Renderer rend in _shadowCastersParent.GetComponentsInChildren<Renderer>(true))
         {
             rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.ShadowsOnly;
@@ -44,9 +48,12 @@ public class ChangeCharacterDepth : MonoBehaviour
             {
                 child.gameObject.layer = LayerMask.NameToLayer("Background_3D");
             }
-            foreach(Transform child in _shadowCastersParent.GetComponentsInChildren<Transform>(true))
+            if (_shadowCastersParent != null)
             {
-                child.gameObject.layer = LayerMask.NameToLayer("Background_3D");
+                foreach(Transform child in _shadowCastersParent.GetComponentsInChildren<Transform>(true))
+                {
+                    child.gameObject.layer = LayerMask.NameToLayer("Background_3D");
+                }
             }
             Debug.DrawRay(Camera.main.transform.position, heading * distance, Color.yellow);
         }
@@ -57,10 +64,14 @@ public class ChangeCharacterDepth : MonoBehaviour
             {
                 child.gameObject.layer = LayerMask.NameToLayer("Midground_3D");
             }
-            foreach(Transform child in _shadowCastersParent.GetComponentsInChildren<Transform>(true))
+            if (_shadowCastersParent != null)
             {
-                child.gameObject.layer = LayerMask.NameToLayer("Midground_3D");
+                foreach(Transform child in _shadowCastersParent.GetComponentsInChildren<Transform>(true))
+                {
+                    child.gameObject.layer = LayerMask.NameToLayer("Midground_3D");
+                }
             }
+            
             Debug.DrawRay(Camera.main.transform.position, heading * 1000, Color.red);
         }
     }

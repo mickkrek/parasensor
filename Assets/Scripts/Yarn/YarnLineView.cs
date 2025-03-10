@@ -60,7 +60,9 @@ namespace Yarn.Unity
         /// dialogue lines.
         /// </summary>
         [SerializeField]
-        internal TextMeshProUGUI lineText = null;
+        internal TextMeshProUGUI lineTextFirst = null, lineTextExtended = null;
+
+        private TextMeshProUGUI selectedLineText = null;
 
         /// <summary>
         /// Controls whether the <see cref="lineText"/> object will show the
@@ -155,6 +157,9 @@ namespace Yarn.Unity
         [HideInInspector] public Color textColor, bubbleColor;
         [HideInInspector] public Sprite bubbleShape; 
 
+        [SerializeField] private Transform _iconParent;
+        [HideInInspector] public bool isFirstLine;
+
         private int lineCount = 0;
 
         private void Reset()
@@ -183,7 +188,7 @@ namespace Yarn.Unity
             
             // for now we are going to just immediately show everything
             // later we will make it fade in
-            lineText.gameObject.SetActive(true);
+            selectedLineText.gameObject.SetActive(true);
             canvasGroup.gameObject.SetActive(true);
 
             int length;
@@ -193,24 +198,24 @@ namespace Yarn.Unity
                 
                 if (showCharacterNameInLineView)
                 {
-                    lineText.text = dialogueLine.Text.Text;
+                    selectedLineText.text = dialogueLine.Text.Text;
                     length = dialogueLine.Text.Text.Length;
                 }
                 else
                 {
-                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                    selectedLineText.text = dialogueLine.TextWithoutCharacterName.Text;
                     length = dialogueLine.TextWithoutCharacterName.Text.Length;
                 }
             }
             else
             {
                 characterNameText.text = dialogueLine.CharacterName;
-                lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                selectedLineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 length = dialogueLine.TextWithoutCharacterName.Text.Length;
             }
 
             // Show the entire line's text immediately.
-            lineText.maxVisibleCharacters = length;
+            selectedLineText.maxVisibleCharacters = length;
 
             onInterruptLineFinished();
         }
@@ -232,18 +237,24 @@ namespace Yarn.Unity
             // Begin running the line as a coroutine.
             StartCoroutine(RunLineInternal(dialogueLine, onDialogueLineFinished));
         }
-        public void UpdateSpeechBubble(Color textColor, Color bubbleColor, Sprite bubbleSprite) 
+        public void UpdateSpeechBubble(Color textColor, Color bubbleColor, Sprite bubbleSprite, bool isFirstLine) 
         {
             this.bubbleShape = bubbleSprite;
             this.bubbleColor = bubbleColor;
             this.textColor = textColor;
+            this.isFirstLine = isFirstLine;
         }
 
         private IEnumerator RunLineInternal(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
             IEnumerator PresentLine()
             {
-                lineText.gameObject.SetActive(true);
+                Debug.Log(isFirstLine);
+                selectedLineText = isFirstLine ? lineTextFirst : lineTextExtended;
+                lineTextFirst.overflowMode = isFirstLine ? TextOverflowModes.Linked : TextOverflowModes.Ellipsis;
+                _iconParent.gameObject.SetActive(isFirstLine);
+                
+                selectedLineText.gameObject.SetActive(true);
                 canvasGroup.gameObject.SetActive(true);
 
                 // Hide the continue button until presentation is complete (if
@@ -252,9 +263,11 @@ namespace Yarn.Unity
                 {
                     continueButton.SetActive(false);
                 }
-                lineText.color = textColor;
+                selectedLineText.color = textColor;
                 bubbleBGSprite.color = bubbleColor;
                 bubbleBGSprite.sprite = bubbleShape;
+                
+                
                 characterNameText.gameObject.SetActive(dialogueLine.CharacterName != null);
                 if (characterNameText != null)
                 {
@@ -263,7 +276,7 @@ namespace Yarn.Unity
                     // text view.
                     characterNameText.text = dialogueLine.CharacterName;
                     characterNameText.color = textColor;
-                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                    selectedLineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 }
                 else
                 {
@@ -272,18 +285,18 @@ namespace Yarn.Unity
                     if (showCharacterNameInLineView)
                     {
                         // Yep! Show the entire text.
-                        lineText.text = dialogueLine.Text.Text;
+                        selectedLineText.text = dialogueLine.Text.Text;
                     }
                     else
                     {
                         // Nope! Show just the text without the character name.
-                        lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                        selectedLineText.text = dialogueLine.TextWithoutCharacterName.Text;
                     }
                 }
 
                 // Ensure that the max visible characters is effectively
                 // unlimited.
-                lineText.maxVisibleCharacters = int.MaxValue;
+                selectedLineText.maxVisibleCharacters = int.MaxValue;
 
                 // If we're using the fade effect, start it, and wait for it to
                 // finish.
@@ -308,7 +321,7 @@ namespace Yarn.Unity
             currentStopToken.Complete();
 
             // All of our text should now be visible.
-            lineText.maxVisibleCharacters = int.MaxValue;
+            selectedLineText.maxVisibleCharacters = int.MaxValue;
 
             // Show the continue button, if we have one.
             if (continueButton != null)
