@@ -1,0 +1,22 @@
+{
+  "name": "com.au.ghoulish.interactionsystem",
+  "version": "0.1.0",
+  "displayName": "Ghoulish Interaction System",
+  "description": "This package acts as a general base for player interactions. It can be expanded upon locally using the 'iinteractable' interface. Developed by Mickey Krekelberg.",
+  "unity": "2022.3",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.9",
+    "com.unity.inputsystem": "1.7.0"
+  },
+  "hideInEditor": "true",
+  "keywords": [
+    "interaction",
+    "interactable",
+    "ghoulish"
+  ],
+  "author": {
+    "name": "Ghoulish",
+    "url": "https://www.ghoulish.com.au"
+  },
+  "_fingerprint": "749eea985acc60c4971b4794aa38e41a5c55cdcd"
+}

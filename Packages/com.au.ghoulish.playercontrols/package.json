@@ -1,0 +1,23 @@
+{
+  "name": "com.au.ghoulish.playercontrols",
+  "version": "0.1.0",
+  "displayName": "Ghoulish Player Controls",
+  "description": "This package provides the basic component and input requirements for a player controlled 3D avatar. Developed by Mickey Krekelberg.",
+  "unity": "2022.3",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.9",
+    "com.unity.inputsystem": "1.7.0"
+  },
+  "hideInEditor": "true",
+  "keywords": [
+    "player",
+    "controls",
+    "input",
+    "ghoulish"
+  ],
+  "author": {
+    "name": "Ghoulish",
+    "url": "https://www.ghoulish.com.au"
+  },
+  "_fingerprint": "79fe9d598aaf5b99a2e44b7112b094870ccfa2b7"
+}

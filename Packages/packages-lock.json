@@ -1,47 +1,43 @@
 {
   "dependencies": {
     "com.au.ghoulish.fixedcamerasystem": {
-      "version": "https://mickkrekART@bitbucket.org/ghoulish/fixedcamerasystem.git",
+      "version": "file:com.au.ghoulish.fixedcamerasystem",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.9",
         "com.unity.inputsystem": "1.7.0",
         "com.unity.cinemachine": "2.10.1",
         "com.unity.2d.psdimporter": "8.0.5",
         "com.unity.render-pipelines.universal": "14.0.11"
-      },
-      "hash": "9a894d20d085b0fd65da1dff82ddf736998490e6"
+      }
     },
     "com.au.ghoulish.interactionsystem": {
-      "version": "https://mickkrekART@bitbucket.org/ghoulish/interactionsystem.git",
+      "version": "file:com.au.ghoulish.interactionsystem",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.9",
         "com.unity.inputsystem": "1.7.0"
-      },
-      "hash": "749eea985acc60c4971b4794aa38e41a5c55cdcd"
+      }
     },
     "com.au.ghoulish.playercontrols": {
-      "version": "https://mickkrekART@bitbucket.org/ghoulish/playercontrols.git",
+      "version": "file:com.au.ghoulish.playercontrols",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.9",
         "com.unity.inputsystem": "1.7.0"
-      },
-      "hash": "79fe9d598aaf5b99a2e44b7112b094870ccfa2b7"
+      }
     },
     "com.au.ghoulish.uisystem": {
-      "version": "https://mickkrekART@bitbucket.org/ghoulish/uisystem.git",
+      "version": "file:com.au.ghoulish.uisystem",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.9",
         "com.unity.inputsystem": "1.7.0"
-      },
-      "hash": "7a2112a560365444aa1093cc454a92c0666af4cd"
+      }
     },
     "com.autodesk.fbx": {
       "version": "5.1.1",

@@ -1,0 +1,26 @@
+{
+  "name": "com.au.ghoulish.fixedcamerasystem",
+  "version": "0.1.0",
+  "displayName": "Ghoulish Fixed Camera System",
+  "description": "This package provides the necessary camera & area/zone systems required for 'fixed camera' games. Also included is a toolset & systems for pre-rendered backgrounds, which is built upon the aforementioned systems. Developed by Mickey Krekelberg.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.9",
+    "com.unity.inputsystem": "1.7.0",
+    "com.unity.cinemachine": "2.10.1",
+    "com.unity.2d.psdimporter": "8.0.5",
+    "com.unity.render-pipelines.universal": "14.0.11"
+  },
+  "hideInEditor": "true",
+  "keywords": [
+    "camera",
+    "fixed",
+    "background",
+    "ghoulish"
+  ],
+  "author": {
+    "name": "Ghoulish",
+    "url": "https://www.ghoulish.com.au"
+  },
+  "_fingerprint": "9a894d20d085b0fd65da1dff82ddf736998490e6"
+}
