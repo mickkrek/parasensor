@@ -8,9 +8,10 @@ using System;
 public class InkTestingScript : MonoBehaviour
 {
     [SerializeField] private TextAsset inkJSON;
-    [SerializeField] private GameObject textPrefab;
+    [SerializeField] private SpeechBubble speechBubble;
     [SerializeField] private Button buttonPrefab;
     private Story inkStory;
+    private string currentSpeaker = "";
     void Start()
     {
         inkStory = new Story(inkJSON.text);
@@ -18,11 +19,9 @@ public class InkTestingScript : MonoBehaviour
     }
     private void RefreshUI()
     {
-        //EraseUI();
         DestroyChildButtons();
-        GameObject storyTextObject = Instantiate(textPrefab);
+        SpeechBubble storyTextObject = Instantiate(speechBubble);
         storyTextObject.transform.SetParent(transform, false);
-        TextMeshProUGUI storyText =  storyTextObject.GetComponentInChildren<TextMeshProUGUI>();
         string loadedText = loadStoryLine();
 
         List<string> tags = inkStory.currentTags;
@@ -31,15 +30,37 @@ public class InkTestingScript : MonoBehaviour
             //handle tags here
             //loadedText = tags[0] + ": " + loadedText;
         }
-        
-        
-        string textWithoutCharacterName = GetStringAfterKey(loadedText);
-        if (textWithoutCharacterName != String.Empty)
+        string textWithoutSpeakerName = GetStringAfterKey(loadedText);
+        if (textWithoutSpeakerName == String.Empty) //check if no speaker name on this line
         {
-           loadedText = textWithoutCharacterName;
+            //just load the whole text with no speaker name
+            storyTextObject.speechText.text = loadedText;
+            storyTextObject.characterName.gameObject.SetActive(false);
+            storyTextObject.characterPortrait.gameObject.SetActive(false);
+        }
+        else
+        {
+            string speakerName = GetStringBeforeKey(loadedText);
+            storyTextObject.characterName.text = speakerName;
+
+            loadedText = textWithoutSpeakerName;
+            storyTextObject.speechText.text = loadedText;
+            
+            if (currentSpeaker != speakerName) //if the current speaker has changed
+            {
+                storyTextObject.characterPortrait.gameObject.SetActive(true);
+                storyTextObject.characterPortrait.color = Color.cyan;
+                ShrinkAllBubbleIcons();
+                storyTextObject.SetIconScale(2f);
+                currentSpeaker = speakerName;
+            }
+            else
+            {
+                storyTextObject.characterPortrait.gameObject.SetActive(false);
+                storyTextObject.characterName.gameObject.SetActive(false);
+            }
         }
         
-        storyText.text = loadedText;
         if (inkStory.currentChoices.Count == 0)
         {
             Button choiceButton = Instantiate(buttonPrefab);
@@ -47,11 +68,10 @@ public class InkTestingScript : MonoBehaviour
             TextMeshProUGUI choiceText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
             choiceText.text = "Continue";
             choiceButton.onClick.AddListener(delegate{
-                ContinueLine();
+                RefreshUI();
             });
             return;
         }
-
         foreach(Choice choice in inkStory.currentChoices)
         {
             Button choiceButton = Instantiate(buttonPrefab);
@@ -63,13 +83,20 @@ public class InkTestingScript : MonoBehaviour
             });
         }
     }
-
-    private void EraseUI()
+    private void RefreshUIChoiceMade()
     {
-        foreach(Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
+        DestroyChildButtons();
+        SpeechBubble storyTextObject = Instantiate(speechBubble);
+        storyTextObject.transform.SetParent(transform, false);
+        string loadedText = loadStoryLine();
+        currentSpeaker = "Marisol";
+        storyTextObject.characterName.text = currentSpeaker;
+        storyTextObject.characterPortrait.gameObject.SetActive(true);
+        storyTextObject.characterPortrait.color = Color.red;
+        storyTextObject.speechText.text = loadedText;
+        ShrinkAllBubbleIcons();
+        storyTextObject.SetIconScale(2f);
+        RefreshUI();
     }
 
     private void DestroyChildButtons()
@@ -83,15 +110,22 @@ public class InkTestingScript : MonoBehaviour
         }
     }
 
+    private void ShrinkAllBubbleIcons()
+    {
+        foreach(Transform child in transform)
+        {
+            SpeechBubble childBubble = child.GetComponent<SpeechBubble>();
+            if (childBubble != null)
+            {
+                childBubble.SetIconScale(1f);
+            }
+        }
+    }
+
     private void ChooseStoryChoice(Choice selectedChoice)
     {
         inkStory.ChooseChoiceIndex(selectedChoice.index);
-        RefreshUI();
-    }
-
-    private void ContinueLine()
-    {
-        RefreshUI();
+        RefreshUIChoiceMade();
     }
 
     private string loadStoryChunk()
@@ -121,7 +155,20 @@ public class InkTestingScript : MonoBehaviour
             if (charLocation > 0)
             {
                 int start = charLocation + key.Length;
-                return text.Substring(start,text.Length-start);
+                return text.Substring(start, text.Length-start);
+            }
+        }
+        return String.Empty;
+    }
+    private string GetStringBeforeKey(string text, string key = ": ")
+    {
+        if (!String.IsNullOrWhiteSpace(text))
+        {
+            int charLocation = text.IndexOf(key, StringComparison.Ordinal);
+
+            if (charLocation > 0)
+            {
+                return text.Substring(0, charLocation);
             }
         }
         return String.Empty;
