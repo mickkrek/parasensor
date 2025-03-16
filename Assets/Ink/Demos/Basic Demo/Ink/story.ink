@@ -1,10 +1,12 @@
-- I looked at Monsieur Fogg 
-*   ... and I could contain myself no longer.
-    'What is the purpose of our journey, Monsieur?'
-    'A wager,' he replied.
-    * *     'A wager!'[] I returned.
-            He nodded. 
-            * * *   'But surely that is foolishness!'
+CHARACTER: I looked at Monsieur Fogg
+CHARACTER: Second line of dialogue here
+MARISOL: Third line of dialogue here
+*   MARISOL: ... and I could contain myself no longer.
+    MARISOL: 'What is the purpose of our journey, Monsieur?'
+    MARISOL: 'A wager,' he replied.
+    * *     MARISOL: 'A wager!'[] I returned.
+            CHARACTER: He nodded. 
+            * * *   MARISOL: 'But surely that is foolishness!'
             * * *  'A most serious matter then!'
             - - -   He nodded again.
             * * *   'But can we win?'
@@ -16,4 +18,3 @@
     - -     After that, <>
 *   ... but I said nothing[] and <>
 - we passed the day in silence.
-- -> END
