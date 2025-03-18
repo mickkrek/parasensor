@@ -21,7 +21,10 @@ namespace Ghoulish.FixedCameraSystem
                 {
                     spriteParent.gameObject.SetActive(true);
                 }
-                environmentParent.gameObject.SetActive(true);
+                if (environmentParent != null && !environmentParent.gameObject.activeSelf)
+                {
+                    environmentParent.gameObject.SetActive(true);
+                }
             }
             else if (CameraManager.Instance.ActiveVirtualCam != camSwitcher.ThisVirtualCam)
             {
@@ -29,7 +32,10 @@ namespace Ghoulish.FixedCameraSystem
                 {
                     spriteParent.gameObject.SetActive(false);
                 }
-                environmentParent.gameObject.SetActive(false);
+                if (environmentParent != null && environmentParent.gameObject.activeSelf)
+                {
+                    environmentParent.gameObject.SetActive(false);
+                }
             }
         }
     }
