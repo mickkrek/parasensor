@@ -3175,7 +3175,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 680737097520113184, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 0.25642678
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1159087282404148193, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_IsActive
@@ -3479,7 +3479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009694063402418035, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 0.25642678
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7009694063402418035, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -3487,7 +3487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7058870489701474620, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 0.25642678
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7589988186505998455, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_RenderPostProcessing
