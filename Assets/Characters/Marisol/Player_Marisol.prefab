@@ -573,6 +573,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[16].m_ActionName
       value: UI/TrackedDeviceOrientation
       objectReference: {fileID: 0}
+    - target: {fileID: 4653618223014108018, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
+      propertyPath: _animator
+      value: 
+      objectReference: {fileID: 3214544300289244261}
     - target: {fileID: 4977453569055318533, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
       propertyPath: m_Height
       value: 1.5
@@ -595,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6980273306581300392, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
       propertyPath: m_Name
-      value: Player_ThirdPerson
+      value: Player_Marisol
       objectReference: {fileID: 0}
     - target: {fileID: 7172662582733383518, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1665,6 +1669,11 @@ PrefabInstance:
       addedObject: {fileID: 8248797098653875953}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7720359e40b0f3548bdff6ca0668d2ca, type: 3}
+--- !u!95 &3214544300289244261 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 7720359e40b0f3548bdff6ca0668d2ca, type: 3}
+  m_PrefabInstance: {fileID: 9076669335107240436}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8826061134906975775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7720359e40b0f3548bdff6ca0668d2ca, type: 3}
