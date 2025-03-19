@@ -110,7 +110,7 @@ Material:
     - _BlendModePreserveSpecular: 1
     - _BoilScale: 200
     - _BoilSpeed: 6
-    - _BoilStrength: 0.05
+    - _BoilStrength: 0.1
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
