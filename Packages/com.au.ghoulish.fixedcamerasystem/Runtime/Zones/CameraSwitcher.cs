@@ -34,8 +34,8 @@ namespace Ghoulish.FixedCameraSystem
                 CameraManager.Instance.ActiveVirtualCam = ThisVirtualCam;
                 CameraManager.Instance.UpdateActiveCamera();
                 //Point the player toward the collision point and 'nudge' them forward for a second
-                Vector3 lookAtPos = GetComponent<Collider>().ClosestPoint(other.transform.position);
-                StartCoroutine(_playerInput.NudgePlayer(_nudgeDuration, _nudgeSpeed, lookAtPos, _pushForwardAmount, true)); //slowly nudge player forward
+                //Vector3 lookAtPos = GetComponent<Collider>().ClosestPoint(other.transform.position);
+                //StartCoroutine(_playerInput.NudgePlayer(_nudgeDuration, _nudgeSpeed, lookAtPos, _pushForwardAmount, true)); //slowly nudge player forward
             }
         }
         private void OnTriggerExit(Collider other)
