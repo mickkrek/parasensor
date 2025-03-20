@@ -641,6 +641,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7497502139824744375, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
+      propertyPath: _turnSmoothTime
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5166286821808272221, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
     m_RemovedGameObjects:
