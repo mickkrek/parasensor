@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2120973440307911351}
   - component: {fileID: 327100957454876984}
   m_Layer: 5
-  m_Name: TestSpeechBubble
+  m_Name: InkSpeechBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

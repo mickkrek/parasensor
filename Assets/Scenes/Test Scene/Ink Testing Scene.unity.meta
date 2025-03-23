@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: 6cf48bb6d89824cc69e35b43f9a1aca6
-timeCreated: 1512575780
-licenseType: Store
-TextScriptImporter:
+guid: 8af1c5cbac5094782904447c9410b35d
+DefaultImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
@@ -11,5 +10,5 @@ AssetOrigin:
   productId: 60055
   packageName: Ink Integration for Unity
   packageVersion: 1.1.8
-  assetPath: Assets/Ink/Demos/Basic Demo/Ink/story.json
+  assetPath: Assets/Ink/Demos/Basic Demo/Basic Demo.unity
   uploadId: 600250
