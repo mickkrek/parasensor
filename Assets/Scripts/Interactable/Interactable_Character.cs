@@ -18,15 +18,15 @@ public class Interactable_Character: MonoBehaviour, IInteractable
     {
         //This queries the global list of character trackers, checks for if one of them aligns with this character, then updates the prompt title based on the unlock status
         CharacterList CharList = GameManager.Instance.CharacterListInstance;
-        for (int i=0; i < CharList.CharacterTrackers.Length;i++)
+        for (int i=0; i < CharList.characterTrackers.Length;i++)
         {
-            if (_character == CharList.CharacterTrackers[i].CharacterInfo)
+            if (_character == CharList.characterTrackers[i].character)
             {
-                if (string.IsNullOrEmpty(_character.NickName + "_Start"))
+                if (string.IsNullOrEmpty(_character.codeName + "_Start"))
                 {
-                    return _character.Names[CharList.CharacterTrackers[i].CharacterState] + " has no accompanying Yarn Node.";
+                    return "Could not find accompanying yarn node";
                 }
-                return "Speak to " + _character.Names[CharList.CharacterTrackers[i].CharacterState];
+                return "Speak to " + _character.characterState[CharList.characterTrackers[i].currentState].displayName;
             }
         } 
         return "Could not find Character info in CharacterTracker";
@@ -36,13 +36,13 @@ public class Interactable_Character: MonoBehaviour, IInteractable
     {
         CharacterList CharList = GameManager.Instance.CharacterListInstance;
         Debug.Log("Start Conversation");
-        for (int i=0; i < CharList.CharacterTrackers.Length;i++)
+        for (int i=0; i < CharList.characterTrackers.Length;i++)
         {
-            if (_character == CharList.CharacterTrackers[i].CharacterInfo)
+            if (_character == CharList.characterTrackers[i].character)
             {
                 GameManager.Instance.ActiveCharacter = _character;
                 GameManager_GUI.Instance.UIStateMachine.ChangeState("Conversation");
-                dialogueRunner.StartDialogue(GameManager.Instance.ActiveCharacter.NickName + "_Start");
+                dialogueRunner.StartDialogue(GameManager.Instance.ActiveCharacter.codeName + "_Start");
             }
         } 
     }

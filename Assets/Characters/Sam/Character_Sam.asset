@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2134ae17ee6bad54f92bd58e2b56f418, type: 3}
-  m_Name: TestCharacter
+  m_Name: Character_Sam
   m_EditorClassIdentifier: 
-  NickName: TestCharacter
-  Names:
-  - Test
-  Contents: []
-  Icons: []
+  codeName: SAM
+  characterState:
+  - displayName: Sam
+    icon: {fileID: 21300000, guid: 172101a71387c294db7c1689ea5cf46b, type: 3}
+    bubbleColor: {r: 1, g: 1, b: 1, a: 1}
+  - displayName: Sam lvl 2
+    icon: {fileID: 21300000, guid: 461a08bc8c5a875489bdcf2c1d011de4, type: 3}
+    bubbleColor: {r: 1, g: 1, b: 1, a: 1}

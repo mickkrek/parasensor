@@ -1,3 +1,4 @@
+EXTERNAL SetCharacterState(characterCodeName, state)
 // Cold open with MARISOL standing in front of the METCOM PAYPHONE. She takes a deep breath, straightens herself (her way of switching into Work Mode), and inserts her Employee Phone Card into the phone's card reader. She brings the phone's receiver to her ear and waits as the phone automatically dials Sam's number.
 PHONE: (TONE...)
 PHONE: (CLICK)
@@ -9,6 +10,7 @@ SAM: Dispatch Operator.
     ++ I'm sorry. I'm here. How are you?
     ++ I'd just keep calling you. How's it goin' Sam?
 -
+~ SetCharacterState("SAM", 1)
 SAM: Oh, you know, the usual...?
 SAM: Wait, not the usual. Coffee machine closest to *my* desk is broken. So now *I* have to walk all the way up to Logistics to get a fucking coffee now. Dez, I'm gonna do it this time. I'm gonna quit this shit job.
 SAM: ...Maybe next week.

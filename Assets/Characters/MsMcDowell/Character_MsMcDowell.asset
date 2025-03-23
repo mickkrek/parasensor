@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2134ae17ee6bad54f92bd58e2b56f418, type: 3}
-  m_Name: TutorialCharacter_A
+  m_Name: Character_MsMcDowell
   m_EditorClassIdentifier: 
-  NickName: TutorialA
-  Names:
-  - Ghoulish
-  Contents: []
-  Icons: []
+  codeName: MSMCD
+  characterState:
+  - displayName: Strange Woman
+    icon: {fileID: 21300000, guid: 12db11c028e2b524bae231213ac59a12, type: 3}
+    bubbleColor: {r: 0, g: 0, b: 0, a: 0}
+  - displayName: Ms. McDowell
+    icon: {fileID: 21300000, guid: 12db11c028e2b524bae231213ac59a12, type: 3}
+    bubbleColor: {r: 0, g: 0, b: 0, a: 0}

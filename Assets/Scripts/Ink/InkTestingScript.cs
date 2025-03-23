@@ -15,7 +15,38 @@ public class InkTestingScript : MonoBehaviour
     void Start()
     {
         inkStory = new Story(inkJSON.text);
+        inkStory.BindExternalFunction("SetCharacterState", (string characterCodeName, int state) =>{
+            SetCharacterState(characterCodeName,state);
+        });
         RefreshUI();
+    }
+    private void SetCharacterState(string characterCodeName, int state)
+    {
+        var trackers = GameManager.Instance.CharacterListInstance.characterTrackers;
+        for (int i = 0; i < trackers.Length; i++)
+        {
+            if (trackers[i].character.codeName == characterCodeName)
+            {
+                trackers[i].currentState = state;
+                Debug.Log(trackers[i].currentState);
+            }
+        }
+    }
+    private CharacterState GetCharacterState(string characterCodeName)
+    {
+        var trackers = GameManager.Instance.CharacterListInstance.characterTrackers;
+        for (int i = 0; i < trackers.Length; i++)
+        {
+            if (trackers[i].character.codeName == characterCodeName)
+            {
+                Character c = trackers[i].character;
+                return c.characterState[trackers[i].currentState];
+            }
+        }
+        Debug.LogError("Could not find character CodeName: " + characterCodeName + " in the character list.");
+        CharacterState nullChar = new CharacterState();
+        nullChar.displayName = "CODENAME NOT FOUND!";
+        return nullChar;
     }
     private void RefreshUI()
     {
@@ -40,18 +71,19 @@ public class InkTestingScript : MonoBehaviour
         }
         else
         {
-            string speakerName = GetStringBeforeKey(loadedText);
-            storyTextObject.characterName.text = speakerName;
+            //Search through all characters in the list and find the corresponding display information
+            string currentCodeName = GetStringBeforeKey(loadedText);
+            CharacterState selectedCharacterState = GetCharacterState(currentCodeName);
 
-            loadedText = textWithoutSpeakerName;
-            storyTextObject.speechText.text = loadedText;
-            
+            string speakerName = selectedCharacterState.displayName;
+            storyTextObject.characterName.text  = selectedCharacterState.displayName;
+
             if (currentSpeaker != speakerName) //if the current speaker has changed
             {
-                storyTextObject.characterPortrait.gameObject.SetActive(true);
-                storyTextObject.characterPortrait.color = Color.cyan;
                 ShrinkAllBubbleIcons();
+                storyTextObject.characterPortrait.gameObject.SetActive(true);
                 storyTextObject.SetIconScale(2f);
+                storyTextObject.characterPortrait.sprite = selectedCharacterState.icon;
                 currentSpeaker = speakerName;
             }
             else
@@ -59,6 +91,9 @@ public class InkTestingScript : MonoBehaviour
                 storyTextObject.characterPortrait.gameObject.SetActive(false);
                 storyTextObject.characterName.gameObject.SetActive(false);
             }
+
+            loadedText = textWithoutSpeakerName;
+            storyTextObject.speechText.text = loadedText;
         }
         
         if (inkStory.currentChoices.Count == 0)

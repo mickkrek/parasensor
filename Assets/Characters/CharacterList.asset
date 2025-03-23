@@ -12,22 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09055f1990858741b7696c90c9fade8, type: 3}
   m_Name: CharacterList
   m_EditorClassIdentifier: 
-  CharacterTrackers:
-  - Name: TutorialA
-    CharacterInfo: {fileID: 11400000, guid: fbfca83e0bf513840a990b511b72e865, type: 2}
-    Unlocked: 0
-    CharacterState: 0
-    CompletedAsks: []
-    Alert: 0
-  - Name: TutorialB
-    CharacterInfo: {fileID: 11400000, guid: 122caf507636be0429537bc08e6cc14c, type: 2}
-    Unlocked: 0
-    CharacterState: 0
-    CompletedAsks: []
-    Alert: 0
-  - Name: TutorialC
-    CharacterInfo: {fileID: 11400000, guid: a8f5b0eec6f911043a9cd2cb8c30a85e, type: 2}
-    Unlocked: 0
-    CharacterState: 0
-    CompletedAsks: []
-    Alert: 0
+  characterTrackers:
+  - character: {fileID: 11400000, guid: f9d2c1bfce329fc4292faa00b5131ce2, type: 2}
+    currentState: 0
+  - character: {fileID: 11400000, guid: 161e81faf31532742b66319f8dba43db, type: 2}
+    currentState: 0
+  - character: {fileID: 11400000, guid: df0d47b30ea3fe44a982ffb290313293, type: 2}
+    currentState: 0
+  - character: {fileID: 11400000, guid: b792d27f02fb09143a3674b2fc216859, type: 2}
+    currentState: 0
+  - character: {fileID: 11400000, guid: 2323933d5cd4df9409679bd15cc21040, type: 2}
+    currentState: 0
+  - character: {fileID: 11400000, guid: 680bbb5de90a4b1469ef0ffa80b62429, type: 2}
+    currentState: 0

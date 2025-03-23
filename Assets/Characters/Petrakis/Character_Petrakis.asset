@@ -10,10 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2134ae17ee6bad54f92bd58e2b56f418, type: 3}
-  m_Name: TutorialCharacter_C
+  m_Name: Character_Petrakis
   m_EditorClassIdentifier: 
-  NickName: TutorialC
-  Names:
-  - Ghoulish
-  Contents: []
-  Icons: []
+  codeName: PETRAKIS
+  characterState:
+  - displayName: Frightened Woman
+    icon: {fileID: 21300000, guid: 1cdf87e3a4e68014fbcfe4b55f211b14, type: 3}
+    bubbleColor: {r: 0, g: 0, b: 0, a: 0}
+  - displayName: Petrakis
+    icon: {fileID: 21300000, guid: 1cdf87e3a4e68014fbcfe4b55f211b14, type: 3}
+    bubbleColor: {r: 0, g: 0, b: 0, a: 0}

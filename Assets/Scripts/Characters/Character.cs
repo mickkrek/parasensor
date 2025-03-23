@@ -5,8 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Character", menuName = "Character/Create Character", order = 1)]
 public class Character : ScriptableObject
 {
-    public string NickName;
-    public string[] Names;
-    public GameObject[] Contents;
-    public Sprite[] Icons;
+    public string codeName;
+    public CharacterState[] characterState;
+}
+[System.Serializable]
+public struct CharacterState
+{
+    public string displayName;
+    public Sprite icon;
+    public Color bubbleColor;
 }
