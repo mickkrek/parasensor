@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 1
+  - name: Foreground_chair
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -104,10 +104,10 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 2172
-      width: 3387
-      height: 2160
-    spriteID: ea476202682a415459dda728a4c1680d
+      y: 5594
+      width: 646
+      height: 664
+    spriteID: fb6bffe950528b94dbda9f5d3b65ab34
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -115,31 +115,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 2172}
-    spritePosition: {x: 453, y: 0}
-  - name: Layer 5 2 Copy 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4340
-      width: 1684
-      height: 980
-    spriteID: bb6606138f13e8340bc55cf1e1098e03
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4340}
-    spritePosition: {x: 296, y: 52}
-  - name: Layer 5 2
+    uvTransform: {x: 4, y: 5594}
+    spritePosition: {x: 877, y: 0}
+  - name: Foreground_flowers
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -151,7 +129,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: 3cceb2e398dd0904296c7ef3b55a7797
+    spriteID: 4f8b4a3039aecc648be94f2469cbcb2c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -160,6 +138,72 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  - name: Desks_far
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1730
+      y: 4340
+      width: 1864
+      height: 1052
+    spriteID: 0daa3c126f9f791489384045003514e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1730, y: 4340}
+    spritePosition: {x: 1976, y: 212}
+  - name: Desks_near
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4340
+      width: 1718
+      height: 1246
+    spriteID: 4e7e319e98b70c14aad60656a3c49e2c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4340}
+    spritePosition: {x: 304, y: 0}
+  - name: BG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 3840
+      height: 2160
+    spriteID: f0dba4a392d616043abb77a172ba9bf2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2172}
     spritePosition: {x: 0, y: 0}
   spriteImportData:
   - name: 
@@ -367,18 +411,38 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 62afd1c80b2a12e46aefb754c78b0cad
-    layerID: 0
+    layerID: 11
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 1
-    spriteName: Layer 1
+  - name: Foreground_chair
+    spriteName: Foreground_chair
     isGroup: 0
     parentIndex: 0
-    spriteID: ea476202682a415459dda728a4c1680d
-    layerID: 0
-    mosaicPosition: {x: 4, y: 2172}
+    spriteID: fb6bffe950528b94dbda9f5d3b65ab34
+    layerID: 10
+    mosaicPosition: {x: 4, y: 5594}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Desks_near
+    spriteName: Desks_near
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4e7e319e98b70c14aad60656a3c49e2c
+    layerID: 9
+    mosaicPosition: {x: 4, y: 4340}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Foreground_flowers
+    spriteName: Foreground_flowers
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4f8b4a3039aecc648be94f2469cbcb2c
+    layerID: 8
+    mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -387,18 +451,18 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 0ef474a7ddcecda4a8c47dac89efd5f3
-    layerID: 0
+    layerID: 6
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 5 2 Copy 2
-    spriteName: Layer 5 2 Copy 2
+  - name: Desks_far
+    spriteName: Desks_far
     isGroup: 0
-    parentIndex: 2
-    spriteID: bb6606138f13e8340bc55cf1e1098e03
-    layerID: 0
-    mosaicPosition: {x: 4, y: 4340}
+    parentIndex: 4
+    spriteID: 0daa3c126f9f791489384045003514e7
+    layerID: 5
+    mosaicPosition: {x: 1730, y: 4340}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -407,18 +471,18 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 608408bbe01ff4f4dab199fd29b12fb1
-    layerID: 0
+    layerID: 3
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 5 2
-    spriteName: Layer 5 2
+  - name: BG
+    spriteName: BG
     isGroup: 0
-    parentIndex: 4
-    spriteID: 3cceb2e398dd0904296c7ef3b55a7797
-    layerID: 0
-    mosaicPosition: {x: 4, y: 4}
+    parentIndex: 6
+    spriteID: f0dba4a392d616043abb77a172ba9bf2
+    layerID: 2
+    mosaicPosition: {x: 4, y: 2172}
     flatten: 0
     isImported: 1
     isVisible: 1

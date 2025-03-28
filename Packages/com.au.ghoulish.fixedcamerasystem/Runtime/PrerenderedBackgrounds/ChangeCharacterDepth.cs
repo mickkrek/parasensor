@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ChangeCharacterDepth : MonoBehaviour
 {
-    [SerializeField] private float _distance;
+    [SerializeField] private float _radius;
     [SerializeField] private Transform _shadowCastersParent;
+    [SerializeField] private Vector3 _offset;
     /*
     void Update()
     {
@@ -34,14 +35,14 @@ public class ChangeCharacterDepth : MonoBehaviour
     {
         // Bit shift the index of the layer (8) to get a bit mask
         int layerMask = 1 << LayerMask.NameToLayer("MidgroundCollider");
-        float sphereRadius = 0.5f;
-        Vector3 heading = transform.position - Camera.main.transform.position;
+        Vector3 target = transform.position + _offset;
+        Vector3 heading = target - Camera.main.transform.position;
         heading = heading.normalized;
-        float distance = Vector3.Distance(Camera.main.transform.position, transform.position) - sphereRadius;
+        float distance = Vector3.Distance(Camera.main.transform.position, target) - (_radius * 2f);
 
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
-        if (Physics.SphereCast(Camera.main.transform.position, sphereRadius, heading, out hit, distance, layerMask))
+        if (Physics.SphereCast(Camera.main.transform.position, _radius, heading, out hit, distance, layerMask))
         {
             gameObject.layer = LayerMask.NameToLayer("Background_3D");
             foreach(Transform child in GetComponentsInChildren<Transform>(true))
