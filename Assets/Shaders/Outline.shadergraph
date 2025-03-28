@@ -3553,7 +3553,7 @@
     "m_ZTestMode": 2,
     "m_ZWriteControl": 0,
     "m_AlphaMode": 0,
-    "m_RenderFace": 2,
+    "m_RenderFace": 0,
     "m_AlphaClip": false,
     "m_CastShadows": false,
     "m_ReceiveShadows": true,
@@ -3993,8 +3993,8 @@
     "m_ObjectId": "c7679896581648a3882b1ec867e178ce",
     "m_Title": "vertexboil",
     "m_Position": {
-        "x": -401.0,
-        "y": -223.00003051757813
+        "x": -401.3335266113281,
+        "y": -222.666748046875
     }
 }
 

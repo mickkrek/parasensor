@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.24712223, g: 0.2529643, b: 0.30817598, a: 1}
-  m_AmbientEquatorColor: {r: 0.09803922, g: 0.10389354, b: 0.16862746, a: 1}
-  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientEquatorColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -3175,7 +3175,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 680737097520113184, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 0.9937888
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1159087282404148193, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_IsActive
@@ -3479,7 +3479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009694063402418035, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 0.9937888
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7009694063402418035, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -3487,7 +3487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7058870489701474620, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: orthographic size
-      value: 0.9937888
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7589988186505998455, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_RenderPostProcessing
@@ -4892,15 +4892,15 @@ PrefabInstance:
       objectReference: {fileID: 558007467}
     - target: {fileID: 4861754887420108970, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.59
+      value: -4.112
       objectReference: {fileID: 0}
     - target: {fileID: 4861754887420108970, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.133
+      value: 0.322
       objectReference: {fileID: 0}
     - target: {fileID: 4861754887420108970, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.85
+      value: 8.185
       objectReference: {fileID: 0}
     - target: {fileID: 6545843094286030614, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_Enabled
@@ -4916,15 +4916,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7200190652408895845, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.59
+      value: -4.112
       objectReference: {fileID: 0}
     - target: {fileID: 7200190652408895845, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.133
+      value: 0.322
       objectReference: {fileID: 0}
     - target: {fileID: 7200190652408895845, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.85
+      value: 8.185
       objectReference: {fileID: 0}
     - target: {fileID: 8469983504801077505, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: stateMachine
@@ -4976,7 +4976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9158667615843729851, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_Name
-      value: Player_ThirdPerson
+      value: Player_Marisol
       objectReference: {fileID: 0}
     - target: {fileID: 9158667615843729851, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_TagString
