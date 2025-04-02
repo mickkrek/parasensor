@@ -24,6 +24,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -41,8 +45,8 @@ Material:
     - _BoilScale: 200
     - _BoilSpeed: 6
     - _BoilStrength: 0.1
-    - _DepthOffset: -0.06
-    - _OutlineWidth: 150
+    - _DepthOffset: -0.025
+    - _OutlineWidth: 0.004
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []

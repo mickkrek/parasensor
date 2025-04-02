@@ -41,7 +41,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: d31bc678e6ab9b24f8074e5848ec9f25, type: 3}
+        m_Texture: {fileID: 2800000, guid: 83db9029f8719f64c88115daaa14070e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap_1:
+        m_Texture: {fileID: 2800000, guid: d6405b819ae975e43b4ce005fe4261f5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RampTexture:
@@ -74,14 +78,17 @@ Material:
     - _Blend: 0
     - _BoilScale: 200
     - _BoilSpeed: 6
-    - _BoilStrength: 0.05
+    - _BoilStrength: 0.1
     - _CastShadows: 1
     - _Cull: 2
     - _DYNAMICLIGHTMAP: 0
+    - _DepthOffset: 0
     - _DstBlend: 0
     - _FlattenNormalPower: 1
+    - _IsOutline: 0
     - _LIGHTMAP: 0
     - _LIGHTMAP_SHADOW_MIXING: 0
+    - _OutlineWidth: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SPECULAR: 1
