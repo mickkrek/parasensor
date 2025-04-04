@@ -19,20 +19,28 @@ namespace Ghoulish.FixedCameraSystem
             EditorWindow.GetWindow(typeof(ImportBackgrounds));
         }
         
-        void OnGUI () {
-            if (SceneManager.GetActiveScene().name != sceneName)
+        void OnGUI ()
+        {
+            if (SceneManager.GetSceneAt(1).name != "BaseScene")
             {
-                sceneName = SceneManager.GetActiveScene().name;
+                sceneName = SceneManager.GetSceneAt(1).name;
             }
-            GUILayout.Label ("Import PSB Backgrounds", EditorStyles.boldLabel);
-            GUILayout.Label ("This tool will import a PSB file into the active scene as a GameObject, then sorts the PSB layers correctly for rendering.", EditorStyles.label);
+            GUIStyle myCustomStyle = new GUIStyle(GUI.skin.GetStyle("label"))
+            {
+                wordWrap = true
+            };
+            GUILayout.Label ("Import PSB Backgrounds", EditorStyles.largeLabel);
+            GUILayout.Label ("This tool will import a PSB file into the active scene as a GameObject, then sorts the PSB layers correctly for rendering.", myCustomStyle);
+            GUILayout.Label ("NOTE:", myCustomStyle);
+            GUILayout.Label ("BaseScene must be the FIRST scene in the heirarchy,", myCustomStyle);
+            GUILayout.Label ("your environment scene must be the SECOND scene in the heirarchy!", myCustomStyle);
             if (GUILayout.Button("Gather Zones from active scene"))
             {
                 zonesGathered = true;
             }
             if (zonesGathered)
             {
-                GUILayout.Label ("Choose a zone to import background for:", EditorStyles.boldLabel);
+                GUILayout.Label ("Choose a zone to import background for:", myCustomStyle);
                 ZoneEditorGizmo[] ZoneGizmos = FindObjectsByType<ZoneEditorGizmo>(FindObjectsSortMode.None);
                 for(int i = 0; i < ZoneGizmos.Length; i++)
                 {
@@ -48,11 +56,15 @@ namespace Ghoulish.FixedCameraSystem
 
         void ImportPSB(string ZoneName)
         {
-            
             string sourcePath = EditorUtility.OpenFilePanel("Import PSB Background", "", "PSB");
             if (sourcePath.Length != 0)
             {
-                newAssetPath = "Assets/Scenes/"+sceneName+"/"+ZoneName+"/BG_"+ZoneName+".PSB";
+                string newFolderPath = "Assets/Scenes/"+sceneName+"/Backgrounds";
+                newAssetPath = newFolderPath+"/"+ZoneName+".PSB";
+                if(!Directory.Exists(newFolderPath)) 
+                {
+                    Directory.CreateDirectory(newFolderPath);
+                }
                 FileUtil.ReplaceFile(sourcePath, newAssetPath);
                 AssetDatabase.Refresh();
             }
@@ -61,17 +73,20 @@ namespace Ghoulish.FixedCameraSystem
         {
             GameObject sourcePrefab = (GameObject)AssetDatabase.LoadAssetAtPath(newAssetPath, typeof(GameObject));
             GameObject createdGO = PrefabUtility.InstantiatePrefab(sourcePrefab) as GameObject;
-            createdGO.transform.SetParent(GameObject.Find("Backgrounds").transform);
-            AssignLayersToChildren(createdGO.transform.Find("Background"), LayerMask.NameToLayer("Sprite Background"));
-            AssignLayersToChildren(createdGO.transform.Find("Midground"), LayerMask.NameToLayer("Sprite Midground"));
-            AssignLayersToChildren(createdGO.transform.Find("Foreground"), LayerMask.NameToLayer("Sprite Foreground"));
+            createdGO.transform.SetParent(GameObject.Find(ZoneName).transform);
+            AssignLayersToChildren(createdGO.transform.Find("Background"), LayerMask.NameToLayer("Background_2D"));
+            AssignLayersToChildren(createdGO.transform.Find("Midground"), LayerMask.NameToLayer("Midground_2D"));
+            AssignLayersToChildren(createdGO.transform.Find("Foreground"), LayerMask.NameToLayer("Foreground_2D"));
         }
         void AssignLayersToChildren(Transform prefabParent, int layer)
         {  
-            prefabParent.gameObject.layer = layer;
-            foreach (Transform child in prefabParent.transform) 
+            if (prefabParent != null)
             {
-                child.gameObject.layer = layer;
+                prefabParent.gameObject.layer = layer;
+                foreach (Transform child in prefabParent.transform) 
+                {
+                    child.gameObject.layer = layer;
+                }
             }
         }
     }
