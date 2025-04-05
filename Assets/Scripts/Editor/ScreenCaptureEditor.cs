@@ -41,13 +41,13 @@ public class ScreenCaptureEditor : EditorWindow
         GUILayout.Label("Directory: " + directory);
     }
 
-    [MenuItem("Tools/Screenshots/Open Window")]
+    [MenuItem("Ghoulish/Screenshots/Open Window")]
     public static void ShowWindow()
     {
         EditorWindow.GetWindow(typeof(ScreenCaptureEditor));
     }
 
-    [MenuItem("Tools/Screenshots/Reveal in Explorer")]
+    [MenuItem("Ghoulish/Screenshots/Reveal in Explorer")]
     private static void ShowFolder()
     {
         if (File.Exists(latestScreenshotPath))
@@ -59,7 +59,7 @@ public class ScreenCaptureEditor : EditorWindow
         EditorUtility.RevealInFinder(directory);
     }
 
-    [MenuItem("Tools/Screenshots/Take a Screenshot")]
+    [MenuItem("Ghoulish/Screenshots/Take a Screenshot")]
     private static void TakeScreenshot()
     {
         Directory.CreateDirectory(directory);
