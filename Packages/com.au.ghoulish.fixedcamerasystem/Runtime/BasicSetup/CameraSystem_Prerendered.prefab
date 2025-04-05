@@ -69,7 +69,7 @@ Camera:
   far clip plane: 1
   field of view: 60
   orthographic: 1
-  orthographic size: 0.5
+  orthographic size: 1
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 0
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 1
   m_Cameras: []
@@ -168,8 +168,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159087282404148193}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.37298784, z: 0, w: 0.92783624}
-  m_LocalPosition: {x: -2.86, y: 1.14, z: -1.15}
+  m_LocalRotation: {x: 0.27781588, y: 0.36497167, z: -0.1150751, w: 0.8811196}
+  m_LocalPosition: {x: -36.32, y: 12.84, z: -2.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -188,12 +188,12 @@ Camera:
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 2
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 21.982569
+  m_FocalLength: 20
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -208,7 +208,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 40
+  field of view: 43.60776
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -371,11 +371,11 @@ Camera:
   far clip plane: 1
   field of view: 60
   orthographic: 1
-  orthographic size: 0.5
+  orthographic size: 1
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 8448
+    m_Bits: 256
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -399,8 +399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 0
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 1
   m_Cameras: []
@@ -410,7 +410,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -470,8 +470,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4569710211627076384}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.37298784, z: 0, w: 0.92783624}
-  m_LocalPosition: {x: -2.86, y: 1.14, z: -1.15}
+  m_LocalRotation: {x: 0.27781588, y: 0.36497167, z: -0.1150751, w: 0.8811196}
+  m_LocalPosition: {x: -36.32, y: 12.84, z: -2.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -490,12 +490,12 @@ Camera:
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 2
   m_GateFitMode: 2
-  m_FOVAxisMode: 0
+  m_FOVAxisMode: 1
   m_Iso: 200
   m_ShutterSpeed: 0.005
   m_Aperture: 16
   m_FocusDistance: 10
-  m_FocalLength: 21.982569
+  m_FocalLength: 20
   m_BladeCount: 5
   m_Curvature: {x: 2, y: 11}
   m_BarrelClipping: 0.25
@@ -510,7 +510,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 40
+  field of view: 43.60776
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -707,7 +707,7 @@ Camera:
   far clip plane: 1
   field of view: 60
   orthographic: 1
-  orthographic size: 0.5
+  orthographic size: 1
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -735,8 +735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 0
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 1
   m_Cameras: []
@@ -807,13 +807,25 @@ PrefabInstance:
       propertyPath: m_DefaultBlend.m_Style
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1718838321286769242, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: LensModeOverride.DefaultMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718838321286769243, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_ClearFlags
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1718838321286769243, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: field of view
-      value: 40
+      value: 43.60776
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718838321286769243, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286769243, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_FocalLength
-      value: 21.982569
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286769243, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: far clip plane
@@ -832,36 +844,40 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286769243, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718838321286769243, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772134, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.86
+      value: -36.32
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772134, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.14
+      value: 12.84
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772134, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.15
+      value: -2.69
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772134, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92783624
+      value: 0.8811196
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772134, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.27781588
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772134, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.37298784
+      value: 0.36497167
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772134, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.1150751
       objectReference: {fileID: 0}
     - target: {fileID: 1718838321286772135, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
       propertyPath: m_IsActive
@@ -911,6 +927,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4012298332707550503, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: field of view
+      value: 43.60776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012298332707550503, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_FocalLength
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4012298332707550503, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 8384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114581731342331806, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906791841287110967, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906791841287110967, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906791841287110967, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906791841287110967, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8811196
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906791841287110967, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.27781588
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906791841287110967, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.36497167
+      objectReference: {fileID: 0}
+    - target: {fileID: 7906791841287110967, guid: 57a0d7c2562616f4cab6794cd6a24207, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.1150751
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -945,9 +1005,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
+  m_RenderShadows: 0
+  m_RequiresDepthTextureOption: 0
+  m_RequiresOpaqueTextureOption: 0
   m_CameraType: 0
   m_Cameras:
   - {fileID: 680737097520113184}
