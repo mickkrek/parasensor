@@ -76,9 +76,9 @@ Material:
     - _AlphaToMask: 0
     - _Alpha_Clip_Threshold: 0.5
     - _Blend: 0
-    - _BoilScale: 200
-    - _BoilSpeed: 6
-    - _BoilStrength: 0.1
+    - _BoilScale: 400
+    - _BoilSpeed: 12
+    - _BoilStrength: 0.2
     - _CastShadows: 1
     - _Cull: 2
     - _DYNAMICLIGHTMAP: 0

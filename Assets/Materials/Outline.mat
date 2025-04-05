@@ -42,9 +42,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BoilScale: 200
-    - _BoilSpeed: 6
-    - _BoilStrength: 0.1
+    - _BoilScale: 400
+    - _BoilSpeed: 12
+    - _BoilStrength: 0.2
     - _DepthOffset: 0.05
     - _OutlineWidth: 0.008
     - _QueueControl: 0
