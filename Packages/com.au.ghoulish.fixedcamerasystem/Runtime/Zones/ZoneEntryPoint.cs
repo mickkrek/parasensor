@@ -5,7 +5,7 @@ namespace Ghoulish.FixedCameraSystem
 {
     public class ZoneEntryPoint : MonoBehaviour
     {
-        public string ZoneName;
+        [HideInInspector] public string ZoneName;
         public bool Active;
         [HideInInspector] public Collider ZoneCollider;
         private CinemachineVirtualCameraBase _thisVirtualCam;
@@ -14,6 +14,7 @@ namespace Ghoulish.FixedCameraSystem
 
         private void Start()
         {
+            ZoneName = transform.parent.name;
             ZoneCollider = GetComponent<Collider>();
             _storedVirtualCam = CameraManager.Instance.ActiveVirtualCam;
             _thisVirtualCam = transform.parent.GetComponentInChildren<CinemachineVirtualCameraBase>();

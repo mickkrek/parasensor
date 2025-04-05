@@ -10,7 +10,7 @@ namespace Ghoulish.FixedCameraSystem
 
         void OnEnable()
         {
-            camSwitcher = GetComponent<CameraSwitcher>();
+            camSwitcher = GetComponentInChildren<CameraSwitcher>();
         }
 
         void Update()

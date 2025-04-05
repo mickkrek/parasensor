@@ -182,6 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5437674474489112809}
   - component: {fileID: 709545715719137752}
+  - component: {fileID: 5705289387011742168}
   m_Layer: 0
   m_Name: Zone
   m_TagString: Untagged
@@ -218,3 +219,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 861316cca0466df499b6567426eb1a86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5705289387011742168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5437674474489112810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e465d5de3104247892e09afc056bea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteParent: {fileID: 0}
+  environmentParent: {fileID: 0}
