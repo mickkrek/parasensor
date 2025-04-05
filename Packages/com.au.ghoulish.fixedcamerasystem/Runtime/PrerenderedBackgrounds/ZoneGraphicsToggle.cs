@@ -5,7 +5,7 @@ namespace Ghoulish.FixedCameraSystem
     public class ZoneGraphicsToggle : MonoBehaviour
     {
         private CameraSwitcher camSwitcher;
-        [SerializeField] private Transform spriteParent;
+        public Transform spriteParent;
         [SerializeField] private Transform environmentParent;
 
         void OnEnable()

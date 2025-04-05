@@ -73,7 +73,9 @@ namespace Ghoulish.FixedCameraSystem
         {
             GameObject sourcePrefab = (GameObject)AssetDatabase.LoadAssetAtPath(newAssetPath, typeof(GameObject));
             GameObject createdGO = PrefabUtility.InstantiatePrefab(sourcePrefab) as GameObject;
-            createdGO.transform.SetParent(GameObject.Find(ZoneName).transform);
+            GameObject parent = GameObject.Find(ZoneName);
+            createdGO.transform.SetParent(parent.transform);
+            parent.GetComponent<ZoneGraphicsToggle>().spriteParent = createdGO.transform;
             AssignLayersToChildren(createdGO.transform.Find("Background"), LayerMask.NameToLayer("Background_2D"));
             AssignLayersToChildren(createdGO.transform.Find("Midground"), LayerMask.NameToLayer("Midground_2D"));
             AssignLayersToChildren(createdGO.transform.Find("Foreground"), LayerMask.NameToLayer("Foreground_2D"));
