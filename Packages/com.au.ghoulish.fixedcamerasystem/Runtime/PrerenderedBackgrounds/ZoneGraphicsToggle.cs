@@ -17,22 +17,34 @@ namespace Ghoulish.FixedCameraSystem
         {
             if (CameraManager.Instance.ActiveVirtualCam == camSwitcher.ThisVirtualCam)
             {
-                if (spriteParent != null && !spriteParent.gameObject.activeSelf)
+                if (spriteParent == null || environmentParent == null )
+                {
+                    Debug.LogError("SpriteParent or EnvironmentParent of " + this.gameObject.name + " is unassigned!");
+                    Debug.Break();
+                    return;
+                }
+                if (!spriteParent.gameObject.activeSelf)
                 {
                     spriteParent.gameObject.SetActive(true);
                 }
-                if (environmentParent != null && !environmentParent.gameObject.activeSelf)
+                if (!environmentParent.gameObject.activeSelf)
                 {
                     environmentParent.gameObject.SetActive(true);
                 }
             }
             else if (CameraManager.Instance.ActiveVirtualCam != camSwitcher.ThisVirtualCam)
             {
-                if (spriteParent != null && spriteParent.gameObject.activeSelf)
+                if (spriteParent == null || environmentParent == null )
+                {
+                    Debug.LogError("SpriteParent or EnvironmentParent of " + this.gameObject.name + " is unassigned!");
+                    Debug.Break();
+                    return;
+                }
+                if (spriteParent.gameObject.activeSelf)
                 {
                     spriteParent.gameObject.SetActive(false);
                 }
-                if (environmentParent != null && environmentParent.gameObject.activeSelf)
+                if (environmentParent.gameObject.activeSelf)
                 {
                     environmentParent.gameObject.SetActive(false);
                 }
