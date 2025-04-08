@@ -20,9 +20,9 @@ TagManager:
   - Background_2D
   - MidgroundCollider
   - ShadowCasters
-  - DontRender
+  - GreyboxOnly
   - Interactable
-  - 
+  - ColliderOnly
   - 
   - 
   - 

@@ -5,31 +5,41 @@ namespace Ghoulish.FixedCameraSystem
     public class ZoneGraphicsToggle : MonoBehaviour
     {
         private CameraSwitcher camSwitcher;
-        [SerializeField] private Transform spriteParent;
+        public Transform spriteParent;
         [SerializeField] private Transform environmentParent;
 
         void OnEnable()
         {
-            camSwitcher = GetComponent<CameraSwitcher>();
+            camSwitcher = GetComponentInChildren<CameraSwitcher>();
         }
 
         void Update()
         {
             if (CameraManager.Instance.ActiveVirtualCam == camSwitcher.ThisVirtualCam)
             {
-                if (spriteParent != null && !spriteParent.gameObject.activeSelf)
-                {
-                    spriteParent.gameObject.SetActive(true);
-                }
-                environmentParent.gameObject.SetActive(true);
+                SetParents(true);
             }
             else if (CameraManager.Instance.ActiveVirtualCam != camSwitcher.ThisVirtualCam)
             {
-                if (spriteParent != null && spriteParent.gameObject.activeSelf)
-                {
-                    spriteParent.gameObject.SetActive(false);
-                }
-                environmentParent.gameObject.SetActive(false);
+                SetParents(false);
+            }
+        }
+        private void SetParents(bool active)
+        {
+            if (environmentParent == null)
+            {
+                Debug.LogError("EnvironmentParent of " + this.gameObject.name + " is unassigned!");
+                Debug.Break();
+                return;
+            }
+            environmentParent.gameObject.SetActive(active);
+            if (spriteParent == null)
+            {
+                Debug.LogWarning("SpriteParent of " + this.gameObject.name + " is unassigned!");
+            }
+            else
+            {
+                spriteParent.gameObject.SetActive(active);
             }
         }
     }

@@ -5,8 +5,9 @@ namespace Ghoulish.PlayerControls
     public abstract class IPlayerControls : MonoBehaviour
     {
         [SerializeField] protected float playerSpeed = 2f;
-        [SerializeField] protected float slowDownSpeed = 0.4f;
+        [SerializeField] protected float movementSmoothSpeed = 0.4f;
         [SerializeField] protected float gravityValue = -1f;
+        [SerializeField] protected float controllerDeadzone = 0.01f;
         [HideInInspector] public CharacterController charController;
         protected Vector3 movement = new Vector3(0f,0f,0f);
         protected bool playerCanMove = true;
@@ -18,12 +19,16 @@ namespace Ghoulish.PlayerControls
         }
         protected virtual void Update()
         {
-            HandleInput();
-            movement = Vector3.zero;
-            if (playerCanMove && playerIsMoving)
+            if (playerCanMove)
             {
-                HandleMovement();
+                HandleInput();
             }
+        }
+
+        protected virtual void FixedUpdate()
+        {
+            movement = Vector3.zero;
+            HandleMovement();
             ApplyGravity();
             charController.Move(movement);
         }
