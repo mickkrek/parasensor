@@ -18,6 +18,6 @@ public class SpeechBubble : MonoBehaviour
     }
     public void SetIconScale(float scaleMultiplier)
     {
-        characterPortraitScaleParent.localScale = originalIconScale * scaleMultiplier;
+        characterPortraitScaleParent.localScale = new Vector3(scaleMultiplier,scaleMultiplier,scaleMultiplier);
     }
 }

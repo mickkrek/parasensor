@@ -8,7 +8,7 @@ using System;
 public class InkTestingScript : MonoBehaviour
 {
     [SerializeField] private TextAsset inkJSON;
-    [SerializeField] private SpeechBubble speechBubble;
+    [SerializeField] private SpeechBubble speechBubble_NPC, speechBubble_Marisol;
     [SerializeField] private Button buttonPrefab;
     private Story inkStory;
     private string currentSpeaker = "";
@@ -51,7 +51,7 @@ public class InkTestingScript : MonoBehaviour
     private void RefreshUI()
     {
         DestroyChildButtons();
-        SpeechBubble storyTextObject = Instantiate(speechBubble);
+        SpeechBubble storyTextObject = Instantiate(speechBubble_NPC);
         storyTextObject.transform.SetParent(transform, false);
         string loadedText = loadStoryLine();
 
@@ -82,7 +82,7 @@ public class InkTestingScript : MonoBehaviour
             {
                 ShrinkAllBubbleIcons();
                 storyTextObject.characterPortrait.gameObject.SetActive(true);
-                storyTextObject.SetIconScale(2f);
+                storyTextObject.SetIconScale(1f);
                 storyTextObject.characterPortrait.sprite = selectedCharacterState.icon;
                 currentSpeaker = speakerName;
             }
@@ -121,16 +121,15 @@ public class InkTestingScript : MonoBehaviour
     private void RefreshUIChoiceMade()
     {
         DestroyChildButtons();
-        SpeechBubble storyTextObject = Instantiate(speechBubble);
+        SpeechBubble storyTextObject = Instantiate(speechBubble_Marisol);
         storyTextObject.transform.SetParent(transform, false);
         string loadedText = loadStoryLine();
         currentSpeaker = "Marisol";
         storyTextObject.characterName.text = currentSpeaker;
         storyTextObject.characterPortrait.gameObject.SetActive(true);
-        storyTextObject.characterPortrait.color = Color.red;
         storyTextObject.speechText.text = loadedText;
         ShrinkAllBubbleIcons();
-        storyTextObject.SetIconScale(2f);
+        storyTextObject.SetIconScale(1f);
         RefreshUI();
     }
 
@@ -152,7 +151,7 @@ public class InkTestingScript : MonoBehaviour
             SpeechBubble childBubble = child.GetComponent<SpeechBubble>();
             if (childBubble != null)
             {
-                childBubble.SetIconScale(1f);
+                childBubble.SetIconScale(0.75f);
             }
         }
     }
