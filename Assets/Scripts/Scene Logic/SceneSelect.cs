@@ -23,12 +23,10 @@ public class SceneSelect : MonoBehaviour
       
     public void ChangeScene(string sceneName)
     {
-        GameManager_GUI.Instance.UIStateMachine.ChangeState("FadeIn");
         if (SceneManager.sceneCount > 1)
         {
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(1));
         }
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-        //SceneManager.SetActiveScene(SceneManager.GetSceneAt(1)); //Set the newly loaded scene to active
     }
 }

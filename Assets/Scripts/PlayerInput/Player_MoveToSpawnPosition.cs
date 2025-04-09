@@ -9,14 +9,13 @@ public class Player_MoveToSpawnTransform : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        CharacterController charController = GetComponent<CharacterController>();
-        charController.enabled = false;
         SceneSpawnPositions spawnList = GameObject.Find("DefaultSpawnPosition").GetComponent<SceneSpawnPositions>();
         for(int i=0; i < spawnList.Spawns.Length;i++)
         {
             if (spawnList.Spawns[i].PreviousSceneName == _previousSceneID)
             {
                 transform.SetPositionAndRotation(spawnList.Spawns[i].SpawnTransform.position, spawnList.Spawns[i].SpawnTransform.rotation);
+                Physics.SyncTransforms();
                 break;
             }
             else
@@ -25,10 +24,10 @@ public class Player_MoveToSpawnTransform : MonoBehaviour
                 {
                     Debug.LogWarning("Spawn position not found so moved the player to first spawn position in the list.");
                     transform.SetPositionAndRotation(spawnList.Spawns[0].SpawnTransform.position, spawnList.Spawns[0].SpawnTransform.rotation);
+                    Physics.SyncTransforms();
                 }
             }
         }
-        charController.enabled = true;
         _previousSceneID = SceneManager.GetActiveScene().name;
     }
     void OnDisable()
