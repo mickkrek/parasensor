@@ -117,29 +117,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 2172}
     spritePosition: {x: 0, y: 0}
-  - name: Chair
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 4340
-      width: 425
-      height: 655
-    spriteID: 8a95e969eac8a3e4994b816b42a63ad6
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 4340}
-    spritePosition: {x: 1930, y: 149}
-  - name: BG
+  - name: Layer 1 Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -151,7 +129,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: ba322ef048c3bbe439ceb16d95f7940d
+    spriteID: 38ea2d613dcf8734e9b42465d71760f6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -367,7 +345,7 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 62afd1c80b2a12e46aefb754c78b0cad
-    layerID: 9
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
@@ -377,7 +355,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: 792d25828087abe4f9d62bbdbf79941c
-    layerID: 8
+    layerID: 0
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
     isImported: 1
@@ -387,37 +365,27 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 0ef474a7ddcecda4a8c47dac89efd5f3
-    layerID: 6
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
-  - name: Chair
-    spriteName: Chair
-    isGroup: 0
-    parentIndex: 2
-    spriteID: 8a95e969eac8a3e4994b816b42a63ad6
-    layerID: 5
-    mosaicPosition: {x: 4, y: 4340}
-    flatten: 0
-    isImported: 1
     isVisible: 1
   - name: Background
     spriteName: 
     isGroup: 1
     parentIndex: -1
     spriteID: 608408bbe01ff4f4dab199fd29b12fb1
-    layerID: 3
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: BG
-    spriteName: BG
+  - name: Layer 1 Copy
+    spriteName: Layer 1 Copy
     isGroup: 0
-    parentIndex: 4
-    spriteID: ba322ef048c3bbe439ceb16d95f7940d
-    layerID: 2
+    parentIndex: 3
+    spriteID: 38ea2d613dcf8734e9b42465d71760f6
+    layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
