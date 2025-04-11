@@ -71,7 +71,10 @@ namespace Ghoulish.FixedCameraSystem
             //When a new camera is activated, deprioritise the old one and prioritise the new one
             if (_storedVirtualCam != ActiveVirtualCam)
             {
-                _storedVirtualCam.Priority = 0;
+                if (_storedVirtualCam != null)
+                {
+                    _storedVirtualCam.Priority = 0;
+                }
                 ActiveVirtualCam.Priority = 1;
                 _storedVirtualCam = ActiveVirtualCam;
             }
