@@ -95,29 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Vignette
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 4
-      y: 2172
-      width: 2413
-      height: 2160
-    spriteID: 792d25828087abe4f9d62bbdbf79941c
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 4, y: 2172}
-    spritePosition: {x: 0, y: 0}
-  - name: Layer 1 Copy
+  - name: Layer 14 2 Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -129,7 +107,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: 38ea2d613dcf8734e9b42465d71760f6
+    spriteID: bbadee085356f374cb0518c1042fe4b9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -349,7 +327,7 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
+    isVisible: 0
   - name: Vignette
     spriteName: Vignette
     isGroup: 0
@@ -358,7 +336,7 @@ ScriptedImporter:
     layerID: 0
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
-    isImported: 1
+    isImported: 0
     isVisible: 1
   - name: Midground
     spriteName: 
@@ -369,7 +347,7 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
-    isVisible: 1
+    isVisible: 0
   - name: Background
     spriteName: 
     isGroup: 1
@@ -380,11 +358,11 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 1 Copy
-    spriteName: Layer 1 Copy
+  - name: Layer 14 2 Copy
+    spriteName: Layer 14 2 Copy
     isGroup: 0
     parentIndex: 3
-    spriteID: 38ea2d613dcf8734e9b42465d71760f6
+    spriteID: bbadee085356f374cb0518c1042fe4b9
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
