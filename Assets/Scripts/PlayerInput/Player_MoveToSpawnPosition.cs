@@ -9,7 +9,13 @@ public class Player_MoveToSpawnTransform : MonoBehaviour
     }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SceneSpawnPositions spawnList = GameObject.Find("DefaultSpawnPosition").GetComponent<SceneSpawnPositions>();
+        GameObject spawnPosObject = GameObject.Find("DefaultSpawnPosition");
+        if (spawnPosObject== null)
+        {
+            Debug.LogWarning("Spawn Position Object not found!");
+            return;
+        }
+        SceneSpawnPositions spawnList = spawnPosObject.GetComponent<SceneSpawnPositions>();
         for(int i=0; i < spawnList.Spawns.Length;i++)
         {
             if (spawnList.Spawns[i].PreviousSceneName == _previousSceneID)
