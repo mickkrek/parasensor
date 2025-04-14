@@ -35,14 +35,14 @@ ModelImporter:
       takeName: Petrakis_Idle
       internalID: -6361861432398800567
       firstFrame: 0
-      lastFrame: 74
+      lastFrame: 60
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
