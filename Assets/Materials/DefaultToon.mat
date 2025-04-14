@@ -75,7 +75,7 @@ Material:
     - _Blend: 0
     - _BoilScale: 150
     - _BoilSpeed: 12
-    - _BoilStrength: 0.1
+    - _BoilStrength: 0
     - _CastShadows: 1
     - _Cull: 2
     - _DstBlend: 0
@@ -93,7 +93,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _DiffuseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadingPower: {r: 1, g: 1.75, b: 2.5, a: 0}
-    - _ShadingSmoothstep: {r: 0.1, g: 0.3, b: 0, a: 0}
+    - _FresnelSmoothstep: {r: 0.7, g: 0.8, b: 0, a: 0}
+    - _ShadingPower: {r: 0.75, g: 1.35, b: 1.7, a: 0}
+    - _ShadingSmoothstep: {r: 0, g: 0.1, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

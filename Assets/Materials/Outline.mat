@@ -44,8 +44,8 @@ Material:
     m_Floats:
     - _BoilScale: 150
     - _BoilSpeed: 12
-    - _BoilStrength: 0.1
-    - _DepthOffset: 0.05
+    - _BoilStrength: 0
+    - _DepthOffset: 0.08
     - _OutlineWidth: 0.008
     - _QueueControl: 0
     - _QueueOffset: 0

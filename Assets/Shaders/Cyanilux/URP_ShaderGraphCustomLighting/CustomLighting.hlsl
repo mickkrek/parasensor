@@ -228,12 +228,7 @@ void AdditionalLights_float(float3 WorldPosition, float3 WorldNormal, float3 Wor
 	#endif
 		{
 			float ndl = saturate(dot(WorldNormal, light.direction));
-			float3 alteredView = normalize(WorldView + float3(0.0,0,0.0));
-			float3 fresnel = dot(WorldNormal, alteredView);
-			fresnel = smoothstep(0.5,.6, 1-fresnel);
-			fresnel *= pow(saturate(WorldNormal.y), .5);
 			float3 lambert = smoothstep(SmoothstepMinMax.x,SmoothstepMinMax.y, ndl);
-			lambert = saturate(lambert + fresnel);
 			lambert = pow(lambert, Power);
 			lambert *= (light.distanceAttenuation * light.shadowAttenuation);
 			lambert *= light.color;
