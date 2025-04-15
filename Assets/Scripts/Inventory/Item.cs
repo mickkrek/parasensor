@@ -7,8 +7,6 @@ public class Item : ScriptableObject
 {
     [Header("GUI Properties")]
     public string title;
-    public string yarnNodeTitle;
-    public Sprite icon;
     public string description;
     public Sprite descriptionImage;
 

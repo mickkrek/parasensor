@@ -1,17 +1,14 @@
 using UnityEngine;
-using Yarn.Unity;
 using Ghoulish.InteractionSystem;
 
 public class Interactable_Object_Item : MonoBehaviour, IInteractable
 {
     [SerializeField] private Item _item; 
-    private DialogueRunner dialogueRunner;
     [SerializeField] private Transform _promptPosition;
 
     public void Start() 
     {
-        dialogueRunner = GameObject.Find("Yarn System").GetComponent<DialogueRunner>();
-
+        //if player has already collected this item
         foreach(string s in GameManager.Instance.CollectedItems)
         {
             if (_item.title.Equals(s))
@@ -29,7 +26,6 @@ public class Interactable_Object_Item : MonoBehaviour, IInteractable
 
     public void Interact(Transform interactorTransform)
     {
-        //dialogueRunner.StartDialogue(_item.yarnNodeTitle);
         GameManager.Instance.CollectedItems.Add(_item.title);
         GameManager_Inventory.Instance.AddItem(_item);
         gameObject.SetActive(false);

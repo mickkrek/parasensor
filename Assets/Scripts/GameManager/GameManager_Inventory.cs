@@ -1,4 +1,5 @@
 using Ghoulish.UISystem;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 public class GameManager_Inventory : MonoBehaviour
@@ -35,13 +36,19 @@ public class GameManager_Inventory : MonoBehaviour
     public GameObject inventorySlotPrefab;
     public GameObject inventoryItemPrefab;
     [HideInInspector] public UISelectableBase SelectedInventoryItem; 
-    public UnityEvent InventoryItemSelected, InventoryItemPlaced;
+    public UnityEvent InventoryItemSelected, InventoryItemPlaced, EquippedItemChanged;
+
+    [HideInInspector] public Item EquippedItem;
+
+    public TextMeshProUGUI SelectedItemTitle = null;
+    public TextMeshProUGUI SelectedItemDescription = null;
 
     public void Start()
     {
         _slots = SlotsParent.GetComponentsInChildren<InventorySlot>();
         InventoryItemSelected ??= new UnityEvent();
         InventoryItemPlaced ??= new UnityEvent();
+        EquippedItemChanged ??= new UnityEvent();
     }
     public void AddItem(Item item)
     {
@@ -67,5 +74,10 @@ public class GameManager_Inventory : MonoBehaviour
         GameObject newItemGO = Instantiate(inventoryItemPrefab, heirarchyPosition);
         InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
+    }
+    public void UpdateEquippedItem(Item itemToEquip)
+    {
+        EquippedItem = itemToEquip;
+        EquippedItemChanged.Invoke();
     }
 }
