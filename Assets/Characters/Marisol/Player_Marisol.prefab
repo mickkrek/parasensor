@@ -667,6 +667,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5659608151738451181, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6374458540240651854}
+    - targetCorrespondingSourceObject: {fileID: 5659608151738451181, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1788951120702550164}
   m_SourcePrefab: {fileID: 100100000, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
 --- !u!1 &5858621926587544062 stripped
 GameObject:
@@ -691,6 +694,14 @@ MonoBehaviour:
     m_Bits: 16384
   _playerControllerTransform: {fileID: 7200190652408895845}
   InteractionEnabled: 1
+--- !u!81 &1788951120702550164
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5858621926587544062}
+  m_Enabled: 1
 --- !u!4 &7200190652408895845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8946613393196690550, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
