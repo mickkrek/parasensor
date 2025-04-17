@@ -45,8 +45,8 @@ Material:
     - _BoilScale: 150
     - _BoilSpeed: 12
     - _BoilStrength: 0
-    - _DepthOffset: 0.08
-    - _OutlineWidth: 0.008
+    - _DepthOffset: 0.3
+    - _OutlineWidth: 0.03
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors: []
