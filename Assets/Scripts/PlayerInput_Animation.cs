@@ -9,18 +9,19 @@ public class PlayerInput_Animation : MonoBehaviour
     private IPlayerControls _playerControls;
     [SerializeField] private Animator _animator;
     private float _forwardSpeed = 0f;
+    protected AnimatorOverrideController animatorOverrideController;
 
     private void Awake()
     {
         _controller = GetComponent<CharacterController>();
         _playerControls = GetComponent<IPlayerControls>();
+        animatorOverrideController = new AnimatorOverrideController(_animator.runtimeAnimatorController);
+        _animator.runtimeAnimatorController = animatorOverrideController;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         UpdateLocomotion();
-        //_animator.transform.position = transform.position;
-        //_animator.transform.rotation = transform.rotation;
     }
     private void UpdateLocomotion()
     {
@@ -37,5 +38,15 @@ public class PlayerInput_Animation : MonoBehaviour
             
             _animator.SetFloat("ForwardVelocity",  _forwardSpeed);
         }
+    }
+    public void ChangeEquippedItemPose(AnimationClip newAnimation)
+    {
+        animatorOverrideController["EquippedItemPose"] = newAnimation;
+        _animator.SetLayerWeight(1,1.0f);
+    }
+    public void RemoveEquippedItemPose()
+    {
+        animatorOverrideController["EquippedItemPose"] = null;
+        _animator.SetLayerWeight(1,0.0f);
     }
 }

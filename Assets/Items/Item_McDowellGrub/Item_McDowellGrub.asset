@@ -15,4 +15,7 @@ MonoBehaviour:
   title: Grub
   description: A grub I cut out of the stomach of Mr McDowell.
   descriptionImage: {fileID: 21300000, guid: 65cbaaa7ffcc9ca4c9697b50e3c74cde, type: 3}
+  graphicsPrefab: {fileID: 8346204846710357978, guid: 52c2e8e9e15e0be4cb123f55769ee459, type: 3}
+  upperBodyAnimation: {fileID: 7400000, guid: 0510a20a0e8e64c4f84fe180644af501, type: 2}
+  itemBoneParent: 2
   itemType: 0

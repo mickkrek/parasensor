@@ -10,12 +10,22 @@ public class Item : ScriptableObject
     public string description;
     public Sprite descriptionImage;
 
+    [Header("Graphics Properties")]
+    public GameObject graphicsPrefab;
+    public AnimationClip upperBodyAnimation;
+    public ItemBoneParent itemBoneParent;
+
+    public enum ItemBoneParent
+    {
+        //Reference GameManagerInventory for corresponding bone transforms
+        Root, LeftHand, RightHand, Chest, Backpack
+    }
+
     [Header("Gameplay Properties")]
     public ItemType itemType;
 
     public enum ItemType
     {
-        Item,
-        Clothing
+        Item, Clothing
     }
 }
