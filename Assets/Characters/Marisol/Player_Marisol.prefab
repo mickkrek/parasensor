@@ -1,5 +1,99 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &209778282483259771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1380599079715984309}
+  - component: {fileID: 1428723375359672599}
+  - component: {fileID: 4872095413315200330}
+  - component: {fileID: 822492645259114544}
+  m_Layer: 16
+  m_Name: StareTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1380599079715984309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209778282483259771}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.0074459733, y: 0.00000009362416, z: -6.971423e-10, w: 0.9999723}
+  m_LocalPosition: {x: 0, y: 1.5685014, z: 0.08783841}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7200190652408895845}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1428723375359672599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209778282483259771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3144c8a06019404e8a24c1f79258c78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1773428102 &4872095413315200330
+ParentConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209778282483259771}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 0, y: 1.5685015, z: 0.08783841}
+  m_RotationAtRest: {x: 0.8532484, y: 0, z: 0}
+  m_TranslationOffsets:
+  - {x: 0, y: 0.075999856, z: 0.09199989}
+  m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 1
+  m_AffectTranslationZ: 1
+  m_AffectRotationX: 1
+  m_AffectRotationY: 1
+  m_AffectRotationZ: 1
+  m_Active: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 6761030374481695791}
+    weight: 1
+--- !u!135 &822492645259114544
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209778282483259771}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1107087214734607711
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +282,7 @@ MonoBehaviour:
   _interactRange: 2
   _interactLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 16385
   staringBones:
   - bone: {fileID: 5293703740267338557}
     clamp: {x: 50, y: 25, z: 20}
@@ -868,6 +962,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8946613393196690550, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4955117555781598793}
+    - targetCorrespondingSourceObject: {fileID: 8946613393196690550, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380599079715984309}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5659608151738451181, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
       insertIndex: -1
