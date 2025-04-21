@@ -7,9 +7,8 @@ using UnityEngine.InputSystem.XR;
 public class StareAtObjects : MonoBehaviour
 {
     private Vector3 _currentLookPos;
+    private float _globalInfluence = 0f; 
     [SerializeField] private Transform _headBone;
-    [Tooltip("This is an offset from the headbone's local position. Position to default to when nothing to stare at.")]
-    [SerializeField] private float _fallbackLookPos;
     [SerializeField] private float _interactRange = 2f;
     [SerializeField] private LayerMask _interactLayerMask = default;
     [SerializeField] private StaringBone[] staringBones;
@@ -41,10 +40,11 @@ public class StareAtObjects : MonoBehaviour
         Transform nearestTarget = GetNearestTarget();
         if (nearestTarget == null || !GameManager.Instance._characterMovementEnabled)
         {
-            _currentLookPos = _headBone.position + (_fallbackLookPos * this.transform.forward);
+            _globalInfluence = 0f;
         }
         else
         {
+            _globalInfluence = 1f;
             _currentLookPos = nearestTarget.position;
         }
         StareAtTarget(_currentLookPos);  
@@ -65,8 +65,6 @@ public class StareAtObjects : MonoBehaviour
 
     private void StareAtTarget(Vector3 target)
     {
-        //float distanceToTarget = Vector3.Distance(_currentLookPos, _headBone.position);
-        //float remappedDistance = math.remap(distanceToTarget, 0f, _interactRange, 1f, 0f);
         foreach(StaringBone b in staringBones)
         {
             //store the animator's bone changes
@@ -78,7 +76,7 @@ public class StareAtObjects : MonoBehaviour
             Vector3 targetDirection = (target - b.bone.position).normalized;
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             //Weight how much the bone's worldspace rotation should be influenced
-            Quaternion weightedRotation = Quaternion.Slerp(animatedBoneRot, targetRotation, b.influence);
+            Quaternion weightedRotation = Quaternion.Slerp(animatedBoneRot, targetRotation, b.influence * _globalInfluence);
             //Smoothly rotate toward the desired worldspace rotation
             weightedRotation = Quaternion.RotateTowards(b.bone.rotation, weightedRotation, b.speed);
             //Clamp the bone's local euler angle - why was this so hard!
