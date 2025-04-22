@@ -3604,6 +3604,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 680737097520113184, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
+      propertyPath: orthographic size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1527198092125220944, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3747,6 +3751,14 @@ PrefabInstance:
     - target: {fileID: 5276716690653234771, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_ClearDepth
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009694063402418035, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
+      propertyPath: orthographic size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058870489701474620, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
+      propertyPath: orthographic size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7589988186505998455, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_ClearDepth
@@ -5135,6 +5147,14 @@ PrefabInstance:
       propertyPath: stateMachine
       value: 
       objectReference: {fileID: 558007467}
+    - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08783841
+      objectReference: {fileID: 0}
     - target: {fileID: 1753907851294318676, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_UIInputModule
       value: 
