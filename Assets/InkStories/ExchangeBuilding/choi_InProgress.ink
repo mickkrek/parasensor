@@ -81,8 +81,16 @@ CHOI: Haha. Is there anything else?
 
 = choi_petradeskConfess
 CHOI: How... uh... um... there's no third member of the team. No idea what you're talking about.
++	{ not choi_petradeskDeflect } Multiple documents on the desk explicitly refer to "Dr. Jennings' research team"...
+	CHOI: Oh, well, of course. Um, Jennings must have put them on there.
+	CHOI: How careless, to put our documents on some random desk... haha. 
+	PARANOIA: Oh he's lying. He's obviously lying to us.
+	ERGOMANIA: Yeah, he's godawful at it.
+	CHOI: Bosses, am I right?
++	-> // fallback empty choice
+-
 PARANOIA: C'mon man...
-+   Jennings told me about her. Petrakis, right?
++   Look, Jennings told me about her. Petrakis, right?
 -
 CHOI: ...
 CHOI: Fuck. Alright. Yeah, she was the other assistant. 
