@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 86c75d7c08b449142b08e29475d2f4ef
+guid: be761192de39262459accc0d61e85e9f
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,7 +95,29 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 14 2 Copy
+  - name: JenningsChair
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 426
+      height: 689
+    spriteID: 5ed967ab587f6d846990770852bcc232
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2172}
+    spritePosition: {x: 1927, y: 125}
+  - name: Background
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -107,7 +129,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: bbadee085356f374cb0518c1042fe4b9
+    spriteID: dc5930febaa12db42a4b350c4aec6731
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -322,48 +344,58 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 62afd1c80b2a12e46aefb754c78b0cad
-    layerID: 0
+    spriteID: 83c1ca91b391d7241a6b11eac35b4674
+    layerID: 9
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 0
   - name: Vignette
-    spriteName: Vignette
+    spriteName: 
     isGroup: 0
     parentIndex: 0
-    spriteID: 792d25828087abe4f9d62bbdbf79941c
-    layerID: 0
-    mosaicPosition: {x: 4, y: 2172}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Midground
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: 0ef474a7ddcecda4a8c47dac89efd5f3
-    layerID: 0
+    spriteID: 18f1e5f7ecd33f7478e9343bd8b4e26a
+    layerID: 8
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 0
-  - name: Background
+  - name: Midground
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 608408bbe01ff4f4dab199fd29b12fb1
-    layerID: 0
+    spriteID: 18842e83e41963b4d85d68dacaab3c7c
+    layerID: 6
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 14 2 Copy
-    spriteName: Layer 14 2 Copy
+  - name: JenningsChair
+    spriteName: JenningsChair
     isGroup: 0
-    parentIndex: 3
-    spriteID: bbadee085356f374cb0518c1042fe4b9
-    layerID: 0
+    parentIndex: 2
+    spriteID: 5ed967ab587f6d846990770852bcc232
+    layerID: 5
+    mosaicPosition: {x: 4, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Background
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 4fc9e5e2fc7270e428d8582550bd65b2
+    layerID: 3
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Background
+    spriteName: Background
+    isGroup: 0
+    parentIndex: 4
+    spriteID: dc5930febaa12db42a4b350c4aec6731
+    layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
