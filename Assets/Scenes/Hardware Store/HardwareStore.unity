@@ -10064,6 +10064,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2969551526287370286, guid: 39e82584ddd515b4d9c61640aca7fd0a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1755749475239334555, guid: 39e82584ddd515b4d9c61640aca7fd0a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 515047076820983328, guid: 39e82584ddd515b4d9c61640aca7fd0a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 39e82584ddd515b4d9c61640aca7fd0a, type: 3}
       propertyPath: m_Name
       value: mr_mcdowell_workingfile (1)
