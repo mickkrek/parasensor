@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 540
+    spritePixelsToUnits: 1080
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -107,7 +107,7 @@ ScriptedImporter:
       y: 4
       width: 1920
       height: 1080
-    spriteID: 3a8aa64b7ab3f1648a646f8a0b13bff8
+    spriteID: 434e80f9fec72db41997d5930e2c3f27
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -129,7 +129,7 @@ ScriptedImporter:
       y: 1092
       width: 1920
       height: 1080
-    spriteID: 129dcc51f0b37054e94bacebadad0acf
+    spriteID: 1c8e75b8fa6c76847ab2a7c57b6314e2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -344,7 +344,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: bc5b54ead6138424ebe42a1717393794
+    spriteID: e571afb12db15ba4b9cfc03ec7fa71c1
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -354,7 +354,7 @@ ScriptedImporter:
     spriteName: Layer 4 2 Copy
     isGroup: 0
     parentIndex: 0
-    spriteID: 3a8aa64b7ab3f1648a646f8a0b13bff8
+    spriteID: 434e80f9fec72db41997d5930e2c3f27
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -364,7 +364,7 @@ ScriptedImporter:
     spriteName: Layer 1
     isGroup: 0
     parentIndex: 0
-    spriteID: 129dcc51f0b37054e94bacebadad0acf
+    spriteID: 1c8e75b8fa6c76847ab2a7c57b6314e2
     layerID: 0
     mosaicPosition: {x: 4, y: 1092}
     flatten: 0

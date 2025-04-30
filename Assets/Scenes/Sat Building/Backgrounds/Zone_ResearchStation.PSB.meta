@@ -107,7 +107,7 @@ ScriptedImporter:
       y: 2172
       width: 426
       height: 689
-    spriteID: 5ed967ab587f6d846990770852bcc232
+    spriteID: ddb515f8dc492004da4e9e29db5d6f0a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -129,7 +129,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: dc5930febaa12db42a4b350c4aec6731
+    spriteID: 6702dbe51f1fe504c81a5c31b8c0d9f5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -344,7 +344,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 83c1ca91b391d7241a6b11eac35b4674
+    spriteID: 544707cf1315ca24bbcada7251464eeb
     layerID: 9
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -354,7 +354,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: 0
-    spriteID: 18f1e5f7ecd33f7478e9343bd8b4e26a
+    spriteID: cf3a5fd3dcf914e4b8686db2d6ad66f2
     layerID: 8
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -364,7 +364,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 18842e83e41963b4d85d68dacaab3c7c
+    spriteID: 090468d36e789f1468e6d08965ffa505
     layerID: 6
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -374,7 +374,7 @@ ScriptedImporter:
     spriteName: JenningsChair
     isGroup: 0
     parentIndex: 2
-    spriteID: 5ed967ab587f6d846990770852bcc232
+    spriteID: ddb515f8dc492004da4e9e29db5d6f0a
     layerID: 5
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
@@ -384,7 +384,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 4fc9e5e2fc7270e428d8582550bd65b2
+    spriteID: 949609fa1e0744944b56c087f3a5d6d8
     layerID: 3
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -394,7 +394,7 @@ ScriptedImporter:
     spriteName: Background
     isGroup: 0
     parentIndex: 4
-    spriteID: dc5930febaa12db42a4b350c4aec6731
+    spriteID: 6702dbe51f1fe504c81a5c31b8c0d9f5
     layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
