@@ -40,7 +40,7 @@ public class StareAtObjects : MonoBehaviour
         Transform nearestTarget = GetNearestTarget();
         if (nearestTarget == null || !GameManager.Instance._characterMovementEnabled)
         {
-            _globalInfluence = 0f;
+            _globalInfluence = Mathf.MoveTowards(_globalInfluence, 0f, 0.5f * Time.deltaTime);
         }
         else
         {
@@ -76,7 +76,7 @@ public class StareAtObjects : MonoBehaviour
             Vector3 targetDirection = (target - b.bone.position).normalized;
             Quaternion targetRotation = Quaternion.LookRotation(targetDirection);
             //Weight how much the bone's worldspace rotation should be influenced
-            Quaternion weightedRotation = Quaternion.Slerp(animatedBoneRot, targetRotation, b.influence * _globalInfluence);
+            Quaternion weightedRotation = Quaternion.Slerp(animatedBoneRot, targetRotation, b.influence);
             //Smoothly rotate toward the desired worldspace rotation
             weightedRotation = Quaternion.RotateTowards(b.bone.rotation, weightedRotation, b.speed);
             //Clamp the bone's local euler angle - why was this so hard!
@@ -85,7 +85,10 @@ public class StareAtObjects : MonoBehaviour
             worldEuler.x = ClampAngle(worldEuler.x, originalWorldEuler.x - b.clamp.x, originalWorldEuler.x + b.clamp.x);
             worldEuler.y = ClampAngle(worldEuler.y, originalWorldEuler.y - b.clamp.y, originalWorldEuler.y + b.clamp.y);
             worldEuler.z = ClampAngle(worldEuler.z, originalWorldEuler.z - b.clamp.z, originalWorldEuler.z + b.clamp.z);
-            b.bone.eulerAngles = worldEuler;
+
+            //Mix between animated bone pos and this bone pose based on Global Influence
+            Vector3 globalInfluencedEuler = Quaternion.Slerp(animatedBoneRot, Quaternion.Euler(worldEuler), _globalInfluence).eulerAngles;
+            b.bone.eulerAngles = globalInfluencedEuler;
 
             //Store the changed rotation because the animator is going to override it next frame
             b.storedQuaternion = b.bone.rotation;
