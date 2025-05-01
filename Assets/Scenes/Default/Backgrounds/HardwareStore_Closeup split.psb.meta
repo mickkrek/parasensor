@@ -107,7 +107,7 @@ ScriptedImporter:
       y: 5152
       width: 3401
       height: 736
-    spriteID: 2ecdd942579a6864c9e2f1056d584c99
+    spriteID: 821f96f587025a64688968315192cd35
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -129,7 +129,7 @@ ScriptedImporter:
       y: 4340
       width: 0
       height: 0
-    spriteID: d9f7df7ede7a9b64fb617cb821da598b
+    spriteID: 60b7aa31134660440bf0910eeac25cfd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -151,7 +151,7 @@ ScriptedImporter:
       y: 6639
       width: 964
       height: 1236
-    spriteID: e14ad60c4a396a547a09559fb60f0051
+    spriteID: 6a4dcfd4d1a080e4985e1a3a26f8cb72
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -173,7 +173,7 @@ ScriptedImporter:
       y: 4340
       width: 3840
       height: 804
-    spriteID: d38d5b0d38c561d4b9b0c6c82f864aba
+    spriteID: 9f070ab15f58b514d934753de0f2ddba
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -195,7 +195,7 @@ ScriptedImporter:
       y: 5896
       width: 795
       height: 596
-    spriteID: ebb57f02e5abb6c43aada8b4876aef45
+    spriteID: 12fd288800ae7df4aa3d3da9baa990fe
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -217,7 +217,7 @@ ScriptedImporter:
       y: 5896
       width: 2322
       height: 735
-    spriteID: 76bf44e67664d674784ab4987640579d
+    spriteID: 4668e32b7cad12f4889d3a4d05576643
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -239,7 +239,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: a4dd7bad9beff794eb9ff8ade7f955e7
+    spriteID: 335415cdc850d7946b281f6329aef1f4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -261,7 +261,7 @@ ScriptedImporter:
       y: 4348
       width: 0
       height: 0
-    spriteID: 47448480920214944a2519a197859af6
+    spriteID: fdff2ecdb3467194191b2f7b24b51f76
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -283,7 +283,7 @@ ScriptedImporter:
       y: 2172
       width: 3840
       height: 2160
-    spriteID: 3ce3423ed8595c34f87ccf1d24294d90
+    spriteID: 7f800ecfa90e79b48836e94464f6c6ff
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -498,7 +498,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: da8c83b559820ab4099094a6e81edf35
+    spriteID: fde1de411bc70d14fb1478d98f4eee69
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -508,7 +508,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: 0
-    spriteID: 29e6f2fe91100524c967dcf3bb6c1fdb
+    spriteID: 04dd8669818a20f43ab57b15bce23402
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -518,7 +518,7 @@ ScriptedImporter:
     spriteName: Layer 5 Copy
     isGroup: 0
     parentIndex: 0
-    spriteID: 2ecdd942579a6864c9e2f1056d584c99
+    spriteID: 821f96f587025a64688968315192cd35
     layerID: 0
     mosaicPosition: {x: 4, y: 5152}
     flatten: 0
@@ -528,7 +528,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: 0
-    spriteID: 95b7a8bedfebc534081416be2452949f
+    spriteID: 628e903e883d4d548acbb60f54eb571e
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -538,7 +538,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: eb360b1b7f43df041b32d8b4d06bdcb6
+    spriteID: 7a2f511983a23b24ca9106c87514d9d4
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -548,7 +548,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: ab51f1b28d9a89245b0e621c8682c743
+    spriteID: 5d5124a48dd017549965df94cc96f3a9
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -558,7 +558,7 @@ ScriptedImporter:
     spriteName: Layer 3
     isGroup: 0
     parentIndex: 5
-    spriteID: d9f7df7ede7a9b64fb617cb821da598b
+    spriteID: 60b7aa31134660440bf0910eeac25cfd
     layerID: 0
     mosaicPosition: {x: 3852, y: 4340}
     flatten: 0
@@ -568,7 +568,7 @@ ScriptedImporter:
     spriteName: Layer 3 3 Copy
     isGroup: 0
     parentIndex: 5
-    spriteID: e14ad60c4a396a547a09559fb60f0051
+    spriteID: 6a4dcfd4d1a080e4985e1a3a26f8cb72
     layerID: 0
     mosaicPosition: {x: 4, y: 6639}
     flatten: 0
@@ -578,7 +578,7 @@ ScriptedImporter:
     spriteName: Layer 1
     isGroup: 0
     parentIndex: 5
-    spriteID: d38d5b0d38c561d4b9b0c6c82f864aba
+    spriteID: 9f070ab15f58b514d934753de0f2ddba
     layerID: 0
     mosaicPosition: {x: 4, y: 4340}
     flatten: 0
@@ -588,7 +588,7 @@ ScriptedImporter:
     spriteName: Layer 3 2 Copy 3
     isGroup: 0
     parentIndex: 5
-    spriteID: ebb57f02e5abb6c43aada8b4876aef45
+    spriteID: 12fd288800ae7df4aa3d3da9baa990fe
     layerID: 0
     mosaicPosition: {x: 2334, y: 5896}
     flatten: 0
@@ -598,7 +598,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: 5
-    spriteID: 3679c3bb3033525478b31c563ef2c33e
+    spriteID: dd19884a363ae6649a4deb696734b290
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -608,7 +608,7 @@ ScriptedImporter:
     spriteName: Layer 6
     isGroup: 0
     parentIndex: 5
-    spriteID: 76bf44e67664d674784ab4987640579d
+    spriteID: 4668e32b7cad12f4889d3a4d05576643
     layerID: 0
     mosaicPosition: {x: 4, y: 5896}
     flatten: 0
@@ -618,7 +618,7 @@ ScriptedImporter:
     spriteName: Layer 3 2
     isGroup: 0
     parentIndex: 5
-    spriteID: a4dd7bad9beff794eb9ff8ade7f955e7
+    spriteID: 335415cdc850d7946b281f6329aef1f4
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -628,7 +628,7 @@ ScriptedImporter:
     spriteName: Layer 2
     isGroup: 0
     parentIndex: 5
-    spriteID: 47448480920214944a2519a197859af6
+    spriteID: fdff2ecdb3467194191b2f7b24b51f76
     layerID: 0
     mosaicPosition: {x: 3852, y: 4348}
     flatten: 0
@@ -638,7 +638,7 @@ ScriptedImporter:
     spriteName: HardwareStore_Closeup Copy
     isGroup: 0
     parentIndex: -1
-    spriteID: 3ce3423ed8595c34f87ccf1d24294d90
+    spriteID: 7f800ecfa90e79b48836e94464f6c6ff
     layerID: 0
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
