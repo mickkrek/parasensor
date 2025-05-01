@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Mr_McDowell_Textures
     second: {fileID: 2100000, guid: a9b1a5aca2ec7c64bb5e41c991b56929, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mr_McDowell_Textures_Translucent
+    second: {fileID: 2100000, guid: e4ffea6642e726b42843b2b99d6cffe4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
