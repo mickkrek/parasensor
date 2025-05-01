@@ -44,6 +44,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _ScrollSpeed: 1
     - _Speed: 54.92
     m_Colors: []
   m_BuildTextureStacks: []
