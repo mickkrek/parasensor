@@ -15707,6 +15707,11 @@ Transform:
   - {fileID: 1266020472}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1319960480 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+  m_PrefabInstance: {fileID: 1505582455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1323986569
 GameObject:
   m_ObjectHideFlags: 0
@@ -20263,6 +20268,103 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1505582455
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1717183937}
+    m_Modifications:
+    - target: {fileID: -8653719598885068355, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Name
+      value: Zone_Stairwell
+      objectReference: {fileID: 0}
+    - target: {fileID: -8653719598885068355, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7552582706839291426, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5864939829293242990, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1077839563363513837, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190793591230224718, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2824943157020903272, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2949043500138629971, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659470170654690009, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6724470107796714755, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6761345949968448226, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181955674465961514, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 4843985084834002234, guid: e3fb4a4c1a12dbe42bb9b0efbfd20bec, type: 3}
 --- !u!1 &1507584855
 GameObject:
   m_ObjectHideFlags: 0
@@ -22278,6 +22380,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5705289387011742168, guid: ad35dd39cf2786b4da6ba4ee1f1ef917, type: 3}
+      propertyPath: spriteParent
+      value: 
+      objectReference: {fileID: 1319960480}
+    - target: {fileID: 5705289387011742168, guid: ad35dd39cf2786b4da6ba4ee1f1ef917, type: 3}
       propertyPath: environmentParent
       value: 
       objectReference: {fileID: 1856374595}
@@ -22359,6 +22465,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5437674474489112809, guid: ad35dd39cf2786b4da6ba4ee1f1ef917, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1297448996}
+    - targetCorrespondingSourceObject: {fileID: 5437674474489112809, guid: ad35dd39cf2786b4da6ba4ee1f1ef917, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1319960480}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5437674474489112810, guid: ad35dd39cf2786b4da6ba4ee1f1ef917, type: 3}
       insertIndex: -1
@@ -23885,7 +23994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1856374595}
   m_Layer: 0
-  m_Name: Zone_Stairwell
+  m_Name: Zone_Stairwell a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24295,7 +24404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1922419760}
   m_Layer: 0
-  m_Name: Zone_PetrakisDoor
+  m_Name: Zone_PetrakisDoor a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
