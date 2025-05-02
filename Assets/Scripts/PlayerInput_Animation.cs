@@ -36,7 +36,7 @@ public class PlayerInput_Animation : MonoBehaviour
             // The overall speed
             float overallSpeed = _controller.velocity.magnitude;
             
-            _animator.SetFloat("ForwardVelocity",  _forwardSpeed);
+            _animator.SetFloat("ForwardVelocity",  _forwardSpeed / _playerControls.playerSpeed);
         }
     }
     public void ChangeEquippedItemPose(AnimationClip newAnimation)

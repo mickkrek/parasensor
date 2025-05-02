@@ -5249,7 +5249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8631302908889666212, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: playerSpeed
-      value: 1.4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8631302908889666212, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: _controllerDeadzone
