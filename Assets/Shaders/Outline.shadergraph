@@ -4770,8 +4770,8 @@
     "m_ObjectId": "9b44a605b290486ab4e45eabdebfc6a8",
     "m_Title": "Width calculation",
     "m_Position": {
-        "x": -5396.0,
-        "y": -298.0
+        "x": -5395.99951171875,
+        "y": -297.99993896484377
     }
 }
 
@@ -5701,8 +5701,8 @@
     "m_ObjectId": "c4ffcb964a634d6a98922f17528baf59",
     "m_Title": "depth offset",
     "m_Position": {
-        "x": -4368.0,
-        "y": -1504.0
+        "x": -4367.99951171875,
+        "y": -1503.9998779296875
     }
 }
 
@@ -5807,8 +5807,8 @@
     "m_ObjectId": "c7679896581648a3882b1ec867e178ce",
     "m_Title": "vertexboil",
     "m_Position": {
-        "x": 62.0,
-        "y": -714.0
+        "x": 62.00048828125,
+        "y": -713.9998779296875
     }
 }
 
@@ -7125,7 +7125,7 @@
     "m_ShaderOutputName": "Max",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 10.0,
+        "x": 5.0,
         "y": 1.0,
         "z": 1.0,
         "w": 1.0
