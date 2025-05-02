@@ -21,14 +21,20 @@ CHOI: Well, I haven't been down in the basement in months so it wouldn't be me, 
 -
 CHOI. Mm-hmm.
 CHOI: How... *tampered* is it?
-+	The core's missing, someone deliberately removed it.
++	The access panel to the core's got a bunch of scratches on it. My guess is someone removed the core from it.
 // should there be a lying option here... maybe
 -
 CHOI: So it's not *completely* destroyed...
-CHOI: How long will it take for you to replace it?
-+	I'd need to source a replacement first. Would there be any proprietary parts lying around here?
-CHOI: There's a Hardware Store nearby that stocks... seemingly everything. That's where I got the generator.
-CHOI: They may have some Metcom stuff there too.
+CHOI: What do you mean your "guess", are you sure that's the cause?
++	It's the only part of it that is visibly damaged...
++	Are you a mechanic? It's pretty obvious the core compartment's the cause.
+-
+CHOI: Right, okay. How long will it take for you to replace it?
++	I'd need to open it up first. Would there be any proprietary screwdriver bits lying around here?
+-
+CHOI: Doubt it. They removed anything useful before we moved in. Including auxiliary power.
+CHOI: There *is* a Hardware Store nearby that stocks... seemingly everything. That's where I got the generator.
+CHOI: They may have some Metcom-compatible stuff there too.
 CHOI: Uh... Anyway. Maybe you should check that out instead of looking around here.
 PARANOIA: He's hiding something... We sense guilt, but it's not about the phone.
 {   

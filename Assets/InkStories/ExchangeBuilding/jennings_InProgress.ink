@@ -6,7 +6,7 @@ JENNINGS: What now? Keep it short. I'm very busy.
 == jennings_questionsMenu ==
 // questions hub that updates as you do things. variables tbd depending on how we wanna implement this stuff.
 +	{ metphone_Inspect } I've checked on the phone. Someone tampered with it. ->jennings_metphoneInspected
-+   { oldphone_Inspect } I found an antique phone in the basement. { choi_oldphone_Inspected: Choi told me you could tell me about it. | Would you know anything about it? } ->jennings_oldphoneInspected
++   { oldphone_Inspect } I found an antique phone in the basement. { choi_questionsMenu.choi_oldphoneInspected: Choi told me you could tell me about it. | Would you know anything about it? } ->jennings_oldphoneInspected
 +	{ petradesk_Inspect } (Point at messy desk) Do you know whose desk that is? ->jennings_petradeskInspected
 + 	I'm good for now. (Leave) ->DONE
 
@@ -71,8 +71,8 @@ JENNINGS: So many good people laid off in preparation for this... preposterous p
 -
 JENNINGS: Petrakis is my assistant researcher! More competent than Choi, for sure, although these days she's been quite flaky.
 JENNINGS: Well, maybe it's good that she's gone. Choi and her were probably scheming against me behind my back. Thick as thieves, those two.
-{ choi_petradeskDeflect: PARANOIA: Oh. This must be what Choi is lying about. It's gonna feel good to let him know... that we know. }
-+	{ choi_petradeskDeflect } Wait, Choi pretended he didn't know her.
+{ choi_questionsMenu.choi_petradeskDeflect: PARANOIA: Oh. This must be what Choi is lying about. It's gonna feel good to let him know... that we know. }
++	{ choi_questionsMenu.choi_petradeskDeflect } Wait, Choi pretended he didn't know her.
 	JENNINGS: Typical. He always was envious of her and he'd do anything for a promotion.
 	++	Looks like I'll have to ask Choi about her.
 +	Looks like I'll have to ask Choi about her.
