@@ -35,7 +35,7 @@ PETRAKIS: You seem smart enough. I'd be happy to tell you all about what Metcom'
 
 == petrakis_MetphoneQuestions ==
 PETRAKIS: Go on, ask me about that phone.
-+   { break && powercore && quitting } Okay. I think I know what's going on here. ->petrakis_InProgress
++   { break and powercore and quitting } Okay. I think I know what's going on here. ->petrakis_InProgress
 +	Why did you break the phone? 
     ->break
 +	What did you do with the power core? 

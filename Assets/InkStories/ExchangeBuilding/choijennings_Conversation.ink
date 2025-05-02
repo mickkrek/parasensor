@@ -1,5 +1,5 @@
 EXTERNAL SetCharacterState(characterCodeName, state)
-
+->choi_Intro
 == choi_Intro ==
 // checking if marisol spoke to jennings first...
 {
@@ -78,7 +78,7 @@ CHOI: Marisol. Anything you need?
 // questions hub that updates as you do things. variables tbd depending on how we wanna implement this stuff.
 +	{ metphone_Inspect } I've looked at the phone, looks like someone tampered with it. ->choi_metphoneInspected 
 +	{ oldphone_Inspect } By the way, I found a very old phone in the basement. Know anything about it? ->choi_oldphoneInspected
-+	{ petradesk_Inspect && not choi_petradeskConfess } (Point at messy desk) { jennings_petradeskInspected: So, where's the third member of your team? | Whose desk is that? } ->choi_petradeskInspected
++	{ petradesk_Inspect and not choi_petradeskConfess } (Point at messy desk) { jennings_petradeskInspected: So, where's the third member of your team? | Whose desk is that? } ->choi_petradeskInspected
 + 	Nothing right now, cheers. (Leave) ->DONE
 
 = choi_metphoneInspected
@@ -107,14 +107,14 @@ CHOI: They may have some Metcom-compatible stuff there too.
 CHOI: Uh... Anyway. Maybe you should check that out instead of looking around here.
 PARANOIA: He's hiding something... We sense guilt, but it's not about the phone.
 {   
-    - 	petradesk_Inspect && jennings_petradeskInspected:
+    - 	petradesk_Inspect and jennings_petradeskInspected:
 		<> Maybe he's responsible for Petrakis running away...
     - 	petradesk_Inspect:
 		<> Could it have something to do with that messy desk?
     - 	else:
 		<> He *really* didn't want us to look around here. There must be something closeby he doesn't want us to see. 
 }
-{ petradesk_Inspect && not jennings_petradeskInspected: PARANOIA: Maybe Jennings knows something...? }
+{ petradesk_Inspect and not jennings_petradeskInspected: PARANOIA: Maybe Jennings knows something...? }
 CHOI: ...Anything else?
 ->choi_questionsMenu
 
