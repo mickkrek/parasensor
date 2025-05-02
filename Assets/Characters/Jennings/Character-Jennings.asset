@@ -17,6 +17,9 @@ MonoBehaviour:
   - displayName: Senior Metcom Researcher
     icon: {fileID: 21300000, guid: db05b2f74e979c7439a10e74bbd9969d, type: 3}
     bubbleColor: {r: 0, g: 0, b: 0, a: 0}
+  - displayName: Jennings
+    icon: {fileID: 21300000, guid: db05b2f74e979c7439a10e74bbd9969d, type: 3}
+    bubbleColor: {r: 0, g: 0, b: 0, a: 0}
   - displayName: Dr. Jennings
     icon: {fileID: 21300000, guid: db05b2f74e979c7439a10e74bbd9969d, type: 3}
     bubbleColor: {r: 0, g: 0, b: 0, a: 0}

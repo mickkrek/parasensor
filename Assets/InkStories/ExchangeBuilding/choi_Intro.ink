@@ -11,14 +11,14 @@
 	ERGOMANIA: Ah, this is the guy that actually does the work around here. He'll appreciate being talked to first.
 	+ 	Hey, excuse me. ->choi_situationBrief
 	+	Hm... I'll leave you to your work for now. (Leave) ->DONE // exit convo here
-	-
+	->DONE
 
 	= jennings_IntroFirst
 	// Choi is absorbed in his work, muttering to himself
 	ERGOMANIA: This is the guy that actually does the work around here. Should have talked to him first.
 	CHOI: ...bastard... treating me like I'm his lackey when I'm...
 	+ 	Okay. Hello. Hey. ->choi_situationBrief
-	-
+	->DONE
 
 == choi_situationBrief ==
 // choi explains what's goin on (omitting anything about petrakis), tells marisol where the phone is so she can take a look.
@@ -54,12 +54,12 @@
 	+	I'm Marisol.
 	+	Marisol Mendez.
 	-
-	EXTERNAL SetCharacterState(Choi, 0) // CHOI
+	~ SetCharacterState("CHOI", 1) // CHOI
 	CHOI: Marisol. I'm Choi, Research Assistant.
-	EXTERNAL SetCharacterState(Jennings, 0) // JENNINGS
+	~ SetCharacterState("JENNINGS", 1) // JENNINGS
 	CHOI: And... that's Jennings. 
 	CHOI: I mean...
-	EXTERNAL SetCharacterState(Jennings, 0) // DR. JENNINGS
+	~ SetCharacterState("JENNINGS", 2) // DR. JENNINGS
 	CHOI: *Doctor* Jennings. He's the one in charge of the team. 
 	CHOI: Technically. 
 	CHOI: Let me know if there's anything you need help with, I guess.

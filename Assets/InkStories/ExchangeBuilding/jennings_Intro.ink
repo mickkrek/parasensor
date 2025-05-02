@@ -26,7 +26,7 @@ ERGOMANIA: Wow, that's some advanced single-finger typing. This guy is hard at w
 		// Turning back towards the computer and muttering
 		JENNINGS: Disrupting my focus like that. Unbelievable.
 		// Turning to Marisol again
-		EXTERNAL SetCharacterState(Choi, 0)
+		~ SetCharacterState("CHOI", 1)
 		JENNINGS: Just... talk to Choi.
 		JENNINGS: Choi?
 		CHOI: (Sigh) What?
