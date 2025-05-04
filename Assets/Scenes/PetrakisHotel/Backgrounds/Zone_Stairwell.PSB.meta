@@ -95,7 +95,117 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 25 Copy
+  - name: ForegroundStairs
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2391
+      y: 2172
+      width: 867
+      height: 702
+    spriteID: d37e0128e67fec54197696918b8ebab2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2391, y: 2172}
+    spritePosition: {x: 702, y: 1458}
+  - name: ForegroundRails
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1278
+      y: 2172
+      width: 1105
+      height: 1312
+    spriteID: 80d9b9e3f027a1c4c952f72083ace921
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1278, y: 2172}
+    spritePosition: {x: 1363, y: 848}
+  - name: MidgroundStools
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1278
+      y: 3492
+      width: 304
+      height: 539
+    spriteID: 7be485197f06523469bef9df12535ae2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1278, y: 3492}
+    spritePosition: {x: 914, y: 72}
+  - name: MidgroundDesk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 3492
+      width: 462
+      height: 246
+    spriteID: ec0177c6daf73aa43a99fe91d7c31dc9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1590, y: 3492}
+    spritePosition: {x: 1292, y: 697}
+  - name: MidgroundRail
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2391
+      y: 2882
+      width: 718
+      height: 682
+    spriteID: 947fd55478cb23047bf190e30487b0b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2391, y: 2882}
+    spritePosition: {x: 1753, y: 221}
+  - name: MidgroundStairs
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -105,9 +215,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 2172
-      width: 1105
-      height: 1312
-    spriteID: c934fb8d304f9614682ae6f096210e5a
+      width: 1266
+      height: 1548
+    spriteID: c6dfc362ed59fd14f90661faa2e674e3
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,30 +226,8 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 2172}
-    spritePosition: {x: 1363, y: 848}
-  - name: Layer 25 Copy 2
-    originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
-    border: {x: 0, y: 0, z: 0, w: 0}
-    customData: 
-    rect:
-      serializedVersion: 2
-      x: 1117
-      y: 2172
-      width: 718
-      height: 682
-    spriteID: ab575f35200010c459dcd4acf98a664a
-    spriteBone: []
-    spriteOutline: []
-    vertices: []
-    spritePhysicsOutline: []
-    indices: 
-    edges: []
-    tessellationDetail: 0
-    uvTransform: {x: 1117, y: 2172}
-    spritePosition: {x: 1753, y: 221}
-  - name: Layer 27 2 2 Copy
+    spritePosition: {x: 1851, y: 0}
+  - name: Background
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -151,7 +239,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: b77b82c805f19184bb1961b796c77876
+    spriteID: 513d95bbe2b26ae41993bee00e40ffa1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -366,19 +454,29 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: bbc8aea1029203f4ca3428204dcb92fb
-    layerID: 0
+    spriteID: 18b3e19831d1b094f9e4f07e70d19bd3
+    layerID: 13
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 25 Copy
-    spriteName: Layer 25 Copy
+  - name: ForegroundStairs
+    spriteName: ForegroundStairs
     isGroup: 0
     parentIndex: 0
-    spriteID: c934fb8d304f9614682ae6f096210e5a
-    layerID: 0
-    mosaicPosition: {x: 4, y: 2172}
+    spriteID: d37e0128e67fec54197696918b8ebab2
+    layerID: 12
+    mosaicPosition: {x: 2391, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ForegroundRails
+    spriteName: ForegroundRails
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 80d9b9e3f027a1c4c952f72083ace921
+    layerID: 11
+    mosaicPosition: {x: 1278, y: 2172}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -386,19 +484,49 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: dddbd88d70dc75e4fb947c21445b1edb
-    layerID: 0
+    spriteID: f2932a57566c99f4f881fb8aea167db8
+    layerID: 9
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 25 Copy 2
-    spriteName: Layer 25 Copy 2
+  - name: MidgroundStools
+    spriteName: MidgroundStools
     isGroup: 0
-    parentIndex: 2
-    spriteID: ab575f35200010c459dcd4acf98a664a
-    layerID: 0
-    mosaicPosition: {x: 1117, y: 2172}
+    parentIndex: 3
+    spriteID: 7be485197f06523469bef9df12535ae2
+    layerID: 8
+    mosaicPosition: {x: 1278, y: 3492}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: MidgroundDesk
+    spriteName: MidgroundDesk
+    isGroup: 0
+    parentIndex: 3
+    spriteID: ec0177c6daf73aa43a99fe91d7c31dc9
+    layerID: 7
+    mosaicPosition: {x: 1590, y: 3492}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: MidgroundRail
+    spriteName: MidgroundRail
+    isGroup: 0
+    parentIndex: 3
+    spriteID: 947fd55478cb23047bf190e30487b0b7
+    layerID: 6
+    mosaicPosition: {x: 2391, y: 2882}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: MidgroundStairs
+    spriteName: MidgroundStairs
+    isGroup: 0
+    parentIndex: 3
+    spriteID: c6dfc362ed59fd14f90661faa2e674e3
+    layerID: 5
+    mosaicPosition: {x: 4, y: 2172}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -406,18 +534,18 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 05b2996f1460332429d9a13f5174d709
-    layerID: 0
+    spriteID: 15bafa4c78d8f2d4284c72a7d9a521d7
+    layerID: 3
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 27 2 2 Copy
-    spriteName: Layer 27 2 2 Copy
+  - name: Background
+    spriteName: Background
     isGroup: 0
-    parentIndex: 4
-    spriteID: b77b82c805f19184bb1961b796c77876
-    layerID: 0
+    parentIndex: 8
+    spriteID: 513d95bbe2b26ae41993bee00e40ffa1
+    layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
