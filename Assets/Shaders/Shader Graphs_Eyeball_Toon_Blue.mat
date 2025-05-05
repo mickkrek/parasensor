@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_Eyeball_Toon_Dark_Brown
+  m_Name: Shader Graphs_Eyeball_Toon_Blue
   m_Shader: {fileID: -6465566751694194690, guid: 8b017de0dfdf72c4587cb899f60b1357, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -55,8 +55,8 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _IrisInnerColor: {r: 0, g: 0, b: 0, a: 0}
-    - _IrisOuterColor: {r: 0.1509434, g: 0.08798505, b: 0.057671774, a: 1}
+    - _IrisInnerColor: {r: 1, g: 0, b: 0, a: 0}
+    - _IrisOuterColor: {r: 0.47036314, g: 0.52100563, b: 0.6603774, a: 1}
     - _ScleraColor: {r: 0.9245283, g: 0.9245283, b: 0.9245283, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

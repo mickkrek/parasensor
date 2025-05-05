@@ -92,7 +92,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SPECULAR: 1
-    - _Smoothness: 0.09
+    - _Smoothness: 0.2
     - _SrcBlend: 1
     - _Surface: 0
     - _ZTest: 4
