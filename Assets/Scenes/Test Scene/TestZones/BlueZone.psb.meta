@@ -104,7 +104,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
+      y: 8676
       width: 3840
       height: 2160
     spriteID: e12f507040e9a234c817e2e0709f842d
@@ -115,7 +115,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 2172}
     spritePosition: {x: 0, y: 0}
   - name: 
     originalName: 
@@ -418,7 +418,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: 2
-    spriteID: b2dac47f96c11e84ead250c1d84dacd3
+    spriteID: e12f507040e9a234c817e2e0709f842d
     layerID: 8
     mosaicPosition: {x: 4, y: 6508}
     flatten: 0
@@ -438,7 +438,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: 4
-    spriteID: 29993559d8f932c41822d28163381470
+    spriteID: e12f507040e9a234c817e2e0709f842d
     layerID: 5
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
