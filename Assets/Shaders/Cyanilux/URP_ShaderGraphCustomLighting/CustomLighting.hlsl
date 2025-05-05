@@ -185,7 +185,7 @@ void AdditionalLights_float(float3 WorldPosition, float3 WorldNormal, float3 Wor
 			float3 spec = pow(ndvl, Smoothness * 50);
 			spec *= (light.distanceAttenuation * light.shadowAttenuation);
 			spec = smoothstep(0.4,0.6,spec);
-			spec *= pow(Smoothness, 5);
+			spec *= pow(Smoothness, 4);
 			spec *= light.color;
 			specularColor += spec;
 		}

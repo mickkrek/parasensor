@@ -1411,7 +1411,7 @@
     "m_ObjectId": "06cba630327a402cb790155f9de17b14",
     "m_Title": "Shadows",
     "m_Position": {
-        "x": -1833.9998779296875,
+        "x": -1834.0,
         "y": 531.0
     }
 }
@@ -1983,7 +1983,7 @@
     "m_ObjectId": "19597c5082ad46518ee290e7015efdae",
     "m_Title": "Apply Albedo (diffuse)",
     "m_Position": {
-        "x": 481.00018310546877,
+        "x": 481.0,
         "y": -695.0
     }
 }
@@ -2238,8 +2238,8 @@
     "m_ObjectId": "1f9e65d3fe68476e9b4f9b9a70557d82",
     "m_Title": "Apply Light Colour",
     "m_Position": {
-        "x": -1246.9998779296875,
-        "y": -365.0000305175781
+        "x": -1247.0,
+        "y": -364.9999084472656
     }
 }
 
@@ -2297,8 +2297,8 @@
     "m_ObjectId": "22e262d7d7a742a48f2d002e973a1855",
     "m_Title": "Fresnel",
     "m_Position": {
-        "x": -880.0000610351563,
-        "y": -1460.0001220703125
+        "x": -880.0,
+        "y": -1460.0
     }
 }
 
@@ -2370,8 +2370,8 @@
     "m_ObjectId": "2b0e6ba4ce49402cae8ba6f4b1d4f52a",
     "m_Title": "Mainlight specular",
     "m_Position": {
-        "x": -2893.999755859375,
-        "y": 1498.0
+        "x": -2894.0,
+        "y": 1498.0001220703125
     }
 }
 
@@ -2381,8 +2381,8 @@
     "m_ObjectId": "2edeee29637c41a98a8aafec1933077d",
     "m_Title": "Combine Ramp with Shadows",
     "m_Position": {
-        "x": -1508.9998779296875,
-        "y": 95.99983215332031
+        "x": -1508.999755859375,
+        "y": 95.99980163574219
     }
 }
 
@@ -2589,8 +2589,8 @@
     "m_ObjectId": "37c82ea9a28a4983a031390da2e1bff7",
     "m_Title": "Main Light Cookie",
     "m_Position": {
-        "x": -2641.999755859375,
-        "y": -459.0000305175781
+        "x": -2642.0,
+        "y": -459.0
     }
 }
 
@@ -3029,7 +3029,7 @@
     "m_Title": "Additional Lights",
     "m_Position": {
         "x": -1107.0,
-        "y": 562.0
+        "y": 561.9998168945313
     }
 }
 
@@ -3140,7 +3140,7 @@
     "m_ShaderOutputName": "B",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 2.0,
+        "x": 4.0,
         "y": 2.0,
         "z": 2.0,
         "w": 2.0
@@ -3304,7 +3304,7 @@
     "m_ObjectId": "4c3f75edb7824406ab180291aa5eb512",
     "m_Title": "Ambient + Additional + Main",
     "m_Position": {
-        "x": -18.000041961669923,
+        "x": -18.0,
         "y": -696.0
     }
 }
@@ -3412,8 +3412,8 @@
     "m_ObjectId": "53fb0c77c05741f4ac5a460b97aac17a",
     "m_Title": "Diffuse, N Dot L",
     "m_Position": {
-        "x": -2516.0,
-        "y": 30.000003814697267
+        "x": -2515.999755859375,
+        "y": 29.999919891357423
     }
 }
 
@@ -4267,7 +4267,7 @@
     "m_Title": "Ambient + Additional",
     "m_Position": {
         "x": -641.0,
-        "y": -835.9999389648438
+        "y": -835.9998779296875
     }
 }
 
@@ -5109,7 +5109,7 @@
     "m_ObjectId": "97bac7fdec2246a99817ea7459f19187",
     "m_Title": "Speculars",
     "m_Position": {
-        "x": 5.0000457763671879,
+        "x": 4.999950408935547,
         "y": 834.0
     }
 }
@@ -5532,8 +5532,8 @@
     "m_ObjectId": "a889365107c04fd9b16bf5df7bef4261",
     "m_Title": "Main Light",
     "m_Position": {
-        "x": -3207.999755859375,
-        "y": -81.99996185302735
+        "x": -3208.0,
+        "y": -82.00019836425781
     }
 }
 
@@ -7266,7 +7266,7 @@
     "m_ShaderOutputName": "B",
     "m_StageCapability": 3,
     "m_Value": {
-        "x": 5.0,
+        "x": 4.0,
         "y": 2.0,
         "z": 2.0,
         "w": 2.0
@@ -8077,7 +8077,7 @@
     "m_ObjectId": "f9a39be892ab459db4009e2781d60b84",
     "m_Title": "Ambient",
     "m_Position": {
-        "x": -942.0,
+        "x": -941.9999389648438,
         "y": -842.9999389648438
     }
 }
