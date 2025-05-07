@@ -11,6 +11,10 @@ namespace DitzelGames.FastIK
     public class FastIKFabric : MonoBehaviour
     {
         /// <summary>
+        ///  If an equipped item is a child of these transforms, IK will not be processed!
+        /// </summary>
+        [SerializeField] private Transform[] _holdingItemSlots;
+        /// <summary>
         /// Chain length of bones
         /// </summary>
         public int ChainLength = 2;
@@ -113,6 +117,14 @@ namespace DitzelGames.FastIK
         // Update is called once per frame
         void LateUpdate()
         {
+            //If the player is holding an item in a relevant hand, do not do any IK stuff. This prevents weird animations
+            foreach(Transform t in _holdingItemSlots)
+            {
+                if (t.childCount > 0)
+                {
+                    return;
+                }
+            }
             ResolveIK();
         }
 
