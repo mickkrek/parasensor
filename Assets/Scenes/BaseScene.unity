@@ -5204,8 +5204,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5685014
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.08783841
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999723
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.0074459733
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.00000009362416
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380599079715984309, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -6.971423e-10
       objectReference: {fileID: 0}
     - target: {fileID: 1753907851294318676, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_UIInputModule
@@ -5227,6 +5247,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.61
       objectReference: {fileID: 0}
+    - target: {fileID: 5449681343551739237, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: _holdingItemSlots.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5449681343551739237, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: '_holdingItemSlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 648964373}
+    - target: {fileID: 5449681343551739237, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: '_holdingItemSlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2009500499}
     - target: {fileID: 6545843094286030614, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -5291,6 +5323,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9078335101884223211, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: _holdingItemSlots.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9078335101884223211, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: '_holdingItemSlots.Array.data[0]'
+      value: 
+      objectReference: {fileID: 137111087}
+    - target: {fileID: 9078335101884223211, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
+      propertyPath: '_holdingItemSlots.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2009500499}
     - target: {fileID: 9158667615843729851, guid: d8541c24e7abe9b48b8e9e58f8608578, type: 3}
       propertyPath: m_Name
       value: Player_Marisol
