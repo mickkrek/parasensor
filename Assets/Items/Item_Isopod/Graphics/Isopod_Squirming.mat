@@ -128,9 +128,10 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RotationStrength: 10
+    - _RotationStrength: 25
     - _SineNoiseOffset: 50
-    - _SineNoiseScale: 50
+    - _SineNoiseScale: 30
+    - _SineWaveScale: 25
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -147,8 +148,9 @@ Material:
     - _DiffuseColor: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ObjectSpaceInfluence: {r: 0, g: 1, b: 1, a: 0}
-    - _RotationAxis: {r: 1, g: 1, b: 0, a: 0}
+    - _RotationAxis: {r: 1, g: 0, b: 0, a: 0}
     - _SineNoiseOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _SineNoiseScale: {r: 30, g: 30, b: 30, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _VertexDirectionMask: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
