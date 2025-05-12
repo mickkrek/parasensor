@@ -1,14 +1,5 @@
 fileFormatVersion: 2
 guid: 03ca45bb53dc94f478358a1b6475653d
-MonoImporter:
-  externalObjects: {}
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 200
-  icon: {instanceID: 0}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
   productId: 139972
@@ -16,3 +7,12 @@ AssetOrigin:
   packageVersion: 1.2
   assetPath: Assets/FastIK/Scripts/FastIK/FastIKFabric.cs
   uploadId: 495221
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 250
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
