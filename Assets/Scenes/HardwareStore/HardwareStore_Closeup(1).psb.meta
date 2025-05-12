@@ -104,7 +104,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 4161
+      y: 4340
       width: 917
       height: 1059
     spriteID: 7d190d575375df04188f59d06abdae96
@@ -115,9 +115,9 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4161}
+    uvTransform: {x: 4, y: 4340}
     spritePosition: {x: 916, y: 0}
-  - name: paintover
+  - name: Original Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -127,9 +127,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 2172
-      width: 3530
-      height: 1981
-    spriteID: 67aa511e7f2970b42a5a147ed3cd379b
+      width: 2437
+      height: 2160
+    spriteID: 1231d6e26955e14469ae2aaabac628eb
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -139,6 +139,28 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 2172}
     spritePosition: {x: 0, y: 0}
+  - name: Layer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3852
+      y: 4
+      width: 0
+      height: 0
+    spriteID: 79e54ae9588b8db4ebb359f4509aae1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3852, y: 4}
+    spritePosition: {x: 0, y: 2160}
   - name: Original
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -367,7 +389,7 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 715fe332010a62e4baad61127d5c098f
-    layerID: 11
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
@@ -377,8 +399,8 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: 7d190d575375df04188f59d06abdae96
-    layerID: 10
-    mosaicPosition: {x: 4, y: 4161}
+    layerID: 0
+    mosaicPosition: {x: 4, y: 4340}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -387,7 +409,7 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: 0
     spriteID: 65219a2b731ebb54491c356d0848cf69
-    layerID: 9
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
@@ -397,7 +419,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: b67f205a2ada8db4385712495de6d772
-    layerID: 8
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
@@ -407,7 +429,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: b67f205a2ada8db4385712495de6d772
-    layerID: 7
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
@@ -417,7 +439,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: b67f205a2ada8db4385712495de6d772
-    layerID: 6
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
@@ -427,7 +449,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: b67f205a2ada8db4385712495de6d772
-    layerID: 5
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
@@ -437,8 +459,28 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: 67aa511e7f2970b42a5a147ed3cd379b
-    layerID: 3
+    layerID: 0
     mosaicPosition: {x: 4, y: 2172}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: Original Copy
+    spriteName: Original Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1231d6e26955e14469ae2aaabac628eb
+    layerID: 0
+    mosaicPosition: {x: 4, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 1
+    spriteName: Layer 1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 79e54ae9588b8db4ebb359f4509aae1f
+    layerID: 0
+    mosaicPosition: {x: 3852, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -447,7 +489,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: ebda704bc6a0bb14cabd25e9eaecd38b
-    layerID: 2
+    layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

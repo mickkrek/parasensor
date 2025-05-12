@@ -95,6 +95,28 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
+  - name: Layer 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2172
+      width: 299
+      height: 452
+    spriteID: ed44f525c59602b4f9dd6d5ebf695ea4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2172}
+    spritePosition: {x: 1522, y: 1132}
   - name: Layer 1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -347,6 +369,16 @@ ScriptedImporter:
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
+    isVisible: 1
+  - name: Layer 2
+    spriteName: Layer 2
+    isGroup: 0
+    parentIndex: 2
+    spriteID: ed44f525c59602b4f9dd6d5ebf695ea4
+    layerID: 0
+    mosaicPosition: {x: 4, y: 2172}
+    flatten: 0
+    isImported: 1
     isVisible: 1
   - name: Layer 1
     spriteName: Layer 1

@@ -103,8 +103,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4161
+      x: 2584
+      y: 2172
       width: 917
       height: 1059
     spriteID: 724d8bf74ba74574dbf4609bfd2065dd
@@ -115,9 +115,31 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4161}
+    uvTransform: {x: 2584, y: 2172}
     spritePosition: {x: 916, y: 0}
-  - name: paintover
+  - name: Layer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4340
+      width: 1928
+      height: 556
+    spriteID: d474109ad9a787c4a9cfe815e657f633
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4340}
+    spritePosition: {x: 0, y: 0}
+  - name: Original Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -127,9 +149,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 2172
-      width: 3530
-      height: 1981
-    spriteID: 5d1eff3fdc48ffa43b13f89cd69677d1
+      width: 2437
+      height: 2160
+    spriteID: 45a909edfcef17646b9394574d8b1fc8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -367,7 +389,7 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: -1
     spriteID: 91a3868870b2112438858595e67813a8
-    layerID: 11
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
@@ -377,8 +399,8 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 0
     spriteID: 724d8bf74ba74574dbf4609bfd2065dd
-    layerID: 10
-    mosaicPosition: {x: 4, y: 4161}
+    layerID: 0
+    mosaicPosition: {x: 2584, y: 2172}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -387,7 +409,7 @@ ScriptedImporter:
     isGroup: 1
     parentIndex: 0
     spriteID: 34309d041ad977d41a17d2e773edb2bf
-    layerID: 9
+    layerID: 0
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
@@ -397,7 +419,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: 8f177d89462a2b743949fac80bfb4144
-    layerID: 8
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
@@ -407,7 +429,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: 8f177d89462a2b743949fac80bfb4144
-    layerID: 7
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
@@ -417,7 +439,7 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: 8f177d89462a2b743949fac80bfb4144
-    layerID: 6
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
@@ -427,27 +449,47 @@ ScriptedImporter:
     isGroup: 0
     parentIndex: 2
     spriteID: 8f177d89462a2b743949fac80bfb4144
-    layerID: 5
+    layerID: 0
     mosaicPosition: {x: 4, y: 6153}
     flatten: 0
     isImported: 0
+    isVisible: 1
+  - name: Layer 1
+    spriteName: Layer 1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d474109ad9a787c4a9cfe815e657f633
+    layerID: 0
+    mosaicPosition: {x: 4, y: 4340}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Original Copy
+    spriteName: Original Copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 45a909edfcef17646b9394574d8b1fc8
+    layerID: 0
+    mosaicPosition: {x: 4, y: 2172}
+    flatten: 0
+    isImported: 1
     isVisible: 1
   - name: paintover
     spriteName: paintover
     isGroup: 0
     parentIndex: 0
     spriteID: 5d1eff3fdc48ffa43b13f89cd69677d1
-    layerID: 3
+    layerID: 0
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
-    isImported: 1
-    isVisible: 1
+    isImported: 0
+    isVisible: 0
   - name: Original
     spriteName: Original
     isGroup: 0
     parentIndex: 0
     spriteID: c564d0d4119a0944d9b03e328728888b
-    layerID: 2
+    layerID: 0
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1

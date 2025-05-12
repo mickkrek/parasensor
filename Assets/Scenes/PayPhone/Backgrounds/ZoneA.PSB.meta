@@ -95,6 +95,28 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
+  - name: Layer 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4340
+      width: 687
+      height: 350
+    spriteID: 2777a3ce41e012c409beb9ceac3e5ac8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4340}
+    spritePosition: {x: 513, y: 822}
   - name: Tone Curve 3 2 Copy
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -370,6 +392,16 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
+  - name: Layer 1
+    spriteName: Layer 1
+    isGroup: 0
+    parentIndex: 2
+    spriteID: 2777a3ce41e012c409beb9ceac3e5ac8
+    layerID: 0
+    mosaicPosition: {x: 4, y: 4340}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Tone Curve 3 2 Copy
     spriteName: Tone Curve 3 2 Copy
     isGroup: 0
@@ -403,7 +435,7 @@ ScriptedImporter:
   - name: Layer 12 3 Copy
     spriteName: Layer 12 3 Copy
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 6
     spriteID: b4a47e40676881a4abc905b4e030db59
     layerID: 0
     mosaicPosition: {x: 4, y: 4}
@@ -413,7 +445,7 @@ ScriptedImporter:
   - name: Render_Background
     spriteName: 
     isGroup: 0
-    parentIndex: 5
+    parentIndex: 6
     spriteID: 9d4611ed2567bd7459b695f7d273297a
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
