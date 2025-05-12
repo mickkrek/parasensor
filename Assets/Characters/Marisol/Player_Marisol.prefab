@@ -1107,8 +1107,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7497502139824744375, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
+      propertyPath: playerSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497502139824744375, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
       propertyPath: _turnSmoothTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7497502139824744375, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
+      propertyPath: controllerDeadzone
+      value: 0.001
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5166286821808272221, guid: 318d8a74a2259dc49918659ac039eb6d, type: 3}
@@ -2356,6 +2364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ca45bb53dc94f478358a1b6475653d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _holdingItemSlots: []
   ChainLength: 2
   Target: {fileID: 3035622790354709885}
   Pole: {fileID: 337133487785879949}
@@ -2389,6 +2398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ca45bb53dc94f478358a1b6475653d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _holdingItemSlots: []
   ChainLength: 2
   Target: {fileID: 7488125271171029912}
   Pole: {fileID: 177875063989899259}

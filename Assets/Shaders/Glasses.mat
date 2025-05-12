@@ -48,10 +48,10 @@ Material:
     - _QueueOffset: 0
     - _Rim: 1.5
     - _Scale: 3
-    - _Whiteout: 0.2
+    - _Whiteout: 0.1
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _SheenColor: {r: 0.78221786, g: 0.8867924, b: 0.8492528, a: 1}
+    - _SheenColor: {r: 0.36645603, g: 0.5754717, b: 0.50579983, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3309594280220366208
