@@ -95,7 +95,7 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   multiSpriteImportData: []
   layeredSpriteImportData:
-  - name: Layer 2
+  - name: insides
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -105,9 +105,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 2172
-      width: 299
-      height: 452
-    spriteID: ed44f525c59602b4f9dd6d5ebf695ea4
+      width: 782
+      height: 903
+    spriteID: 4ca9222bb28108e4885e69facdf1dea8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -116,8 +116,52 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 2172}
+    spritePosition: {x: 1108, y: 668}
+  - name: paintover
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 794
+      y: 2172
+      width: 360
+      height: 384
+    spriteID: 5456f4373ce060a45bbfa7a299c94980
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 794, y: 2172}
+    spritePosition: {x: 1567, y: 1219}
+  - name: paintover1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 794
+      y: 2564
+      width: 299
+      height: 452
+    spriteID: c6fbf3ebd62b8cc4eab1366213e9e0a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 794, y: 2564}
     spritePosition: {x: 1522, y: 1132}
-  - name: Layer 1
+  - name: original
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -129,7 +173,7 @@ ScriptedImporter:
       y: 4
       width: 3840
       height: 2160
-    spriteID: 9f55145a6c9a5a64d8426817557d9164
+    spriteID: dea69614f83423a4e8b7d95679cb7523
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -340,52 +384,52 @@ ScriptedImporter:
   resliceFromLayer: 0
   pSDLayerImportSetting: []
   psdLayers:
-  - name: Foreground
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: e3b3d679becdd0846839eccab2fb0c30
-    layerID: 0
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
-  - name: Midground
-    spriteName: 
-    isGroup: 1
-    parentIndex: -1
-    spriteID: baab4bc5b7ccc4f44b4c10391f7a5f31
-    layerID: 0
-    mosaicPosition: {x: 0, y: 0}
-    flatten: 0
-    isImported: 0
-    isVisible: 1
   - name: Background
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 26cc483df7eb35f44a97a09b34ce1015
-    layerID: 0
+    spriteID: 608408bbe01ff4f4dab199fd29b12fb1
+    layerID: 6
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Layer 2
-    spriteName: Layer 2
+  - name: insides
+    spriteName: insides
     isGroup: 0
-    parentIndex: 2
-    spriteID: ed44f525c59602b4f9dd6d5ebf695ea4
-    layerID: 0
+    parentIndex: 0
+    spriteID: 4ca9222bb28108e4885e69facdf1dea8
+    layerID: 5
     mosaicPosition: {x: 4, y: 2172}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Layer 1
-    spriteName: Layer 1
+  - name: paintover
+    spriteName: paintover
     isGroup: 0
-    parentIndex: 2
-    spriteID: 9f55145a6c9a5a64d8426817557d9164
-    layerID: 0
+    parentIndex: 0
+    spriteID: 5456f4373ce060a45bbfa7a299c94980
+    layerID: 4
+    mosaicPosition: {x: 794, y: 2172}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: paintover1
+    spriteName: paintover1
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c6fbf3ebd62b8cc4eab1366213e9e0a3
+    layerID: 3
+    mosaicPosition: {x: 794, y: 2564}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: original
+    spriteName: original
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dea69614f83423a4e8b7d95679cb7523
+    layerID: 2
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
     isImported: 1
