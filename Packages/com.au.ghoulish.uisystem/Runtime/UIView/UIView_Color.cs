@@ -11,7 +11,7 @@ namespace Ghoulish.UISystem
         public string ComponentName = "UI Image Color";
         [System.Serializable]private class AnimationState
         {
-            public Color color;
+            public Color color = Color.white;
             public float duration;
             public CurveTypes CurveType;
         }

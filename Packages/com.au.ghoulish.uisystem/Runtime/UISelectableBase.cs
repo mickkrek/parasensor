@@ -9,7 +9,7 @@ namespace Ghoulish.UISystem
     public class UISelectableBase : Selectable, IDeselectHandler, IPointerClickHandler, ISubmitHandler
     {
         [SerializeField] bool UseHover, UseSelected, UseSubmit; //these dont do anything right now
-        private SelectionState storedSelectionState = SelectionState.Normal; //Set the default to 'selectable' state
+        private SelectionState storedSelectionState = SelectionState.Disabled; //Set the default to 'selectable' state
         private UIView[] childrenUIViews;
         
     #region Unity Button
@@ -112,7 +112,7 @@ namespace Ghoulish.UISystem
                         OnDefault();
                         break;
                     default:
-                        OnDefault();
+                        OnDisabled();
                         break;
                 }
             }

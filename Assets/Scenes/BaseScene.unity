@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0, g: 1, b: 0, a: 0}
-  m_AmbientEquatorColor: {r: 0, g: 1, b: 0, a: 0}
-  m_AmbientGroundColor: {r: 0, g: 1, b: 0, a: 0}
+  m_AmbientSkyColor: {r: 0.7137255, g: 0.7254902, b: 0.61960787, a: 0}
+  m_AmbientEquatorColor: {r: 0.49803925, g: 0.5686275, b: 0.60784316, a: 0}
+  m_AmbientGroundColor: {r: 0.08627451, g: 0.098039225, b: 0.17254902, a: 0}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -5136,13 +5136,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037685719}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9acd363b3c8576e4484cfbce4aca173d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollBar: {fileID: 1406362995}
-  contentParent: {fileID: 814053131}
+  _scrollBar: {fileID: 1406362995}
+  _contentParent: {fileID: 814053131}
 --- !u!114 &1037685723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5156,7 +5156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 814053131}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 2
   m_Elasticity: 0.1
