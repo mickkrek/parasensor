@@ -29,3 +29,5 @@ MonoBehaviour:
     currentState: 0
   - character: {fileID: 11400000, guid: d777c6c3dedf9410596698413766f828, type: 2}
     currentState: 0
+  - character: {fileID: 11400000, guid: 0d71b71fdf7b9d048b7b89dbb3ca7334, type: 2}
+    currentState: 0

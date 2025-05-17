@@ -86,6 +86,8 @@ GameObject:
   - component: {fileID: 1712433422887646176}
   - component: {fileID: 1309971142944623519}
   - component: {fileID: 2937463681270263691}
+  - component: {fileID: 3743158246550228854}
+  - component: {fileID: 8208571175502876803}
   m_Layer: 5
   m_Name: InkSpeechBubble
   m_TagString: Untagged
@@ -156,6 +158,30 @@ MonoBehaviour:
   characterName: {fileID: 6239591009012598361}
   speechText: {fileID: 8758596002250704986}
   characterPortrait: {fileID: 8284625808000879471}
+--- !u!114 &3743158246550228854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905881031631973892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5bfb1a1c3a0c94897c7c05e8d60796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!225 &8208571175502876803
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905881031631973892}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &4505141451242267612
 GameObject:
   m_ObjectHideFlags: 0

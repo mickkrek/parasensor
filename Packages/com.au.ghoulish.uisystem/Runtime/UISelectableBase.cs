@@ -1,17 +1,68 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Ghoulish.UISystem
 {
-    public class UISelectableBase : Selectable, IDeselectHandler
+    public class UISelectableBase : Selectable, IDeselectHandler, IPointerClickHandler, ISubmitHandler
     {
-        [SerializeField] bool UseHover, UseSelected, UseSubmit;
+        [SerializeField] bool UseHover, UseSelected, UseSubmit; //these dont do anything right now
         private SelectionState storedSelectionState = SelectionState.Normal; //Set the default to 'selectable' state
         private UIView[] childrenUIViews;
+        
+    #region Unity Button
+        public class ButtonClickedEvent : UnityEvent {}
+        [SerializeField] private ButtonClickedEvent m_OnClick = new ButtonClickedEvent();
+        public ButtonClickedEvent onClick
+        {
+            get { return m_OnClick; }
+            set { m_OnClick = value; }
+        }
 
+        private void Press()
+        {
+            if (!IsActive() || !IsInteractable())
+                return;
 
+            UISystemProfilerApi.AddMarker("Button.onClick", this);
+            m_OnClick.Invoke();
+        }
+        public virtual void OnPointerClick(PointerEventData eventData)
+        {
+            if (eventData.button != PointerEventData.InputButton.Left)
+                return;
+
+            Press();
+        }
+        public virtual void OnSubmit(BaseEventData eventData)
+        {
+            Press();
+
+            // if we get set disabled during the press
+            // don't run the coroutine.
+            if (!IsActive() || !IsInteractable())
+                return;
+
+            DoStateTransition(SelectionState.Pressed, false);
+            StartCoroutine(OnFinishSubmit());
+        }
+
+        private IEnumerator OnFinishSubmit()
+        {
+            var fadeTime = colors.fadeDuration;
+            var elapsedTime = 0f;
+
+            while (elapsedTime < fadeTime)
+            {
+                elapsedTime += Time.unscaledDeltaTime;
+                yield return null;
+            }
+
+            DoStateTransition(currentSelectionState, false);
+        }
+    #endregion
         override protected void Start()
         {
             base.Start();
@@ -102,6 +153,6 @@ namespace Ghoulish.UISystem
             {
                 view.TaskOnDefault();
             }
-        } 
+        }
     }
 }

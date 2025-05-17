@@ -4,21 +4,23 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System;
+using Ghoulish.UISystem;
+using UnityEngine.EventSystems;
 
 public class InkDirector : MonoBehaviour
 {
-    [SerializeField] private TextAsset inkJSON;
-    [SerializeField] private SpeechBubble speechBubble_NPC, speechBubble_Marisol;
-    [SerializeField] private Button buttonPrefab;
-    private Story inkStory;
+    [SerializeField] private SpeechBubble _speechBubble_NPC, _speechBubble_Marisol;
+    [SerializeField] private UISelectableBase _buttonPrefab;
+    [SerializeField] private Transform _UIContentParent;
+    private Story _currentInkStory;
     private string currentSpeaker = "";
-    void Start()
+    public void LoadNewInkStory(TextAsset inkJSON)
     {
-        inkStory = new Story(inkJSON.text);
-        inkStory.BindExternalFunction("SetCharacterState", (string characterCodeName, int state) =>{
+        _currentInkStory = new Story(inkJSON.text);
+        _currentInkStory.BindExternalFunction("SetCharacterState", (string characterCodeName, int state) =>{
             SetCharacterState(characterCodeName,state);
         });
-        inkStory.BindExternalFunction("GivePlayerItem", (string itemName) =>{
+        _currentInkStory.BindExternalFunction("GivePlayerItem", (string itemName) =>{
             GivePlayerItem(itemName);
         });
         RefreshUI();
@@ -36,14 +38,15 @@ public class InkDirector : MonoBehaviour
         }
         Debug.LogError("No such inventory item named: " + itemName);
     }
-    private void RefreshUI()
+    public void RefreshUI()
     {
+        Debug.Log("REFRESHED UI");
         DestroyChildButtons();
-        SpeechBubble storyTextObject = Instantiate(speechBubble_NPC);
-        storyTextObject.transform.SetParent(transform, false);
+        SpeechBubble storyTextObject = Instantiate(_speechBubble_NPC);
+        storyTextObject.transform.SetParent(_UIContentParent, false);
         string loadedText = loadStoryLine();
 
-        List<string> tags = inkStory.currentTags;
+        List<string> tags = _currentInkStory.currentTags;
         if (tags.Count > 0)
         {
             //handle tags here
@@ -84,49 +87,75 @@ public class InkDirector : MonoBehaviour
             storyTextObject.speechText.text = loadedText;
         }
         
-        if (inkStory.currentChoices.Count == 0)
+        if (_currentInkStory.currentChoices.Count == 0)
         {
-            Button choiceButton = Instantiate(buttonPrefab);
-            choiceButton.transform.SetParent(transform, false);
-            TextMeshProUGUI choiceText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
-            choiceText.text = "Continue";
-            choiceButton.onClick.AddListener(delegate{
-                RefreshUI();
-            });
+            CreateButtonContinue();
             return;
         }
-        foreach(Choice choice in inkStory.currentChoices)
+        foreach(Choice choice in _currentInkStory.currentChoices)
         {
-            Button choiceButton = Instantiate(buttonPrefab);
-            choiceButton.transform.SetParent(transform, false);
-            TextMeshProUGUI choiceText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
-            choiceText.text = choice.text;
-            choiceButton.onClick.AddListener(delegate{
-                ChooseStoryChoice(choice);
-            });
+            CreateButtonChoice(choice);
         }
+    }
+    private void CreateButtonContinue()
+    {
+        //Create a new button:
+        UISelectableBase choiceButton = Instantiate(_buttonPrefab);
+        choiceButton.transform.SetParent(_UIContentParent, false);
+        TextMeshProUGUI choiceText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
+        choiceText.text = "Continue";
+        choiceButton.onClick.AddListener(delegate{
+            RefreshUI();
+            });
+        choiceButton.ToggleInteractable(true); //Use this custom function for a delayed interactable enable. Prevents the user automatically hitting submit
+    }
+    private void CreateButtonChoice(Choice choice)
+    {
+        //Create a new button:
+        UISelectableBase choiceButton = Instantiate(_buttonPrefab);
+        choiceButton.transform.SetParent(_UIContentParent, false);
+        TextMeshProUGUI choiceText = choiceButton.GetComponentInChildren<TextMeshProUGUI>();
+        choiceText.text = choice.text;
+        choiceButton.onClick.AddListener(delegate{
+            ChooseStoryChoice(choice);
+            });
+        choiceButton.ToggleInteractable(true); //Use this custom function for a delayed interactable enable. Prevents the user automatically hitting submit
     }
     private void RefreshUIChoiceMade()
     {
-        //Creates a speechbubble after selecting a dialogue choice:
         DestroyChildButtons();
-        SpeechBubble storyTextObject = Instantiate(speechBubble_Marisol);
-        storyTextObject.transform.SetParent(transform, false);
+        SpeechBubble storyTextObject = Instantiate(_speechBubble_Marisol);
+        storyTextObject.transform.SetParent(_UIContentParent, false);
         string loadedText = loadStoryLine();
-        currentSpeaker = "Marisol";
-        storyTextObject.characterName.text = currentSpeaker;
-        storyTextObject.characterPortrait.gameObject.SetActive(true);
+
+        List<string> tags = _currentInkStory.currentTags;
+        if (tags.Count > 0)
+        {
+            //handle tags here
+            //loadedText = tags[0] + ": " + loadedText;
+        }
+        //Search through all characters in the list and find the corresponding display information
+        string currentCodeName = "MARISOL";
+        CharacterState selectedCharacterState = GetCharacterState(currentCodeName);
+        string speakerName = selectedCharacterState.displayName;
+        currentSpeaker = speakerName;
         storyTextObject.speechText.text = loadedText;
+
         ShrinkAllBubbleIcons();
+        storyTextObject.characterPortrait.gameObject.SetActive(true);
         storyTextObject.SetIconScale(1f);
-        RefreshUI();
+        storyTextObject.characterPortrait.sprite = selectedCharacterState.icon;
+        storyTextObject.characterName.text = selectedCharacterState.displayName;
+        
+        CreateButtonContinue();
+        return;
     }
     #region UIVisuals
     private void DestroyChildButtons()
     {
-        foreach(Transform child in transform)
+        foreach(Transform child in _UIContentParent)
         {
-            if (child.GetComponent<Button>())
+            if (child.GetComponent<UISelectableBase>())
             {
                 Destroy(child.gameObject);
             }
@@ -135,7 +164,7 @@ public class InkDirector : MonoBehaviour
 
     private void ShrinkAllBubbleIcons()
     {
-        foreach(Transform child in transform)
+        foreach(Transform child in _UIContentParent)
         {
             SpeechBubble childBubble = child.GetComponent<SpeechBubble>();
             if (childBubble != null)
@@ -178,25 +207,25 @@ public class InkDirector : MonoBehaviour
     #region InkFunctions
     private void ChooseStoryChoice(Choice selectedChoice)
     {
-        inkStory.ChooseChoiceIndex(selectedChoice.index);
+        _currentInkStory.ChooseChoiceIndex(selectedChoice.index);
         RefreshUIChoiceMade();
     }
 
     private string loadStoryChunk()
     {
         string text = "";
-        if (inkStory.canContinue)
+        if (_currentInkStory.canContinue)
         {
-            text = inkStory.ContinueMaximally();
+            text = _currentInkStory.ContinueMaximally();
         }
         return text; 
     }
     private string loadStoryLine()
     {
         string text = "";
-        if (inkStory.canContinue)
+        if (_currentInkStory.canContinue)
         {
-            text = inkStory.Continue();
+            text = _currentInkStory.Continue();
         }
         return text; 
     }

@@ -3,10 +3,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SpeechChoiceButton : MonoBehaviour
+public class SetSelectedOnEnable : MonoBehaviour
 {
     private void OnEnable()
     {
-        EventSystem.current.SetSelectedGameObject(this.gameObject);
+        EventSystem.current.SetSelectedGameObject(gameObject);
     }
 }
