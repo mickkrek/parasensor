@@ -13,7 +13,7 @@ public class InventoryItem : MonoBehaviour
     {
         gameObject.name = new string(gameObject.name + "(" + newItem.title + ")");
         item = newItem;
-        _image.sprite = newItem.icon;
+        _image.sprite = newItem.descriptionImage;
     }
     public void SetSelectedToThis()
     {

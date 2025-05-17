@@ -35,7 +35,14 @@ namespace Ghoulish.PlayerControls
                 transform.rotation = Quaternion.Euler(0f, angle, 0f); 
             }
             Vector3 targetDir = _direction.magnitude * transform.forward;
-            _velocity = Vector3.MoveTowards(_velocity, targetDir, movementSmoothSpeed * Time.fixedDeltaTime);
+            Vector3 planeNormal = Vector3.up;
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit))
+            {
+                planeNormal = hit.normal;
+            }
+            // Obtain the ProjectOnPlane result.
+            Vector3 response = Vector3.ProjectOnPlane(targetDir, planeNormal);
+            _velocity = Vector3.MoveTowards(_velocity, response, movementSmoothSpeed * Time.fixedDeltaTime);
             movement = playerSpeed * Time.fixedDeltaTime * _velocity;
         }
     }

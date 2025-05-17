@@ -1,0 +1,262 @@
+fileFormatVersion: 2
+guid: 39e82584ddd515b4d9c61640aca7fd0a
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mr_McDowell_Textures
+    second: {fileID: 2100000, guid: a9b1a5aca2ec7c64bb5e41c991b56929, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mr_McDowell_Textures_Translucent
+    second: {fileID: 2100000, guid: e4ffea6642e726b42843b2b99d6cffe4, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: mr_mcdowell_workingfile(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mr_McDowell_SKELE
+      parentName: mr_mcdowell_workingfile(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root
+      parentName: Mr_McDowell_SKELE
+      position: {x: -0.000000012862319, y: 0, z: 0}
+      rotation: {x: 0.70710665, y: 0.00000008429358, z: 0.000000092992416, w: 0.7071069}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand_L
+      parentName: Root
+      position: {x: -0.1766552, y: 0.29123113, z: -0.18236555}
+      rotation: {x: 0.99697614, y: -0.05369825, z: -0.053698406, w: 0.016480472}
+      scale: {x: 0.99999887, y: 1, z: 0.9999998}
+    - name: Hand_L_end
+      parentName: Hand_L
+      position: {x: -0, y: 0.21012123, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hand_R
+      parentName: Root
+      position: {x: 0.41143337, y: 0.85427785, z: 0.00412954}
+      rotation: {x: 0.9285674, y: 0.024079889, z: 0.20158298, w: 0.31072018}
+      scale: {x: 1, y: 1, z: 0.99999976}
+    - name: Hand_R_end
+      parentName: Hand_R
+      position: {x: -0, y: 0.18277556, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_Upper_L
+      parentName: Root
+      position: {x: -0.082233526, y: 0.61165094, z: 0.050174657}
+      rotation: {x: 0.95044184, y: -0.04637184, z: 0.290717, w: 0.09996831}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.99999994}
+    - name: Leg_Lower_L
+      parentName: Leg_Upper_L
+      position: {x: 0.000000019557774, y: 0.4264592, z: 0.000000014901161}
+      rotation: {x: 0.2896262, y: 0.039980665, z: -0.0022982808, w: 0.9563017}
+      scale: {x: 0.9999992, y: 1, z: 0.9999997}
+    - name: Leg_Lower_L_end
+      parentName: Leg_Lower_L
+      position: {x: -0, y: 0.5926398, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Leg_Upper_R
+      parentName: Root
+      position: {x: 0.08653543, y: 0.59463584, z: 0.060460854}
+      rotation: {x: 0.91344374, y: 0.065152474, z: -0.3911063, w: 0.09171484}
+      scale: {x: 1, y: 0.99999976, z: 1.0000001}
+    - name: Leg_Lower_R
+      parentName: Leg_Upper_R
+      position: {x: 0.000000007450581, y: 0.4427342, z: 0.000000039115548}
+      rotation: {x: 0.28084743, y: 0.093400754, z: -0.012124725, w: 0.9551199}
+      scale: {x: 0.9999999, y: 0.9999999, z: 0.99999964}
+    - name: Leg_Lower_R_end
+      parentName: Leg_Lower_R
+      position: {x: -0, y: 0.60162723, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PoleTarget_Leg_L
+      parentName: Root
+      position: {x: -0.30168352, y: 0.5558456, z: 0.72651106}
+      rotation: {x: 0.00000039672582, y: 0.7071069, z: 0.7071067, w: 0.00000072156877}
+      scale: {x: 1, y: 0.9999997, z: 0.99999994}
+    - name: PoleTarget_Leg_L_end
+      parentName: PoleTarget_Leg_L
+      position: {x: -0, y: 0.19461805, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PoleTarget_Leg_R
+      parentName: Root
+      position: {x: 0.43117085, y: 0.5994151, z: 0.6532977}
+      rotation: {x: -0.00000019181924, y: 0.70710665, z: 0.7071069, w: -0.000000083538325}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PoleTarget_Leg_R_end
+      parentName: PoleTarget_Leg_R
+      position: {x: -0, y: 0.1946181, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootIK_L
+      parentName: Root
+      position: {x: -0.20218915, y: 0.0010142773, z: 0.59443384}
+      rotation: {x: 0.6927394, y: -0.1620718, z: 0.15590557, w: 0.68522865}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Foot_L
+      parentName: FootIK_L
+      position: {x: 0.0000008786901, y: 0.000010152152, z: 0.000033484423}
+      rotation: {x: 0.010070199, y: -0.06270021, z: -0.010634886, w: 0.997925}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Foot_L_end
+      parentName: Foot_L
+      position: {x: -0, y: 0.24512328, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootIK_R
+      parentName: Root
+      position: {x: 0.39884016, y: 0.0026759952, z: 0.26969653}
+      rotation: {x: 0.6604905, y: 0.2693286, z: -0.26140845, w: 0.6502923}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Foot_R
+      parentName: FootIK_R
+      position: {x: 0.000012587858, y: 0.000009660482, z: 0.00008473196}
+      rotation: {x: 0.010642323, y: 0.043300673, z: 0.010529343, w: 0.99894994}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: Foot_R_end
+      parentName: Foot_R
+      position: {x: -0, y: 0.2451235, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Torso_01
+      parentName: Root
+      position: {x: 0.000000002984072, y: 0.6771453, z: -0.027950304}
+      rotation: {x: -0.23990132, y: -0.006893147, z: -0.02684229, w: 0.97040164}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Torso_02
+      parentName: Torso_01
+      position: {x: -0.0000000018626451, y: 0.26540962, z: 0.000000056286808}
+      rotation: {x: 0.2303816, y: -0.0014115017, z: 0.005542153, w: 0.97308356}
+      scale: {x: 0.9999999, y: 0.99999994, z: 1}
+    - name: Head
+      parentName: Torso_02
+      position: {x: 0.0000000037252903, y: 0.2533411, z: 0.00000001641456}
+      rotation: {x: 0.321955, y: 0.04579768, z: -0.12919483, w: 0.93677974}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_end
+      parentName: Head
+      position: {x: -0, y: 0.33280584, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mr_mcdowell_ALL
+      parentName: mr_mcdowell_workingfile(Clone)
+      position: {x: 0.000000014901161, y: -0.00000011920929, z: 0.000000014901161}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mr_mcdowell_ALL_transulcent_sack
+      parentName: mr_mcdowell_workingfile(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Root
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

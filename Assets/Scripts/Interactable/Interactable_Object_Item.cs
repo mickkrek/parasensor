@@ -1,5 +1,4 @@
 using UnityEngine;
-using Yarn.Unity;
 using Ghoulish.InteractionSystem;
 
 public class Interactable_Object_Item : MonoBehaviour, IInteractable
@@ -9,6 +8,7 @@ public class Interactable_Object_Item : MonoBehaviour, IInteractable
 
     public void Start() 
     {
+        //if player has already collected this item
         foreach(string s in GameManager.Instance.CollectedItems)
         {
             if (_item.title.Equals(s))

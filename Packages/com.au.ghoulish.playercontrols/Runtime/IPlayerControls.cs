@@ -4,7 +4,7 @@ namespace Ghoulish.PlayerControls
 {
     public abstract class IPlayerControls : MonoBehaviour
     {
-        [SerializeField] protected float playerSpeed = 2f;
+        public float playerSpeed = 2f;
         [SerializeField] protected float movementSmoothSpeed = 0.4f;
         [SerializeField] protected float gravityValue = -1f;
         [SerializeField] protected float controllerDeadzone = 0.01f;

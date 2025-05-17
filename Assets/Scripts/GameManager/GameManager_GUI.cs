@@ -31,33 +31,9 @@ public class GameManager_GUI : MonoBehaviour
     }
     #endregion
     
-    /*
-    void Start()
-    {
-        _selectedItemImageDefault = _selectedItemImage.sprite;
-        _selectedItemTitleDefault = _selectedItemTitle.text;
-        _selectedItemDescriptionDefault = _selectedItemDescription.text;
-    }
-    public void RevertInventoryToDefault()
-    {
-        _selectedItemImage.sprite = _selectedItemImageDefault;
-        _selectedItemTitle.text = _selectedItemTitleDefault;
-        _selectedItemDescription.text = _selectedItemDescriptionDefault;
-    }
-    */
     [Header("General")]
     [SerializeField] private Transform _mainCanvas = null;
     [SerializeField] private StateMachine _UIstateMachine;
-
-    [Header("Inventory")]
-    [SerializeField] private Transform _inventoryParent = null;
-    [SerializeField] private TextMeshProUGUI _selectedItemTitle = null;
-    [SerializeField] private TextMeshProUGUI _selectedItemDescription = null;
-    [SerializeField] private Image _selectedItemImage = null;
-    private Sprite _selectedItemImageDefault = null;
-    private string _selectedItemTitleDefault = null;
-    private string _selectedItemDescriptionDefault = null;
-    public Transform OpenInventoryIcon, CloseInventoryIcon;
 
     [Header("Conversation")]
     [SerializeField] private Transform _conversationParent = null;
@@ -70,12 +46,8 @@ public class GameManager_GUI : MonoBehaviour
 
     public Transform MainCanvas => _mainCanvas;
     public Transform ConversationParent => _conversationParent;
-    public Transform InventoryParent => _inventoryParent;
     public Transform ThoughtBubblePosition => _thoughtBubblePosition;
     public GameObject SpeechBubblePrefab => _speechBubblePrefab;
-    public TextMeshProUGUI SelectedItemTitle => _selectedItemTitle;
-    public TextMeshProUGUI SelectedItemDescription => _selectedItemDescription;
-    public Image SelectedItemImage => _selectedItemImage;
     public Color ThoughtBubbleColor => _thoughtBubbleColor;
     public Color ThoughtTextColor => _thoughtTextColor;
     public StateMachine UIStateMachine => _UIstateMachine;

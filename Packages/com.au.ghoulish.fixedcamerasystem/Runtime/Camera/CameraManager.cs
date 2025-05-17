@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using Ghoulish.PlayerControls;
 using Unity.Cinemachine;
+using System;
 
 namespace Ghoulish.FixedCameraSystem
 {
@@ -43,6 +44,12 @@ namespace Ghoulish.FixedCameraSystem
         [HideInInspector] public List<string> VisitedScenes;
         private void Start()
         {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneUnloaded += OnSceneUnloaded;
+        }
+
+        private void OnSceneLoaded(Scene current, LoadSceneMode mode)
+        {
             _startCamera = FindFirstObjectByType<StartCamera>().GetComponentInChildren<CinemachineVirtualCameraBase>();
             if (_startCamera == null)
             {
@@ -51,7 +58,6 @@ namespace Ghoulish.FixedCameraSystem
             _startCamera.Priority = 1;
             _storedVirtualCam = _startCamera;
             ActiveVirtualCam = _startCamera;
-            SceneManager.sceneUnloaded += OnSceneUnloaded;
         }
         private void OnSceneUnloaded(Scene current)
         {
@@ -65,7 +71,10 @@ namespace Ghoulish.FixedCameraSystem
             //When a new camera is activated, deprioritise the old one and prioritise the new one
             if (_storedVirtualCam != ActiveVirtualCam)
             {
-                _storedVirtualCam.Priority = 0;
+                if (_storedVirtualCam != null)
+                {
+                    _storedVirtualCam.Priority = 0;
+                }
                 ActiveVirtualCam.Priority = 1;
                 _storedVirtualCam = ActiveVirtualCam;
             }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using Yarn.Unity;
 using Ghoulish.InteractionSystem;
 
 public class Interactable_LockedDoor : MonoBehaviour, IInteractable
@@ -8,13 +7,11 @@ public class Interactable_LockedDoor : MonoBehaviour, IInteractable
     [SerializeField] private Item _requiredItem;
     private Interactable_ChangeScene _changeScene;
     [SerializeField] private Transform _objectToEnable, _objectToDisable;
-    private DialogueRunner dialogueRunner;
     private bool _locked = true;
 
     public void Start() 
     {
         gameObject.layer = LayerMask.NameToLayer("Interactable");
-        dialogueRunner = GameObject.Find("Yarn System").GetComponent<DialogueRunner>();
         _changeScene = GetComponentInChildren<Interactable_ChangeScene>();
         _changeScene.transform.gameObject.SetActive(false);
         _objectToEnable.gameObject.SetActive(false);
@@ -42,12 +39,10 @@ public class Interactable_LockedDoor : MonoBehaviour, IInteractable
         {
             if (!CheckInventory())
             {
-                dialogueRunner.StartDialogue(_yarnThoughtNode);
                 return;
             }
             else
             {
-                dialogueRunner.StartDialogue(_requiredItem.yarnNodeTitle);
                 _objectToEnable.gameObject.SetActive(true);
                 _objectToDisable.gameObject.SetActive(false);
                 _locked = false;

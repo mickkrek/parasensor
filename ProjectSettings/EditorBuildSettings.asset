@@ -11,12 +11,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu/MainMenu.unity
     guid: 1478ea1d79fc9b04280d20e718bafd1b
-  - enabled: 0
-    path: Assets/Scenes/Test Scene/BlockoutTest_Zones.unity
-    guid: c89c4b5806c80c349ba2b930e25ff7c8
   - enabled: 1
-    path: Assets/Scenes/Test Scene/UI_Test_Zones.unity
-    guid: 71d4f5d15d064a74282271f91aa0d4a3
+    path: Assets/Scenes/Hardware Store/HardwareStore.unity
+    guid: b5f736c45ef4ee34fa25ddd6bc4dddac
+  - enabled: 1
+    path: Assets/Scenes/Sat Building/Sat Building.unity
+    guid: 0d7535e341fa770448e9a769d57bc721
+  - enabled: 1
+    path: Assets/Scenes/PetrakisHotel/PetrakisHotel.unity
+    guid: 66153f55fe699834cbb60b4d6093e06e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 12461d161a5b0a543a063247900ecc69, type: 3}
   m_UseUCBPForAssetBundles: 0

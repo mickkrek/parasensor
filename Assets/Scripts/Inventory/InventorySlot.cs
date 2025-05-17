@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InventorySlot : MonoBehaviour, ISelectHandler, IDeselectHandler
+public class InventorySlot : MonoBehaviour, ISelectHandler
 {
     private Item _item;
 
@@ -11,15 +11,10 @@ public class InventorySlot : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         InventoryItem inv = GetComponentInChildren<InventoryItem>();
         if (inv != null)
-        {   _item = inv.item;
-            GameManager_GUI.Instance.SelectedItemTitle.text = _item.title;
-            GameManager_GUI.Instance.SelectedItemDescription.text = _item.description;
-            GameManager_GUI.Instance.SelectedItemImage.sprite = _item.descriptionImage;
+        {   
+            _item = inv.item;
+            GameManager_Inventory.Instance.SelectedItemTitle.text = _item.title;
+            GameManager_Inventory.Instance.SelectedItemDescription.text = _item.description;
         }
-    }
-
-    void IDeselectHandler.OnDeselect(BaseEventData eventData)
-    {
-        //GameManager_GUI.Instance.RevertInventoryToDefault();
     }
 }

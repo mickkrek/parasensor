@@ -1,4 +1,6 @@
+using System;
 using Ghoulish.UISystem;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 public class GameManager_Inventory : MonoBehaviour
@@ -35,13 +37,26 @@ public class GameManager_Inventory : MonoBehaviour
     public GameObject inventorySlotPrefab;
     public GameObject inventoryItemPrefab;
     [HideInInspector] public UISelectableBase SelectedInventoryItem; 
-    public UnityEvent InventoryItemSelected, InventoryItemPlaced;
+    public UnityEvent InventoryItemSelected, InventoryItemPlaced, EquippedItemChanged;
 
+    [HideInInspector] public Item EquippedItem;
+
+    public TextMeshProUGUI SelectedItemTitle = null;
+    public TextMeshProUGUI SelectedItemDescription = null;
+
+    [SerializeField] private ItemBoneParent[] itemBoneParents;
+    [Serializable]
+    public class ItemBoneParent
+    {
+        public string name;
+        public Transform bone;
+    }
     public void Start()
     {
         _slots = SlotsParent.GetComponentsInChildren<InventorySlot>();
         InventoryItemSelected ??= new UnityEvent();
         InventoryItemPlaced ??= new UnityEvent();
+        EquippedItemChanged ??= new UnityEvent();
     }
     public void AddInventoryItem(Item item)
     {
@@ -77,17 +92,53 @@ public class GameManager_Inventory : MonoBehaviour
         InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
     }
-    public void DestroyItem(string itemName)
+    private void DestroyEquippedItemObjects()
     {
-        InventoryItem[] items = SlotsParent.GetComponentsInChildren<InventoryItem>();
-        foreach(InventoryItem i in items)
+        for(int i = 0; i< itemBoneParents.Length; i++)
         {
-            if (i.item.title.Equals(itemName))
+            if (itemBoneParents[i].bone.childCount > 0)
             {
-                Destroy(i.gameObject);
+                foreach(Transform child in itemBoneParents[i].bone)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+        }
+    }
+    private void CreateEquippedItemObject(Item itemToEquip)
+    {
+        if (itemToEquip.graphicsPrefab == null)
+        {
+            return;
+        }
+        for(int i = 0; i< itemBoneParents.Length; i++)
+        {
+            if (itemToEquip.itemBoneParent.ToString() == itemBoneParents[i].name)
+            {
+                Transform targetParent = itemBoneParents[i].bone;
+                Instantiate(itemToEquip.graphicsPrefab, targetParent);
                 return;
             }
         }
-        Debug.Log("No such item found in inventory: " + itemName);
+        Debug.LogError("Could not find bone name. Has the list of bones been changed?");
+    }
+    private void ChangeAnimatorPose(Item itemToEquip)
+    {
+        if (itemToEquip.upperBodyAnimation != null)
+        {
+            GameManager.Instance.CharacterController.GetComponent<PlayerInput_Animation>().ChangeEquippedItemPose(itemToEquip.upperBodyAnimation);
+        }
+        else
+        {
+            GameManager.Instance.CharacterController.GetComponent<PlayerInput_Animation>().RemoveEquippedItemPose();
+        }
+    }
+    public void UpdateEquippedItem(Item itemToEquip)
+    {
+        EquippedItem = itemToEquip;
+        DestroyEquippedItemObjects();
+        CreateEquippedItemObject(itemToEquip);
+        ChangeAnimatorPose(itemToEquip);
+        EquippedItemChanged.Invoke();
     }
 }
