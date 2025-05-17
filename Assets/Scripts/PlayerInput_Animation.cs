@@ -28,7 +28,6 @@ public class PlayerInput_Animation : MonoBehaviour
         if (_animator != null) 
         {
             Vector3 forwardVelocity = new Vector3(_controller.velocity.x, 0, _controller.velocity.z);
-            Debug.Log(forwardVelocity.magnitude);
             // The speed on the x-z plane ignoring any speed
             _forwardSpeed = forwardVelocity.magnitude;
             // The speed from gravity or jumping
