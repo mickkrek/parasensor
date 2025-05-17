@@ -58,6 +58,19 @@ public class GameManager_Inventory : MonoBehaviour
         InventoryItemPlaced ??= new UnityEvent();
         EquippedItemChanged ??= new UnityEvent();
     }
+    public void DestroyInventoryItem(string itemName)
+    {
+        InventoryItem[] items = SlotsParent.GetComponentsInChildren<InventoryItem>();
+        foreach(InventoryItem i in items)
+        {
+            if (i.item.title.Equals(itemName))
+            {
+                Destroy(i.gameObject);
+                return;
+            }
+        }
+        Debug.Log("No such item found in inventory: "+itemName);
+    }
     public void AddInventoryItem(Item item)
     {
         _slots = SlotsParent.GetComponentsInChildren<InventorySlot>();
