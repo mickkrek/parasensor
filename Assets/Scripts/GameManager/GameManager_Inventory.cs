@@ -43,12 +43,16 @@ public class GameManager_Inventory : MonoBehaviour
         InventoryItemSelected ??= new UnityEvent();
         InventoryItemPlaced ??= new UnityEvent();
     }
-    public void AddItem(Item item)
+    public void AddInventoryItem(Item item)
     {
         _slots = SlotsParent.GetComponentsInChildren<InventorySlot>();
         ref Transform parentToUse = ref SlotsParent; //default to tools slots
         ref GameObject slotPrefabToUse = ref inventorySlotPrefab;
 
+        if (_slots.Length < 1)
+        {
+            Debug.LogError("No empty inventory slots - Mickey make a UI prompt here!");
+        }
         //Find an empty slot, instantiate an item there.
         for (int i = 0; i < _slots.Length; i++)
         {
@@ -58,6 +62,11 @@ public class GameManager_Inventory : MonoBehaviour
             {
                 InstantiateItem(item, targetSlot.transform);
                 Destroy(targetEmptySlot.gameObject);
+                GameObject.Find("GUI_NewJournalPrompt").GetComponent<GUI_NewItemPrompt>().TriggerPrompt();
+                if (!GameManager.Instance.CollectedItems.Contains(item.title))
+                {
+                    GameManager.Instance.CollectedItems.Add(item.title);
+                }
                 return;
             }
         }
@@ -67,5 +76,18 @@ public class GameManager_Inventory : MonoBehaviour
         GameObject newItemGO = Instantiate(inventoryItemPrefab, heirarchyPosition);
         InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
+    }
+    public void DestroyItem(string itemName)
+    {
+        InventoryItem[] items = SlotsParent.GetComponentsInChildren<InventoryItem>();
+        foreach(InventoryItem i in items)
+        {
+            if (i.item.title.Equals(itemName))
+            {
+                Destroy(i.gameObject);
+                return;
+            }
+        }
+        Debug.Log("No such item found in inventory: " + itemName);
     }
 }

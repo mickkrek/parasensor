@@ -5,7 +5,6 @@ using Yarn.Unity;
 public class YarnDirector : MonoBehaviour
 {
     private DialogueRunner dialogueRunner;
-    [SerializeField] private YarnLineView yarnLineView;
     private SpeechBubbleMaker _previousBubbleMaker = null;
 
     private void Start() {
@@ -16,7 +15,6 @@ public class YarnDirector : MonoBehaviour
         // <<SpeechBubble NAME_OF_CHARACTER>>
         dialogueRunner.AddCommandHandler<SpeechBubbleMaker>("SpeechBubble", UpdateSpeechBubble);
         // <<GiveItem NAME_OF_OBJECT>>
-        dialogueRunner.AddCommandHandler<YarnGiveItem>("GiveItem", GiveItem);
     }
 
     private void OnDialogueStart() 
@@ -33,7 +31,6 @@ public class YarnDirector : MonoBehaviour
     private void UpdateSpeechBubble(SpeechBubbleMaker bubbleMaker) 
     {
         bool isFirstLine = bubbleMaker != _previousBubbleMaker;
-        yarnLineView.UpdateSpeechBubble(bubbleMaker.speechBubble.TextColor, bubbleMaker.speechBubble.BubbleColor, bubbleMaker.speechBubble.BubbleShape, isFirstLine);
         _previousBubbleMaker = bubbleMaker;
     }
     [YarnFunction]
@@ -67,10 +64,5 @@ public class YarnDirector : MonoBehaviour
     public static void EndGame()
     {
         Application.Quit();
-    }
-    private void GiveItem(YarnGiveItem item)
-    {
-        GameObject.Find("GUI_NewJournalPrompt").GetComponent<GUI_NewItemPrompt>().TriggerPrompt();
-        GameManager_Inventory.Instance.AddItem(item._item);
     }
 }

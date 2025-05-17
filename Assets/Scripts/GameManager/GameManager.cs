@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     
     public bool _characterMovementEnabled = true;
     public StateMachine UIStateMachine;
+    public ItemList itemList;
     [HideInInspector] public bool _conversationActive = false;
     public CharacterController CharacterController;
     [HideInInspector] public CharacterList CharacterListInstance => _characterListInstance;

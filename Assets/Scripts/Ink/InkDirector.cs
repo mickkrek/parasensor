@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System;
 
-public class InkTestingScript : MonoBehaviour
+public class InkDirector : MonoBehaviour
 {
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] private SpeechBubble speechBubble_NPC, speechBubble_Marisol;
@@ -18,35 +18,23 @@ public class InkTestingScript : MonoBehaviour
         inkStory.BindExternalFunction("SetCharacterState", (string characterCodeName, int state) =>{
             SetCharacterState(characterCodeName,state);
         });
+        inkStory.BindExternalFunction("GivePlayerItem", (string itemName) =>{
+            GivePlayerItem(itemName);
+        });
         RefreshUI();
     }
-    private void SetCharacterState(string characterCodeName, int state)
+    private void GivePlayerItem(string itemName)
     {
-        var trackers = GameManager.Instance.CharacterListInstance.characterTrackers;
-        for (int i = 0; i < trackers.Length; i++)
+        var allItems = GameManager.Instance.itemList.items;
+        for (int i = 0; i < allItems.Length; i++)
         {
-            if (trackers[i].character.codeName == characterCodeName)
+            if (allItems[i].name == itemName)
             {
-                trackers[i].currentState = state;
-                Debug.Log(trackers[i].currentState);
+                GameManager_Inventory.Instance.AddInventoryItem(allItems[i]);
+                return;
             }
         }
-    }
-    private CharacterState GetCharacterState(string characterCodeName)
-    {
-        var trackers = GameManager.Instance.CharacterListInstance.characterTrackers;
-        for (int i = 0; i < trackers.Length; i++)
-        {
-            if (trackers[i].character.codeName == characterCodeName)
-            {
-                Character c = trackers[i].character;
-                return c.characterState[trackers[i].currentState];
-            }
-        }
-        Debug.LogError("Could not find character CodeName: " + characterCodeName + " in the character list.");
-        CharacterState nullChar = new CharacterState();
-        nullChar.displayName = "CODENAME NOT FOUND!";
-        return nullChar;
+        Debug.LogError("No such inventory item named: " + itemName);
     }
     private void RefreshUI()
     {
@@ -120,6 +108,7 @@ public class InkTestingScript : MonoBehaviour
     }
     private void RefreshUIChoiceMade()
     {
+        //Creates a speechbubble after selecting a dialogue choice:
         DestroyChildButtons();
         SpeechBubble storyTextObject = Instantiate(speechBubble_Marisol);
         storyTextObject.transform.SetParent(transform, false);
@@ -132,7 +121,7 @@ public class InkTestingScript : MonoBehaviour
         storyTextObject.SetIconScale(1f);
         RefreshUI();
     }
-
+    #region UIVisuals
     private void DestroyChildButtons()
     {
         foreach(Transform child in transform)
@@ -155,7 +144,38 @@ public class InkTestingScript : MonoBehaviour
             }
         }
     }
-
+    #endregion
+    #region CharacterStates
+    private void SetCharacterState(string characterCodeName, int state)
+    {
+        var trackers = GameManager.Instance.CharacterListInstance.characterTrackers;
+        for (int i = 0; i < trackers.Length; i++)
+        {
+            if (trackers[i].character.codeName == characterCodeName)
+            {
+                trackers[i].currentState = state;
+                Debug.Log(trackers[i].currentState);
+            }
+        }
+    }
+    private CharacterState GetCharacterState(string characterCodeName)
+    {
+        var trackers = GameManager.Instance.CharacterListInstance.characterTrackers;
+        for (int i = 0; i < trackers.Length; i++)
+        {
+            if (trackers[i].character.codeName == characterCodeName)
+            {
+                Character c = trackers[i].character;
+                return c.characterState[trackers[i].currentState];
+            }
+        }
+        Debug.LogError("Could not find character CodeName: " + characterCodeName + " in the character list.");
+        CharacterState nullChar = new CharacterState();
+        nullChar.displayName = "CODENAME NOT FOUND!";
+        return nullChar;
+    }
+    #endregion
+    #region InkFunctions
     private void ChooseStoryChoice(Choice selectedChoice)
     {
         inkStory.ChooseChoiceIndex(selectedChoice.index);
@@ -180,6 +200,8 @@ public class InkTestingScript : MonoBehaviour
         }
         return text; 
     }
+    #endregion
+    #region StringTools
     private string GetStringAfterKey(string text, string key = ": ")
     {
         if (!String.IsNullOrWhiteSpace(text))
@@ -207,4 +229,5 @@ public class InkTestingScript : MonoBehaviour
         }
         return String.Empty;
     }
+    #endregion
 }
