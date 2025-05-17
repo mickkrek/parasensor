@@ -103,8 +103,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 4
+      x: 12
+      y: 2180
       width: 3840
       height: 2160
     spriteID: c51badca2e20c0f438c73e9f630a0579
@@ -115,7 +115,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 2172}
     spritePosition: {x: 0, y: 0}
   - name: 
     originalName: 
@@ -125,8 +125,8 @@ ScriptedImporter:
     customData: 
     rect:
       serializedVersion: 2
-      x: 4
-      y: 2172
+      x: 12
+      y: 2180
       width: 3840
       height: 2160
     spriteID: c51badca2e20c0f438c73e9f630a0579
