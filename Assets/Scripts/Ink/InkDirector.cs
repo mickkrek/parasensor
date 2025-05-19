@@ -40,8 +40,8 @@ public class InkDirector : MonoBehaviour
     }
     public void RefreshUI()
     {
-        Debug.Log("REFRESHED UI");
         DestroyChildButtons();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_UIContentParent as RectTransform); //force layout groups to update immediately instead at end of frame. Destroy is also called at end of frame so this causes race conditions
         SpeechBubble storyTextObject = Instantiate(_speechBubble_NPC);
         storyTextObject.transform.SetParent(_UIContentParent, false);
         string loadedText = loadStoryLine();
@@ -90,11 +90,13 @@ public class InkDirector : MonoBehaviour
         if (_currentInkStory.currentChoices.Count == 0)
         {
             CreateButtonContinue();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_UIContentParent as RectTransform);
             return;
         }
         foreach(Choice choice in _currentInkStory.currentChoices)
         {
             CreateButtonChoice(choice);
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_UIContentParent as RectTransform);
         }
     }
     private void CreateButtonContinue()
@@ -124,6 +126,7 @@ public class InkDirector : MonoBehaviour
     private void RefreshUIChoiceMade()
     {
         DestroyChildButtons();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_UIContentParent as RectTransform); //force layout groups to update immediately instead at end of frame. Destroy is also called at end of frame so this causes race conditions
         SpeechBubble storyTextObject = Instantiate(_speechBubble_Marisol);
         storyTextObject.transform.SetParent(_UIContentParent, false);
         string loadedText = loadStoryLine();
@@ -148,6 +151,7 @@ public class InkDirector : MonoBehaviour
         storyTextObject.characterName.text = selectedCharacterState.displayName;
         
         CreateButtonContinue();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_UIContentParent as RectTransform);
         return;
     }
     #region UIVisuals
