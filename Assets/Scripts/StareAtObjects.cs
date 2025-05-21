@@ -38,7 +38,7 @@ public class StareAtObjects : MonoBehaviour
     void LateUpdate()
     {
         Transform nearestTarget = GetNearestTarget();
-        if (nearestTarget == null || !GameManager.Instance._characterMovementEnabled)
+        if (nearestTarget == null)
         {
             _globalInfluence = Mathf.MoveTowards(_globalInfluence, 0f, 0.5f * Time.deltaTime);
         }
