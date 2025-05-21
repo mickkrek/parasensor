@@ -7,45 +7,56 @@ namespace Ghoulish.UISystem
     public class UIView_Color : UIView
     {
         [SerializeField] private AnimationState normal, hover, selected, submit, disabled;
-        private Image imageRenderer;
+        private Image _imageRenderer;
         public string ComponentName = "UI Image Color";
-        [System.Serializable]private class AnimationState
+        [System.Serializable]
+        private class AnimationState
         {
-            public Color color = Color.white;
+            public bool useStartAlpha = false;
+            public Color startColor = Color.white, endColor = Color.white;
             public float duration;
             public CurveTypes CurveType;
         }
 
-        protected override void Start()
+        private void Awake()
         {
-            base.Start();
-            imageRenderer = GetComponent<Image>();
-            imageRenderer.color = normal.color;
+            _imageRenderer = GetComponent<Image>();
         }
         public override void TaskOnHover()
         {
             base.TaskOnHover();
-            tween = Tween.Color(imageRenderer, hover.color, hover.duration, 0.0f, animationCurves[(int)hover.CurveType]);
+            HandleTween(hover);
         }
         public override void TaskOnDefault()
         {
             base.TaskOnDefault();
-            tween = Tween.Color(imageRenderer, normal.color, normal.duration, 0.0f, animationCurves[(int)normal.CurveType]);
+            HandleTween(normal);
         }
         public override void TaskOnSelect()
         {
             base.TaskOnSelect();
-            tween = Tween.Color(imageRenderer, selected.color, selected.duration, 0.0f, animationCurves[(int)selected.CurveType]);
+            HandleTween(selected);
         }
         public override void TaskOnSubmit()
         {
             base.TaskOnSubmit();
-            tween = Tween.Color(imageRenderer, submit.color, submit.duration, 0.0f, animationCurves[(int)submit.CurveType]);
+            HandleTween(submit);
         }
         public override void TaskOnDisabled()
         {
             base.TaskOnDisabled();
-            tween = Tween.Color(imageRenderer, disabled.color, disabled.duration, 0.0f, animationCurves[(int)disabled.CurveType]);
+            HandleTween(disabled);
+        }
+        private void HandleTween (AnimationState animationState)
+        {
+            if (animationState.useStartAlpha)
+            {
+                tween = Tween.Color(_imageRenderer, animationState.startColor, animationState.endColor, animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], Tween.LoopType.None, null, null, true);
+            }
+            else
+            {
+                tween = Tween.Color(_imageRenderer, animationState.endColor, animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], Tween.LoopType.None, null, null, true);
+            }
         }
     }
 }

@@ -25,7 +25,7 @@ namespace Ghoulish.UISystem
         [HideInInspector] public AnimationCurve[] animationCurves;
         [HideInInspector] public TweenBase tween;
 
-        protected virtual void Start()
+        public void GatherAnimationData()
         {
             animationCurves = new AnimationCurve[13];
             animationCurves[0] = Tween.EaseIn;

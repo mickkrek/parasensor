@@ -24,7 +24,10 @@ public class AutoScroll : MonoBehaviour
             {
                 HandleTween(_contentParent.childCount, _contentParent.childCount);
             }
-            HandleTween(currentSelected.transform.GetSiblingIndex(), _contentParent.childCount);
+            else
+            {
+                HandleTween(currentSelected.transform.GetSiblingIndex(), _contentParent.childCount);
+            }
         }
         _storedSelected = currentSelected;
     }

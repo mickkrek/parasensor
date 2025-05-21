@@ -11,15 +11,11 @@ namespace Ghoulish.UISystem
 
         [System.Serializable]private class AnimationState
         {
+            public bool useStartRotation = false;
             public float startRotation, endRotation;
             public float duration;
             public CurveTypes CurveType;
             public Tween.LoopType LoopType = Tween.LoopType.None;
-        }
-        protected override void Start()
-        {
-            base.Start();
-            HandleTween(normal);
         }
         public override void TaskOnHover()
         {
@@ -49,13 +45,13 @@ namespace Ghoulish.UISystem
 
         private void HandleTween (AnimationState animationState)
         {
-            if (animationState.LoopType != Tween.LoopType.None)
+            if (animationState.useStartRotation)
             {
-                tween = Tween.LocalRotation(transform, new Vector3(0.0f,0.0f,animationState.startRotation),new Vector3(0.0f,0.0f,animationState.endRotation), animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], animationState.LoopType);
+                tween = Tween.LocalRotation(transform, new Vector3(0.0f, 0.0f, animationState.startRotation), new Vector3(0.0f, 0.0f, animationState.endRotation), animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], animationState.LoopType);
             }
             else
             {
-                tween = Tween.LocalRotation(transform, new Vector3(0.0f,0.0f,animationState.endRotation), animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], Tween.LoopType.None);
+                tween = Tween.LocalRotation(transform, new Vector3(0.0f, 0.0f, animationState.endRotation), animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], Tween.LoopType.None);
             }
         }
     }

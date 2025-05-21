@@ -3,18 +3,26 @@ using Pixelplacement;
 
 namespace Ghoulish.UISystem
 {
-    public class UIView_Scale : UIView
+    public class UIView_Position : UIView
     {
         [SerializeField] private AnimationState normal, hover, selected, submit, disabled;
-        public string ComponentName = "UI Image Scale";
+        public string ComponentName = "UI RectTransform Position";
+        private RectTransform thisRect;
 
-        [System.Serializable]private class AnimationState
+        [System.Serializable] private class AnimationState
         {
-            public bool useStartScale = false;
-            public float startScale, endScale;
+            public bool useStartPosition = false;
+            public Vector2 startPosition, endPosition;
             public float duration;
             public CurveTypes CurveType;
             public Tween.LoopType LoopType = Tween.LoopType.None;
+        }
+        private void Awake()
+        {
+            if (thisRect == null)
+            {
+                thisRect = GetComponent<RectTransform>();
+            }
         }
         public override void TaskOnHover()
         {
@@ -44,13 +52,13 @@ namespace Ghoulish.UISystem
 
         private void HandleTween (AnimationState animationState)
         {
-            if (animationState.useStartScale)
+            if (animationState.useStartPosition)
             {
-                tween = Tween.LocalScale(transform, new Vector3(animationState.startScale, animationState.startScale, animationState.startScale), new Vector3(animationState.endScale, animationState.endScale, animationState.endScale), animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], animationState.LoopType);
+                tween = Tween.AnchoredPosition(thisRect, animationState.startPosition, animationState.endPosition, animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], animationState.LoopType, null, null, true);
             }
             else
             {
-                tween = Tween.LocalScale(transform, new Vector3(animationState.endScale, animationState.endScale, animationState.endScale), animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], Tween.LoopType.None);
+                tween = Tween.AnchoredPosition(thisRect, animationState.endPosition, animationState.duration, 0.0f, animationCurves[(int)animationState.CurveType], animationState.LoopType);
             }
         }
     }

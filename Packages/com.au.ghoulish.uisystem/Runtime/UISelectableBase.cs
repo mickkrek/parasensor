@@ -10,7 +10,7 @@ namespace Ghoulish.UISystem
     {
         [SerializeField] bool UseHover, UseSelected, UseSubmit; //these dont do anything right now
         private SelectionState storedSelectionState = SelectionState.Disabled; //Set the default to 'selectable' state
-        private UIView[] childrenUIViews;
+        private UIView[] _childrenUIViews;
         
     #region Unity Button
         public class ButtonClickedEvent : UnityEvent {}
@@ -62,13 +62,21 @@ namespace Ghoulish.UISystem
 
             DoStateTransition(currentSelectionState, false);
         }
-    #endregion
+        #endregion
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+        }
         override protected void Start()
         {
             base.Start();
             transition = Transition.None;
-            childrenUIViews = GetComponentsInChildren<UIView>();
-         }
+            _childrenUIViews = GetComponentsInChildren<UIView>();
+            foreach (UIView child in _childrenUIViews)
+            {
+                child.GatherAnimationData();
+            }
+        }
         void Update()
         {
             if (storedSelectionState != currentSelectionState)
@@ -92,7 +100,7 @@ namespace Ghoulish.UISystem
         }
         private void ChangeState()
         {
-            if (childrenUIViews != null && Application.isPlaying)
+            if (_childrenUIViews != null && Application.isPlaying)
             {
                 switch(currentSelectionState)
                 {
@@ -120,21 +128,21 @@ namespace Ghoulish.UISystem
         }
         private void OnSubmit()
         {
-            foreach(UIView view in childrenUIViews)
+            foreach(UIView view in _childrenUIViews)
             {
                 view.TaskOnSubmit();
             }
         }
         private void OnSelect()
         {
-            foreach(UIView view in childrenUIViews)
+            foreach(UIView view in _childrenUIViews)
             {
                 view.TaskOnSelect();
             }
         }
         private void OnHover()
         {
-            foreach(UIView view in childrenUIViews)
+            foreach(UIView view in _childrenUIViews)
             {
                 view.TaskOnHover();
             }
@@ -142,14 +150,14 @@ namespace Ghoulish.UISystem
         private void OnDisabled()
         {
             
-            foreach(UIView view in childrenUIViews)
+            foreach(UIView view in _childrenUIViews)
             {
                 view.TaskOnDisabled();
             }
         }
         private void OnDefault()
         {
-            foreach(UIView view in childrenUIViews)
+            foreach(UIView view in _childrenUIViews)
             {
                 view.TaskOnDefault();
             }

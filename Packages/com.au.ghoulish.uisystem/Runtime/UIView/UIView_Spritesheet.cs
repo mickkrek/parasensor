@@ -19,9 +19,8 @@ namespace Ghoulish.UISystem
             public float duration = 1;
         }
 
-        protected override void Start()
+        private void Awake()
         {
-            base.Start();
             imageRenderer = GetComponent<Image>();
         }
 

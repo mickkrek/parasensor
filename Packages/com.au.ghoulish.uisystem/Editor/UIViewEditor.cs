@@ -10,8 +10,8 @@ public class UIViewEditor: Editor
 
     private string[] tabs = {"Normal", "Hover", "Selected", "Submit", "Disabled"};
     private int tabIndex = 0;
-    private GUIStyle headerStyle;
-    
+    private GUIStyle headerStyle, labelStyle;
+
     void OnEnable()
     {
         normal = serializedObject.FindProperty("normal");
@@ -25,12 +25,19 @@ public class UIViewEditor: Editor
         headerStyle.fontStyle = FontStyle.Bold;
         headerStyle.alignment = TextAnchor.MiddleCenter;
         headerStyle.normal.textColor = Color.yellow;
+        
+        labelStyle = new GUIStyle();
+        labelStyle.fontSize = 12;
+        labelStyle.fontStyle = FontStyle.Normal;
+        labelStyle.alignment = TextAnchor.MiddleLeft;
+        labelStyle.normal.textColor = Color.white;
     }
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
         EditorGUILayout.LabelField(serializedObject.FindProperty("ComponentName").stringValue, headerStyle);
         EditorGUILayout.BeginVertical();
+        EditorGUILayout.LabelField("Note: 'Start' property will override this Tween's start value when the toggle is enabled.", labelStyle);
         tabIndex = GUILayout.Toolbar(tabIndex, tabs);
         EditorGUILayout.EndVertical();
         switch (tabIndex)

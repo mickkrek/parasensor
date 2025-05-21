@@ -3345,6 +3345,7 @@ GameObject:
   - component: {fileID: 775466483}
   - component: {fileID: 775466485}
   - component: {fileID: 775466484}
+  - component: {fileID: 775466486}
   m_Layer: 5
   m_Name: Conversation
   m_TagString: Untagged
@@ -3364,7 +3365,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1037685720}
+  - {fileID: 1282620119}
   m_Father: {fileID: 558007466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3397,6 +3398,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaefd3d5a2a864ca5b5d9ec5f2a7040f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &775466486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775466482}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad47954e3106eea429a811c482317f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _disableTimeSeconds: 1
 --- !u!1 &779378796
 GameObject:
   m_ObjectHideFlags: 0
@@ -5102,7 +5116,7 @@ RectTransform:
   m_Children:
   - {fileID: 1113679508}
   - {fileID: 1406362994}
-  m_Father: {fileID: 775466483}
+  m_Father: {fileID: 1282620119}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5136,7 +5150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1037685719}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9acd363b3c8576e4484cfbce4aca173d, type: 3}
   m_Name: 
@@ -6385,6 +6399,132 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3084815253490148263, guid: 14a205b7aed1c5d49877d3c097e64efc, type: 3}
   m_PrefabInstance: {fileID: 1249606359}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1282620118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282620119}
+  - component: {fileID: 1282620122}
+  - component: {fileID: 1282620120}
+  - component: {fileID: 1282620121}
+  m_Layer: 5
+  m_Name: TweenParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1282620119
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282620118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1037685720}
+  m_Father: {fileID: 775466483}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1282620120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282620118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8a618c38a0f2f740a731dd231e47937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationCurves: []
+  normal:
+    useStartPosition: 1
+    startPosition: {x: 100, y: 0}
+    endPosition: {x: 0, y: 0}
+    duration: 0.3
+    CurveType: 7
+    LoopType: 0
+  hover:
+    useStartPosition: 0
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: 0, y: 0}
+    duration: 0
+    CurveType: 0
+    LoopType: 0
+  selected:
+    useStartPosition: 0
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: 0, y: 0}
+    duration: 0
+    CurveType: 0
+    LoopType: 0
+  submit:
+    useStartPosition: 0
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: 0, y: 0}
+    duration: 0
+    CurveType: 0
+    LoopType: 0
+  disabled:
+    useStartPosition: 0
+    startPosition: {x: 0, y: 0}
+    endPosition: {x: 0, y: 0}
+    duration: 0
+    CurveType: 0
+    LoopType: 0
+  ComponentName: UI RectTransform Position
+--- !u!114 &1282620121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282620118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b187d2f37a5fd254782f924b678a63ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationCurves: []
+  normal:
+    useStartAlpha: 1
+    startAlpha: 0
+    endAlpha: 1
+    duration: 0.3
+    CurveType: 0
+  disabled:
+    useStartAlpha: 0
+    startAlpha: 0
+    endAlpha: 0
+    duration: 0
+    CurveType: 0
+  ComponentName: UI Canvas Group Alpha
+--- !u!225 &1282620122
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282620118}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1340218643
 GameObject:
   m_ObjectHideFlags: 0
@@ -9371,23 +9511,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationCurves: []
   normal:
-    color: {r: 0.50980395, g: 0.25490198, b: 0.9764706, a: 0.76862746}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.2
     CurveType: 0
   hover:
-    color: {r: 0.8200113, g: 0.7216981, b: 1, a: 1}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.2
     CurveType: 0
   selected:
-    color: {r: 0.81960785, g: 0.72156864, b: 1, a: 0.76862746}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0
     CurveType: 0
   submit:
-    color: {r: 0.3048677, g: 0.1321645, b: 0.6226415, a: 1}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.1
     CurveType: 0
   disabled:
-    color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0.76862746}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.2
     CurveType: 0
   ComponentName: UI Image Color
@@ -10471,23 +10621,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationCurves: []
   normal:
-    color: {r: 0.50980395, g: 0.25490198, b: 0.9764706, a: 0.76862746}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.2
     CurveType: 0
   hover:
-    color: {r: 0.8200113, g: 0.7216981, b: 1, a: 1}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.2
     CurveType: 0
   selected:
-    color: {r: 0.81960785, g: 0.72156864, b: 1, a: 0.76862746}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0
     CurveType: 0
   submit:
-    color: {r: 0.3048677, g: 0.1321645, b: 0.6226415, a: 1}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.1
     CurveType: 0
   disabled:
-    color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 0.76862746}
+    useStartAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    endColor: {r: 1, g: 1, b: 1, a: 1}
     duration: 0.2
     CurveType: 0
   ComponentName: UI Image Color
