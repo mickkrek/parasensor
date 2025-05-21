@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.7137255, g: 0.7254902, b: 0.61960787, a: 0}
-  m_AmbientEquatorColor: {r: 0.49803925, g: 0.5686275, b: 0.60784316, a: 0}
-  m_AmbientGroundColor: {r: 0.08627451, g: 0.098039225, b: 0.17254902, a: 0}
+  m_AmbientSkyColor: {r: 0.7843138, g: 0.6156863, b: 0.53333336, a: 0}
+  m_AmbientEquatorColor: {r: 0.5019608, g: 0.43529415, b: 0.4431373, a: 0}
+  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -604,6 +604,7 @@ MonoBehaviour:
   _speechBubble_Marisol: {fileID: 1462124143537386199, guid: 6577da081b9e5544dafd7405cdaf0d62, type: 3}
   _buttonPrefab: {fileID: 5239885985866593856, guid: ce62ae8a140c99648af221c30ba2511e, type: 3}
   _UIContentParent: {fileID: 814053131}
+  _globalInkJSON: {fileID: 4900000, guid: 7485e4fa95296374fa1f78aa53111ca3, type: 3}
 --- !u!4 &168136313
 Transform:
   m_ObjectHideFlags: 0
