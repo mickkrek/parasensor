@@ -1,5 +1,11 @@
-EXTERNAL SetCharacterState(characterCodeName, state)
-->choi_Intro
+== CHOI_HUB ==
+    {not choi_situationBrief: -> choi_Intro}
+    {choi_situationBrief: -> choi_InProgress}
+    
+== JENNINGS_HUB  ==
+    {not choi_situationBrief: -> jennings_Intro}
+    {choi_situationBrief: -> jennings_InProgress}
+    
 == choi_Intro ==
 // checking if marisol spoke to jennings first...
 {
@@ -11,15 +17,18 @@ EXTERNAL SetCharacterState(characterCodeName, state)
 	// Choi is absorbed in his work, muttering to himself
 	CHOI: ...well, these numbers don't even make sense... did she fuck them up somehow?
 	ERGOMANIA: Ah, this is the guy that actually does the work around here. He'll appreciate being talked to first.
-	+ 	Hey, excuse me. ->choi_situationBrief
-	+	Hm... I'll leave you to your work for now. (Leave) ->DONE // exit convo here
+	+ 	Hey, excuse me.
+	    ->choi_situationBrief
+	+	Hm... I'll leave you to your work for now. (Leave)
+	    ->DONE // exit convo here
 	->DONE
 
 	= jennings_IntroFirst
 	// Choi is absorbed in his work, muttering to himself
 	ERGOMANIA: This is the guy that actually does the work around here. Should have talked to him first.
 	CHOI: ...bastard... treating me like I'm his lackey when I'm...
-	+ 	Okay. Hello. Hey. ->choi_situationBrief
+	+ 	Okay. Hello. Hey.
+	    ->choi_situationBrief
 	->DONE
 
 == choi_situationBrief ==
@@ -76,10 +85,14 @@ CHOI: Marisol. Anything you need?
 
 == choi_questionsMenu ==
 // questions hub that updates as you do things. variables tbd depending on how we wanna implement this stuff.
-+	{ metphone_Inspect } I've looked at the phone, looks like someone tampered with it. ->choi_metphoneInspected 
-+	{ oldphone_Inspect } By the way, I found a very old phone in the basement. Know anything about it? ->choi_oldphoneInspected
-+	{ petradesk_Inspect and not choi_petradeskConfess } (Point at messy desk) { jennings_petradeskInspected: So, where's the third member of your team? | Whose desk is that? } ->choi_petradeskInspected
-+ 	Nothing right now, cheers. (Leave) ->DONE
++	{ metphone_Inspect } I've looked at the phone, looks like someone tampered with it.
+    ->choi_metphoneInspected 
++	{ oldphone_Inspect } By the way, I found a very old phone in the basement. Know anything about it?
+    ->choi_oldphoneInspected
++	{ petradesk_Inspect and not choi_petradeskConfess } (Point at messy desk) { jennings_petradeskInspected: So, where's the third member of your team? | Whose desk is that? }
+    ->choi_petradeskInspected
++ 	Nothing right now, cheers. (Leave)
+    ->DONE
 
 = choi_metphoneInspected
 // he acts guilty about something... but he tells you about the hardware store. paranoia tells you to look around more if you havent found petrakis' desk.
@@ -270,10 +283,14 @@ JENNINGS: What now? Keep it short. I'm very busy.
 
 == jennings_questionsMenu ==
 // questions hub that updates as you do things. variables tbd depending on how we wanna implement this stuff.
-+	{ metphone_Inspect } I've checked on the phone. Someone tampered with it. ->jennings_metphoneInspected
-+   { oldphone_Inspect } I found an antique phone in the basement. { choi_questionsMenu.choi_oldphoneInspected: Choi told me you could tell me about it. | Would you know anything about it? } ->jennings_oldphoneInspected
-+	{ petradesk_Inspect } (Point at messy desk) Do you know whose desk that is? ->jennings_petradeskInspected
-+ 	I'm good for now. (Leave) ->DONE
++	{ metphone_Inspect } I've checked on the phone. Someone tampered with it.
+    ->jennings_metphoneInspected
++   { oldphone_Inspect } I found an antique phone in the basement. { choi_questionsMenu.choi_oldphoneInspected: Choi told me you could tell me about it. | Would you know anything about it? }
+    ->jennings_oldphoneInspected
++	{ petradesk_Inspect } (Point at messy desk) Do you know whose desk that is?
+    ->jennings_petradeskInspected
++ 	I'm good for now. (Leave)
+    ->DONE
 
 == jennings_metphoneInspected ==
 // jennings isnt much help here, but he does mention the generator and points you to choi, who is the one who grabbed it from the hardware store.

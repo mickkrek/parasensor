@@ -20,3 +20,4 @@ MonoBehaviour:
   - displayName: Petrakis
     icon: {fileID: 21300000, guid: 1cdf87e3a4e68014fbcfe4b55f211b14, type: 3}
     bubbleColor: {r: 0, g: 0, b: 0, a: 0}
+  inkHubKnot: PETRAKIS_HUB

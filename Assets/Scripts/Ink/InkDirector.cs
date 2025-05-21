@@ -12,17 +12,31 @@ public class InkDirector : MonoBehaviour
     [SerializeField] private SpeechBubble _speechBubble_NPC, _speechBubble_Marisol;
     [SerializeField] private UISelectableBase _buttonPrefab;
     [SerializeField] private Transform _UIContentParent;
+    [SerializeField] private TextAsset _globalInkJSON;
     private Story _currentInkStory;
     private string currentSpeaker = "";
-    public void LoadNewInkStory(TextAsset inkJSON)
+
+    private void Start()
     {
-        _currentInkStory = new Story(inkJSON.text);
-        _currentInkStory.BindExternalFunction("SetCharacterState", (string characterCodeName, int state) =>{
-            SetCharacterState(characterCodeName,state);
+        InkStorySetup();
+    }
+    private void InkStorySetup()
+    {
+        //Create the global ink story, used throughout the whole game. Then bind all your functions.
+        _currentInkStory = new Story(_globalInkJSON.text);
+        _currentInkStory.BindExternalFunction("SetCharacterState", (string characterCodeName, int state) =>
+        {
+            SetCharacterState(characterCodeName, state);
         });
-        _currentInkStory.BindExternalFunction("GivePlayerItem", (string itemName) =>{
+        _currentInkStory.BindExternalFunction("GivePlayerItem", (string itemName) =>
+        {
             GivePlayerItem(itemName);
         });
+    }
+    public void LoadInkKnot(string knotName)
+    {
+        DestroyAllChildren();
+        _currentInkStory.ChoosePathString(knotName);
         RefreshUI();
     }
     private void GivePlayerItem(string itemName)
@@ -165,10 +179,16 @@ public class InkDirector : MonoBehaviour
             }
         }
     }
-
-    private void ShrinkAllBubbleIcons()
+    private void DestroyAllChildren()
     {
         foreach(Transform child in _UIContentParent)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+    private void ShrinkAllBubbleIcons()
+    {
+        foreach (Transform child in _UIContentParent)
         {
             SpeechBubble childBubble = child.GetComponent<SpeechBubble>();
             if (childBubble != null)
@@ -217,21 +237,31 @@ public class InkDirector : MonoBehaviour
 
     private string loadStoryChunk()
     {
-        string text = "";
         if (_currentInkStory.canContinue)
         {
-            text = _currentInkStory.ContinueMaximally();
+            string text = _currentInkStory.ContinueMaximally();
+            return text;
         }
-        return text; 
+        else
+        {
+            //return to gameplay mode when no more text to display
+            GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
+            return "Ink story flow has ended.";
+        }
     }
     private string loadStoryLine()
     {
-        string text = "";
         if (_currentInkStory.canContinue)
         {
-            text = _currentInkStory.Continue();
+            string text = _currentInkStory.Continue();
+            return text;
         }
-        return text; 
+        else
+        {
+            //return to gameplay mode when no more text to display
+            GameManager_GUI.Instance.UIStateMachine.ChangeState("Game");
+            return "Ink story flow has ended.";
+        }
     }
     #endregion
     #region StringTools

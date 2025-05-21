@@ -35,7 +35,8 @@ PETRAKIS: You seem smart enough. I'd be happy to tell you all about what Metcom'
 
 == petrakis_MetphoneQuestions ==
 PETRAKIS: Go on, ask me about that phone.
-+   { break and powercore and quitting } Okay. I think I know what's going on here. ->petrakis_InProgress
++   { break and powercore and quitting } Okay. I think I know what's going on here.
+    ->petrakis_InProgress
 +	Why did you break the phone? 
     ->break
 +	What did you do with the power core? 
@@ -107,7 +108,8 @@ PARANOIA: We're allies now. Co-counter-conspirators.
     PETRAKIS: I found such an organism in a Hardware Store nearby. The sample I retrieved from there unfortunately did not survive some of my... experiments.
     PETRAKIS: Would you be able to fetch me one?
     ->DONE
-+   Do you know anything about this egg? ->petrakis_Egg.conspiracist // if you have the egg
++   Do you know anything about this egg?
+    ->petrakis_Egg.conspiracist // if you have the egg
 
 // the door closes
 = rationalist

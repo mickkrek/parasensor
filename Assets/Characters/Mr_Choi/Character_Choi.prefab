@@ -95,6 +95,7 @@ MonoBehaviour:
   _character: {fileID: 11400000, guid: 161e81faf31532742b66319f8dba43db, type: 2}
   _promptPosition: {fileID: 3292405565971947011}
   _inkJSON: {fileID: 4900000, guid: e63a8473e6dec49a29a878dba2630f7f, type: 3}
+  _startKnotName: choi_hub
 --- !u!136 &591546297707603894
 CapsuleCollider:
   m_ObjectHideFlags: 0

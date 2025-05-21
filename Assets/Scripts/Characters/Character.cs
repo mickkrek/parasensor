@@ -7,6 +7,7 @@ public class Character : ScriptableObject
 {
     public string codeName;
     public CharacterState[] characterState;
+    public string inkHubKnot;
 }
 [System.Serializable]
 public struct CharacterState
