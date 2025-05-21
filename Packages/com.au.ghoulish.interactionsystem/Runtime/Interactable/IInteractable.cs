@@ -3,7 +3,7 @@ namespace Ghoulish.InteractionSystem
 {
     public interface IInteractable
     {
-        void Interact(Transform interactorTransform);
+        void Interact();
         string GetPromptText();
         Vector3 GetPromptPosition();
     }

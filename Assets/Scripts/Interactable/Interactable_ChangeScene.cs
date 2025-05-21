@@ -31,7 +31,7 @@ public class Interactable_ChangeScene : MonoBehaviour, IInteractable
     {
         SceneManager.LoadScene(_sceneName);
     }
-    public void Interact(Transform interactorTransform)
+    public void Interact()
     {
         FadeOut();
     }

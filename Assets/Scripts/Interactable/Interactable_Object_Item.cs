@@ -24,7 +24,7 @@ public class Interactable_Object_Item : MonoBehaviour, IInteractable
         return "Pick up " + _item.title;
     }
 
-    public void Interact(Transform interactorTransform)
+    public void Interact()
     {
         GameManager_Inventory.Instance.AddInventoryItem(_item);
         gameObject.SetActive(false);

@@ -33,7 +33,7 @@ public class Interactable_LockedDoor : MonoBehaviour, IInteractable
         return "Go to " + _name;
     }
 
-    public void Interact(Transform interactorTransform)
+    public void Interact()
     {
         if (_locked)
         {

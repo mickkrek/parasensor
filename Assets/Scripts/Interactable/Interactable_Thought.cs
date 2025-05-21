@@ -22,7 +22,7 @@ public class Interactable_Thought : MonoBehaviour, IInteractable
         return "Inspect " + _name;
     }
 
-    public void Interact(Transform interactorTransform)
+    public void Interact()
     {
         dialogueRunner.StartDialogue(_yarnStartNode);
         if (_disableAfterReading)

@@ -7,7 +7,6 @@ public class Interactable_CharacterInk: MonoBehaviour, IInteractable
 {
     [SerializeField] private Character _character;
     [SerializeField] private Transform _promptPosition;
-    [SerializeField] private TextAsset _inkJSON;
     private InkDirector inkDirector;
 
     public void Start() 
@@ -43,16 +42,14 @@ public class Interactable_CharacterInk: MonoBehaviour, IInteractable
             {
                 GameManager.Instance.ActiveCharacter = _character;
                 GameManager_GUI.Instance.UIStateMachine.ChangeState("Conversation");
-                inkDirector.LoadNewInkStory(_inkJSON);
+                inkDirector.LoadInkKnot(_character.inkHubKnot);
             }
         } 
     }
 
-    public void Interact(Transform interactorTransform)
+    public void Interact()
     {
-        Debug.Log("Interact");
         StartConversation();
-        GameManager.Instance.CharacterMovementEnabled(false);
     }
 
     public Vector3 GetPromptPosition()

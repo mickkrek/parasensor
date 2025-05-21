@@ -47,9 +47,8 @@ public class Interactable_Character: MonoBehaviour, IInteractable
         } 
     }
 
-    public void Interact(Transform interactorTransform)
+    public void Interact()
     {
-        Debug.Log("Interact");
         if (!dialogueRunner.IsDialogueRunning)
         {
             StartConversation();
