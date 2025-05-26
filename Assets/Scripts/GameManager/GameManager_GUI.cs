@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Pixelplacement;
-using Yarn.Unity;
 
 public class GameManager_GUI : MonoBehaviour
 {
