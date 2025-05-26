@@ -22,34 +22,22 @@ namespace Ghoulish.UISystem
         public override void TaskOnHover()
         {
             base.TaskOnHover();
-            if (hover.sprite != null)
-            {
-                imageRenderer.sprite = hover.sprite;
-            }
+            imageRenderer.sprite = hover.sprite;
         }
         public override void TaskOnDefault()
         {
             base.TaskOnDefault();
-            if (normal.sprite != null)
-            {
-                imageRenderer.sprite = normal.sprite;
-            }
+            imageRenderer.sprite = normal.sprite;
         }
         public override void TaskOnSelect()
         {
             base.TaskOnSelect();
-            if (selected.sprite != null)
-            {
-                imageRenderer.sprite = selected.sprite;
-            }
+            imageRenderer.sprite = selected.sprite;
         }
         public override void TaskOnSubmit()
         {
             base.TaskOnSubmit();
-            if (submit.sprite != null)
-            {
-                imageRenderer.sprite = submit.sprite;
-            }
+            imageRenderer.sprite = submit.sprite;
         }
     }
 }
