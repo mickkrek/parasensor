@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.7843138, g: 0.6156863, b: 0.53333336, a: 0}
-  m_AmbientEquatorColor: {r: 0.5019608, g: 0.43529415, b: 0.4431373, a: 0}
-  m_AmbientGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_AmbientSkyColor: {r: 0.7137255, g: 0.7254902, b: 0.61960787, a: 0}
+  m_AmbientEquatorColor: {r: 0.49803925, g: 0.5686275, b: 0.60784316, a: 0}
+  m_AmbientGroundColor: {r: 0.08627451, g: 0.098039225, b: 0.17254902, a: 0}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -2776,6 +2776,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1876622548528292424, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2349203563943672904, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.32
@@ -2978,6 +2982,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7589988186505998455, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
       propertyPath: m_ClearDepth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589988186505998455, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
+      propertyPath: m_RenderPostProcessing
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7621231594056946236, guid: 768bf7f8f4e5da649b74174b64c91db4, type: 3}
@@ -3725,7 +3733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4101,10 +4109,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 797342790}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1009.08276, y: -17.070312}
-  m_SizeDelta: {x: 2107.4731, y: 143.54243}
+  m_AnchoredPosition: {x: -100, y: -16}
+  m_SizeDelta: {x: 613.9233, y: 81.3262}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874541294
 MonoBehaviour:
@@ -4119,14 +4127,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.764151, g: 0.7186611, b: 0.4577697, a: 1}
+  m_Color: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 66d637aec55dc0140ab4120a206d0c80, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65f1b1b2ca111b14185b8d2afd3a5e02, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -6979,7 +6987,7 @@ GameObject:
   - component: {fileID: 1441205686}
   - component: {fileID: 1441205685}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7001,8 +7009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 58.22351, y: 0}
-  m_SizeDelta: {x: -86.447, y: 30}
+  m_AnchoredPosition: {x: 57.708496, y: -0.5656738}
+  m_SizeDelta: {x: -81.1637, y: 31.1442}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441205685
 MonoBehaviour:
@@ -7269,45 +7277,30 @@ MonoBehaviour:
   runSelectedOptionAsLine: 0
   lineProvider: {fileID: 0}
   verboseLogging: 0
+  <IsDialogueRunning>k__BackingField: 0
   onNodeStart:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   onNodeComplete:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   onDialogueStart:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 558007468}
-        m_TargetAssemblyTypeName: StateMachineController, Ghoulish.UIToolkit
-        m_MethodName: ChangeState
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1632961712}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DestroyChildren, Assembly-CSharp
-        m_MethodName: DestroyAllButLast
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 558007468}, m_TargetAssemblyTypeName: StateMachineController, Ghoulish.UIToolkit, m_MethodName: ChangeState, m_Mode: 2, m_Arguments: {m_ObjectArgument: {fileID: 1632961712}, m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+      - {m_Target: {fileID: 0}, m_TargetAssemblyTypeName: DestroyChildren, Assembly-CSharp, m_MethodName: DestroyAllButLast, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+    m_CallsDirty: 1
   onCommand:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
+  IsOptionSelectionAllowed: 0
 --- !u!114 &1506627697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7320,6 +7313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10715697f52a9f34da1047affde3e593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueRunner: {fileID: 0}
+  _previousBubbleMaker: {fileID: 0}
 --- !u!4 &1506627698
 Transform:
   m_ObjectHideFlags: 0

@@ -72,6 +72,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2937463681270263691, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: activeFrameSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d110e936c3c841644b9feffed0a0662d, type: 3}
+    - target: {fileID: 2937463681270263691, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: _activeFrameSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d110e936c3c841644b9feffed0a0662d, type: 3}
+    - target: {fileID: 2937463681270263691, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: inactiveFrameSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d3fac94de4989984c9752b03de8a4d0d, type: 3}
+    - target: {fileID: 2937463681270263691, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: _inactiveFrameSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d3fac94de4989984c9752b03de8a4d0d, type: 3}
     - target: {fileID: 3758618436765393208, guid: 91656245c81039446be8fce16bdef297, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -113,9 +129,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6239591009012598361, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.28235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239591009012598361, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.1137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239591009012598361, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.53333336
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239591009012598361, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4282916232
+      objectReference: {fileID: 0}
+    - target: {fileID: 6239591009012598361, guid: 91656245c81039446be8fce16bdef297, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8001239688626376495, guid: 91656245c81039446be8fce16bdef297, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d110e936c3c841644b9feffed0a0662d, type: 3}
     - target: {fileID: 8284625808000879471, guid: 91656245c81039446be8fce16bdef297, type: 3}
       propertyPath: m_Sprite
       value: 

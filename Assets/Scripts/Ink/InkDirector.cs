@@ -87,7 +87,7 @@ public class InkDirector : MonoBehaviour
             {
                 ShrinkAllBubbleIcons();
                 storyTextObject.characterPortrait.gameObject.SetActive(true);
-                storyTextObject.SetIconScale(1f);
+                storyTextObject.ExpandBubble();
                 storyTextObject.characterPortrait.sprite = selectedCharacterState.icon;
                 currentSpeaker = speakerName;
             }
@@ -160,7 +160,7 @@ public class InkDirector : MonoBehaviour
 
         ShrinkAllBubbleIcons();
         storyTextObject.characterPortrait.gameObject.SetActive(true);
-        storyTextObject.SetIconScale(1f);
+        storyTextObject.ExpandBubble();
         storyTextObject.characterPortrait.sprite = selectedCharacterState.icon;
         storyTextObject.characterName.text = selectedCharacterState.displayName;
         
@@ -193,7 +193,7 @@ public class InkDirector : MonoBehaviour
             SpeechBubble childBubble = child.GetComponent<SpeechBubble>();
             if (childBubble != null)
             {
-                childBubble.SetIconScale(0.75f);
+                childBubble.ShrinkBubble();
             }
         }
     }
