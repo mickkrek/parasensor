@@ -129,8 +129,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -356.45764, y: 0}
-  m_SizeDelta: {x: 712.9152, y: 270.47668}
+  m_AnchoredPosition: {x: -356.45764, y: 67.619}
+  m_SizeDelta: {x: 712.9152, y: 135.24}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &2937463681270263691
 MonoBehaviour:
@@ -151,6 +151,7 @@ MonoBehaviour:
   bubbleRenderer: {fileID: 3758618436765393208}
   _activeFrameSprite: {fileID: 21300000, guid: 2ba3aa3cc35a76340834874a4d1d6d30, type: 3}
   _inactiveFrameSprite: {fileID: 21300000, guid: bd9f046056dfbee4d9cefc784789c269, type: 3}
+  _bubbleContainerLayout: {fileID: 0}
 --- !u!114 &1309971142944623519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,9 +320,8 @@ GameObject:
   - component: {fileID: 3758618436765393208}
   - component: {fileID: 3595695775167830539}
   - component: {fileID: 5317372706236455213}
-  - component: {fileID: 5605092692714150803}
   m_Layer: 5
-  m_Name: TextPanel
+  m_Name: BubblePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,10 +412,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 10
-    m_Right: 10
-    m_Top: 10
-    m_Bottom: 10
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
@@ -425,26 +425,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &5605092692714150803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4505141451242267612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: 60
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
-  m_FlexibleWidth: -1
-  m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!1 &4585377643108961617
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +555,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 10, y: 10, z: 10, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -615,7 +595,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -12, y: 0}
+  m_AnchoredPosition: {x: -10, y: -30}
   m_SizeDelta: {x: 80, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &8924728099149871451
@@ -705,8 +685,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Speaker Name:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: abc7f8b710a1c6943a0be71294845014, type: 2}
-  m_sharedMaterial: {fileID: -5866444305728503006, guid: abc7f8b710a1c6943a0be71294845014, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9881e5a425a9ea9438678344f8f4213e, type: 2}
+  m_sharedMaterial: {fileID: 1972678837424841857, guid: 9881e5a425a9ea9438678344f8f4213e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -736,7 +716,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 32
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -768,7 +748,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 10, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
