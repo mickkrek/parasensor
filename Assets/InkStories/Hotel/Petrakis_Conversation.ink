@@ -1,7 +1,10 @@
 // trying to gain Petrakis' trust... maybe this is all variables going +1/-1 trust depending on your choices and possibly what you have equipped.
 // i dont think you necessarily need a "perfect combination of right answers" bc thats annoying lol, it's mostly about the player's willingness to get into the conspiracy wavelength. the on/off ramps should be obvious enough...
 
+->PETRAKIS_HUB
+== PETRAKIS_HUB ==
 ->petrakis_Intro
+
 == petrakis_Intro ==
 PETRAKIS: Who's there?
 + 	Dr Petrakis? I need to talk to you.
