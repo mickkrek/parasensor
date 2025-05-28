@@ -1,3 +1,4 @@
+== SAM_HUB ==
 // Cold open with MARISOL standing in front of the METCOM PAYPHONE. She takes a deep breath, straightens herself (her way of switching into Work Mode), and inserts her Employee Phone Card into the phone's card reader. She brings the phone's receiver to her ear and waits as the phone automatically dials Sam's number.
 PHONE: (TONE...)
 PHONE: (CLICK)
@@ -9,9 +10,8 @@ SAM: Dispatch Operator.
     ++  I'm sorry. I'm here. How are you?
     ++  I'd just keep calling you. How's it goin' Sam?
 -
-~ SetCharacterState("SAM", 1)
-SAM: Oh, you know, the usual...?
-SAM: Wait, not the usual. Coffee machine closest to *my* desk is broken. So now *I* have to walk all the way up to Logistics to get a fucking coffee now. Dez, I'm gonna do it this time. I'm gonna quit this shit job.
+SAM: Oh, you know, the usual...
+SAM: Wait, not the usual. Coffee machine closest to *my* desk is broken. So now *I* have to walk all the way up to Logistics to get a coffee now. Dez, I'm gonna do it this time. I'm gonna quit this crappy job.
 SAM: ...Maybe next week.
 SAM: Anyway, I've got a fun one for you today.
 +   Wait, really? A fun one?
@@ -19,6 +19,7 @@ SAM: Anyway, I've got a fun one for you today.
     ++  Damn it. Well, let's hear it.
 +   OK. Let's hear it.
 -
+~ SetCharacterState("SAM", 1)
 SAM: I got this report about the... Eastern Exchange Building.
 SAM: I thought they had decommissioned that building but somehow it's still operating. Not like they would tell me anything actually important, but you know.
 SAM: Says "urgent" on it but I'll be honest, they put that on almost every folder they send down here.
@@ -32,7 +33,7 @@ SAM: The report says that the building's "gone dark". The Research team in there
 +   And that someone is me?
 -
 SAM: Correct. Lucky you! You get to meet with freaks from Research!
-SAM: Of course it's fucking Research. They fuck up their duties and we're the ones who have to clean up after them. 
+SAM: Of course it's bloody Research. They screw up their duties and we're the ones who have to clean up after them. 
 +   Sam, I'm the one who's doing the clean up. You're just sitting at a desk.
     SAM: I thought we were a team? 
     ++  We are. How will I restore communications with HQ?

@@ -5,4 +5,4 @@ EXTERNAL SetCharacterState(characterCodeName, state)
 INCLUDE ./ExchangeBuilding/choijennings_Conversation.ink
 INCLUDE ./HardwareStore/mcdowell_Conversation.ink
 INCLUDE ./Hotel/Petrakis_Conversation.ink
-INCLUDE./Payphone/sambrief.ink
+INCLUDE ./Payphone/sambrief.ink

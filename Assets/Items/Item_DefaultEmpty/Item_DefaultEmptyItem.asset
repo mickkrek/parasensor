@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: None
   description: You have no item equipped.
-  descriptionImage: {fileID: 21300000, guid: 41b964c7cfec7fb4892cc495b9eadf24, type: 3}
+  descriptionImage: {fileID: 21300000, guid: 40fc84ba6d5f3c044b4d7f14028ca7ac, type: 3}
   graphicsPrefab: {fileID: 0}
   upperBodyAnimation: {fileID: 0}
   itemBoneParent: 0

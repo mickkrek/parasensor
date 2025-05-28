@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeName: SAM
   characterState:
-  - displayName: Sam
+  - displayName: Dispatch Operator
     icon: {fileID: 21300000, guid: 172101a71387c294db7c1689ea5cf46b, type: 3}
     bubbleColor: {r: 1, g: 1, b: 1, a: 1}
-  - displayName: Sam lvl 2
+  - displayName: Sam
     icon: {fileID: 21300000, guid: 461a08bc8c5a875489bdcf2c1d011de4, type: 3}
     bubbleColor: {r: 1, g: 1, b: 1, a: 1}
   inkHubKnot: SAM_HUB
