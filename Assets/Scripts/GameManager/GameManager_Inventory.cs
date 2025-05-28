@@ -90,7 +90,7 @@ public class GameManager_Inventory : MonoBehaviour
             {
                 InstantiateItem(item, targetSlot.transform);
                 Destroy(targetEmptySlot.gameObject);
-                GameObject.Find("GUI_NewJournalPrompt").GetComponent<GUI_NewItemPrompt>().TriggerPrompt();
+                //GameObject.Find("GUI_NewJournalPrompt").GetComponent<GUI_NewItemPrompt>().TriggerPrompt();
                 if (!GameManager.Instance.CollectedItems.Contains(item.title))
                 {
                     GameManager.Instance.CollectedItems.Add(item.title);

@@ -8,8 +8,6 @@ public class GUI_InteractPrompt_Button : MonoBehaviour
     [SerializeField] private Transform _followPos;
     [SerializeField] private GameObject _floatingContainer, _buttonContainer;
     [SerializeField] private TextMeshProUGUI _textTMPGUI;
-    [SerializeField] private RectTransform _spritePanel;
-    [SerializeField] private HorizontalLayoutGroup _layoutGroup;
     private Vector2 _textSize;
 
     private void Update()
@@ -47,10 +45,6 @@ public class GUI_InteractPrompt_Button : MonoBehaviour
     {
         _textTMPGUI.SetText(text);
         _textTMPGUI.ForceMeshUpdate();
-        _textSize = _textTMPGUI.GetRenderedValues(false);
-        _textTMPGUI.rectTransform.sizeDelta = _textSize;
-        
-        //_spritePanel.sizeDelta = new Vector2(_layoutGroup.padding.right +_layoutGroup.padding.left, 0f) + _textSize;
     }
 
     private void FollowPosition(Vector3 pos)

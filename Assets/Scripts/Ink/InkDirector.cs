@@ -73,6 +73,7 @@ public class InkDirector : MonoBehaviour
             storyTextObject.speechText.text = loadedText;
             storyTextObject.characterName.gameObject.SetActive(false);
             storyTextObject.characterPortrait.gameObject.SetActive(false);
+            storyTextObject.frameRenderer.gameObject.SetActive(false);
         }
         else
         {
@@ -81,12 +82,13 @@ public class InkDirector : MonoBehaviour
             CharacterState selectedCharacterState = GetCharacterState(currentCodeName);
 
             string speakerName = selectedCharacterState.displayName;
-            storyTextObject.characterName.text  = selectedCharacterState.displayName;
+            storyTextObject.characterName.text = selectedCharacterState.displayName;
 
             if (currentSpeaker != speakerName) //if the current speaker has changed
             {
                 ShrinkAllBubbleIcons();
                 storyTextObject.characterPortrait.gameObject.SetActive(true);
+                storyTextObject.frameRenderer.gameObject.SetActive(true);
                 storyTextObject.ExpandBubble();
                 storyTextObject.characterPortrait.sprite = selectedCharacterState.icon;
                 currentSpeaker = speakerName;
@@ -94,6 +96,7 @@ public class InkDirector : MonoBehaviour
             else
             {
                 storyTextObject.characterPortrait.gameObject.SetActive(false);
+                storyTextObject.frameRenderer.gameObject.SetActive(false);
                 storyTextObject.characterName.gameObject.SetActive(false);
             }
 
@@ -160,6 +163,7 @@ public class InkDirector : MonoBehaviour
 
         ShrinkAllBubbleIcons();
         storyTextObject.characterPortrait.gameObject.SetActive(true);
+        storyTextObject.frameRenderer.gameObject.SetActive(true);
         storyTextObject.ExpandBubble();
         storyTextObject.characterPortrait.sprite = selectedCharacterState.icon;
         storyTextObject.characterName.text = selectedCharacterState.displayName;
